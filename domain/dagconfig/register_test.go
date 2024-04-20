@@ -3,7 +3,7 @@ package dagconfig_test
 import (
 	"testing"
 
-	. "github.com/katkoin/katd/domain/dagconfig"
+	. "github.com/Katkoin/katd/domain/dagconfig"
 )
 
 // Define some of the required parameters for a user-registered

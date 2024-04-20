@@ -5,7 +5,7 @@
 package blocktemplatebuilder
 
 import (
-	"github.com/katkoin/katd/infrastructure/logger"
+	"github.com/Katkoin/katd/infrastructure/logger"
 )
 
 var log = logger.RegisterSubSystem("BLTB")

@@ -2,16 +2,16 @@ package rpc
 
 import (
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/app/protocol"
-	"github.com/katkoin/katdd/app/rpc/rpccontext"
-	"github.com/katkoin/katdd/domain"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/utxoindex"
-	"github.com/katkoin/katdd/infrastructure/config"
-	"github.com/katkoin/katdd/infrastructure/logger"
-	"github.com/katkoin/katdd/infrastructure/network/addressmanager"
-	"github.com/katkoin/katdd/infrastructure/network/connmanager"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter"
+	"github.com/Katkoin/katd/app/protocol"
+	"github.com/Katkoin/katd/app/rpc/rpccontext"
+	"github.com/Katkoin/katd/domain"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/utxoindex"
+	"github.com/Katkoin/katd/infrastructure/config"
+	"github.com/Katkoin/katd/infrastructure/logger"
+	"github.com/Katkoin/katd/infrastructure/network/addressmanager"
+	"github.com/Katkoin/katd/infrastructure/network/connmanager"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter"
 	"github.com/pkg/errors"
 )
 

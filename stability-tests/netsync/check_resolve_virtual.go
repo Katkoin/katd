@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/stability-tests/common/rpc"
+	"github.com/Katkoin/katd/stability-tests/common/rpc"
 	"github.com/pkg/errors"
 )
 

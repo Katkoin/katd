@@ -6,7 +6,7 @@ import (
 
 	"github.com/Katkoin/katd/domain/consensus/utils/transactionid"
 
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 )
 
 func (mud *mutableUTXODiff) equal(other *mutableUTXODiff) bool {

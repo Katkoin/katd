@@ -1,7 +1,7 @@
 package database
 
 import (
-	"github.com/katkoin/katd/infrastructure/db/database"
+	"github.com/Katkoin/katd/infrastructure/db/database"
 )
 
 // ErrNotFound denotes that the requested item was not

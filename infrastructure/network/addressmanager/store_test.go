@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/util/mstime"
+	"github.com/Katkoin/katd/util/mstime"
 )
 
 func TestAddressKeySerialization(t *testing.T) {

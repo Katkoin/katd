@@ -8,14 +8,14 @@ import (
 	difficultyPackage "github.com/Katkoin/katd/util/difficulty"
 	"github.com/pkg/errors"
 
-	"github.com/katkoin/katdd/domain/consensus/utils/hashes"
+	"github.com/Katkoin/katd/domain/consensus/utils/hashes"
 
-	"github.com/katkoin/katdd/domain/consensus/utils/txscript"
+	"github.com/Katkoin/katd/domain/consensus/utils/txscript"
 
-	"github.com/katkoin/katdd/app/appmessage"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/consensushashing"
-	"github.com/katkoin/katdd/domain/dagconfig"
+	"github.com/Katkoin/katd/app/appmessage"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
+	"github.com/Katkoin/katd/domain/dagconfig"
 )
 
 // ErrBuildBlockVerboseDataInvalidBlock indicates that a block that was given to BuildBlockVerboseData is invalid.

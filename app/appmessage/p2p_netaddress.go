@@ -7,7 +7,7 @@ package appmessage
 import (
 	"net"
 
-	"github.com/katkoin/katd/util/mstime"
+	"github.com/Katkoin/katd/util/mstime"
 )
 
 // NetAddress defines information about a peer on the network including the time

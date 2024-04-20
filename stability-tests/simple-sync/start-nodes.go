@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/Katkoin/katd/stability-tests/common"
-	"github.com/katkoin/katdd/util/panics"
+	"github.com/Katkoin/katd/util/panics"
 	"github.com/pkg/errors"
 )
 

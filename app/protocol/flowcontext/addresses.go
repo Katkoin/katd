@@ -1,7 +1,7 @@
 package flowcontext
 
 import (
-	"github.com/katkoin/katd/infrastructure/network/addressmanager"
+	"github.com/Katkoin/katd/infrastructure/network/addressmanager"
 )
 
 // AddressManager returns the address manager associated to the flow context.

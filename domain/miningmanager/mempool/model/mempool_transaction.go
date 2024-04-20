@@ -2,7 +2,7 @@ package model
 
 import (
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/consensushashing"
+	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
 )
 
 // MempoolTransaction represents a transaction inside the main TransactionPool

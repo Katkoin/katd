@@ -1,6 +1,6 @@
 package model
 
-import "github.com/katkoin/katd/domain/consensus/model/externalapi"
+import "github.com/Katkoin/katd/domain/consensus/model/externalapi"
 
 // DAABlocksStore represents a store of ???
 type DAABlocksStore interface {

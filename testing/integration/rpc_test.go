@@ -7,7 +7,7 @@ import (
 
 	"github.com/Katkoin/katd/infrastructure/config"
 
-	"github.com/katkoin/katdd/infrastructure/network/rpcclient"
+	"github.com/Katkoin/katd/infrastructure/network/rpcclient"
 )
 
 const rpcTimeout = 10 * time.Second

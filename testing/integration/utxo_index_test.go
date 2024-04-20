@@ -7,13 +7,13 @@ import (
 	"github.com/Katkoin/katd/domain/consensus/utils/utxo"
 
 	"github.com/kaspanet/go-secp256k1"
-	"github.com/katkoin/katdd/app/appmessage"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/consensushashing"
-	"github.com/katkoin/katdd/domain/consensus/utils/constants"
-	"github.com/katkoin/katdd/domain/consensus/utils/transactionid"
-	"github.com/katkoin/katdd/domain/consensus/utils/txscript"
-	"github.com/katkoin/katdd/util"
+	"github.com/Katkoin/katd/app/appmessage"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
+	"github.com/Katkoin/katd/domain/consensus/utils/constants"
+	"github.com/Katkoin/katd/domain/consensus/utils/transactionid"
+	"github.com/Katkoin/katd/domain/consensus/utils/txscript"
+	"github.com/Katkoin/katd/util"
 )
 
 func TestUTXOIndex(t *testing.T) {
@@ -184,7 +184,7 @@ func buildTransactionForUTXOIndexTest(t *testing.T, entry *appmessage.UTXOsByAdd
 	txIns := make([]*appmessage.TxIn, 1)
 	txIns[0] = appmessage.NewTxIn(appmessage.NewOutpoint(transactionID, entry.Outpoint.Index), []byte{}, 0, 1)
 
-	payeeAddress, err := util.DecodeAddress(miningAddress1, util.Bech32PrefixKaspaSim)
+	payeeAddress, err := util.DecodeAddress(miningAddress1, util.Bech32PrefixKatkoinSim)
 	if err != nil {
 		t.Fatalf("Error decoding payeeAddress: %+v", err)
 	}

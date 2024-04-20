@@ -6,17 +6,17 @@ import (
 	"time"
 
 	"github.com/Katkoin/katd/domain/consensus/model"
-	"github.com/katkoin/katdd/domain/consensus/utils/constants"
-	"github.com/katkoin/katdd/domain/consensus/utils/txscript"
-	"github.com/katkoin/katdd/domain/dagconfig"
+	"github.com/Katkoin/katd/domain/consensus/utils/constants"
+	"github.com/Katkoin/katd/domain/consensus/utils/txscript"
+	"github.com/Katkoin/katd/domain/dagconfig"
 
-	"github.com/katkoin/katdd/domain/consensus"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/model/testapi"
-	"github.com/katkoin/katdd/domain/consensus/ruleerrors"
-	"github.com/katkoin/katdd/domain/consensus/utils/consensushashing"
-	"github.com/katkoin/katdd/domain/consensus/utils/testutils"
-	"github.com/katkoin/katdd/domain/consensus/utils/utxo"
+	"github.com/Katkoin/katd/domain/consensus"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model/testapi"
+	"github.com/Katkoin/katd/domain/consensus/ruleerrors"
+	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
+	"github.com/Katkoin/katd/domain/consensus/utils/testutils"
+	"github.com/Katkoin/katd/domain/consensus/utils/utxo"
 	"github.com/pkg/errors"
 )
 

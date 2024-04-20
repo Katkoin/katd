@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/mining"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/utils/mining"
 )
 
 func mineNextBlock(t *testing.T, harness *appHarness) *externalapi.DomainBlock {

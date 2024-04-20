@@ -2,7 +2,7 @@ package rpcclient
 
 import (
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 )
 
 func (c *RPCClient) submitBlock(block *externalapi.DomainBlock, allowNonDAABlocks bool) (appmessage.RejectReason, error) {

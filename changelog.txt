@@ -52,7 +52,7 @@ katd v0.12.8 - 2022-10-23
 katd v0.12.7 - 2022-09-21
 ===========================
 
-* Security Fix + Hard fork - Full details can be seen here: https://medium.com/@michaelsuttonil/kaspa-security-patch-and-hard-fork-september-2022-12da617b0094
+* Security Fix + Hard fork - Full details can be seen here: https://medium.com/@michaelsuttonil/katkoin-security-patch-and-hard-fork-september-2022-12da617b0094
 
 katd v0.12.6 - 2022-09-09
 ===========================
@@ -129,7 +129,7 @@ katd v0.12.1 - 2022-05-31
 * Update Dockerfile for go 1.18 (#2038)
 * Remove HF1 activation code (#2042)
 
-Kaspa wallet:
+Katkoin wallet:
 * Various katwallet text fixes and log additions (#2032, #2047, #2062)
 * Wallet address synchronization improvement (#2025)
 * Add support for `from` address in `katwallet send` (#1964)

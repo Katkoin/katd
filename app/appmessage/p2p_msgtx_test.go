@@ -13,11 +13,11 @@ import (
 
 	"github.com/Katkoin/katd/domain/consensus/utils/constants"
 
-	"github.com/katkoin/katdd/domain/consensus/utils/subnetworks"
-	"github.com/katkoin/katdd/domain/consensus/utils/transactionid"
+	"github.com/Katkoin/katd/domain/consensus/utils/subnetworks"
+	"github.com/Katkoin/katd/domain/consensus/utils/transactionid"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 )
 
 // TestTx tests the MsgTx API.

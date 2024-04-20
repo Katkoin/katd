@@ -5,9 +5,9 @@ import (
 
 	"github.com/Katkoin/katd/domain/consensus/model"
 
-	"github.com/katkoin/katdd/domain/consensus"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/testutils"
+	"github.com/Katkoin/katd/domain/consensus"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/utils/testutils"
 )
 
 func TestLowestChainBlockAboveOrEqualToBlueScore(t *testing.T) {

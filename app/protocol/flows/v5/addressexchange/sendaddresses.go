@@ -4,8 +4,8 @@ import (
 	"math/rand"
 
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/infrastructure/network/addressmanager"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/router"
+	"github.com/Katkoin/katd/infrastructure/network/addressmanager"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/router"
 )
 
 // SendAddressesContext is the interface for the context needed for the SendAddresses flow.

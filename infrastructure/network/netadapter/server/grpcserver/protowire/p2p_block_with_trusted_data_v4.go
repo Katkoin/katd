@@ -5,7 +5,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-func (x *katdMessage_BlockWithTrustedDataV4) toAppMessage() (appmessage.Message, error) {
+func (x *KatdMessage_BlockWithTrustedDataV4) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
 		return nil, errors.Wrapf(errorNil, "katdMessage_BlockWithTrustedDataV4 is nil")
 	}
@@ -22,7 +22,7 @@ func (x *katdMessage_BlockWithTrustedDataV4) toAppMessage() (appmessage.Message,
 	}, nil
 }
 
-func (x *katdMessage_BlockWithTrustedDataV4) fromAppMessage(msgBlockWithTrustedData *appmessage.MsgBlockWithTrustedDataV4) error {
+func (x *KatdMessage_BlockWithTrustedDataV4) fromAppMessage(msgBlockWithTrustedData *appmessage.MsgBlockWithTrustedDataV4) error {
 	x.BlockWithTrustedDataV4 = &BlockWithTrustedDataV4Message{
 		Block:               &BlockMessage{},
 		DaaWindowIndices:    msgBlockWithTrustedData.DAAWindowIndices,

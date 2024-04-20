@@ -6,11 +6,12 @@ import (
 	"sync/atomic"
 
 	"github.com/Katkoin/katd/infrastructure/network/netadapter/router"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/server/grpcserver/protowire"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/server"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/server"
 	"google.golang.org/grpc"
 )
 
@@ -36,8 +37,8 @@ type gRPCConnection struct {
 }
 
 type grpcStream interface {
-	Send(*protowire.katdMessage) error
-	Recv() (*protowire.katdMessage, error)
+	Send(*protowire.KatdMessage) error
+	Recv() (*protowire.KatdMessage, error)
 }
 
 func newConnection(server *gRPCServer, address *net.TCPAddr, stream grpcStream,
@@ -126,7 +127,7 @@ func (c *gRPCConnection) Address() *net.TCPAddr {
 	return c.address
 }
 
-func (c *gRPCConnection) receive() (*protowire.katdMessage, error) {
+func (c *gRPCConnection) receive() (*protowire.KatdMessage, error) {
 	// We use RLock here and in send() because they can work
 	// in parallel. closeSend(), however, must not have either
 	// receive() nor send() running while it's running.
@@ -136,7 +137,7 @@ func (c *gRPCConnection) receive() (*protowire.katdMessage, error) {
 	return c.stream.Recv()
 }
 
-func (c *gRPCConnection) send(message *protowire.katdMessage) error {
+func (c *gRPCConnection) send(message *protowire.KatdMessage) error {
 	// We use RLock here and in receive() because they can work
 	// in parallel. closeSend(), however, must not have either
 	// receive() nor send() running while it's running.

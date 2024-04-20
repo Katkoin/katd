@@ -2,12 +2,12 @@ package protowire
 
 import (
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/id"
-	"github.com/katkoin/katdd/util/mstime"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/id"
+	"github.com/Katkoin/katd/util/mstime"
 	"github.com/pkg/errors"
 )
 
-func (x *katdMessage_Version) toAppMessage() (appmessage.Message, error) {
+func (x *KatdMessage_Version) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
 		return nil, errors.Wrapf(errorNil, "katdMessage_Version is nil")
 	}
@@ -57,7 +57,7 @@ func (x *VersionMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *katdMessage_Version) fromAppMessage(msgVersion *appmessage.MsgVersion) error {
+func (x *KatdMessage_Version) fromAppMessage(msgVersion *appmessage.MsgVersion) error {
 	err := appmessage.ValidateUserAgent(msgVersion.UserAgent)
 	if err != nil {
 		return err

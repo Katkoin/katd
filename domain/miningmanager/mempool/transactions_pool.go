@@ -6,8 +6,8 @@ import (
 	"github.com/pkg/errors"
 
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/consensushashing"
-	"github.com/katkoin/katdd/domain/miningmanager/mempool/model"
+	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
+	"github.com/Katkoin/katd/domain/miningmanager/mempool/model"
 )
 
 type transactionsPool struct {

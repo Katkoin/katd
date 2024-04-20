@@ -5,14 +5,14 @@ import (
 	"github.com/pkg/errors"
 )
 
-func (x *katdMessage_Block) toAppMessage() (appmessage.Message, error) {
+func (x *KatdMessage_Block) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
 		return nil, errors.Wrap(errorNil, "katdMessage_Block is nil")
 	}
 	return x.Block.toAppMessage()
 }
 
-func (x *katdMessage_Block) fromAppMessage(msgBlock *appmessage.MsgBlock) error {
+func (x *KatdMessage_Block) fromAppMessage(msgBlock *appmessage.MsgBlock) error {
 	x.Block = new(BlockMessage)
 	return x.Block.fromAppMessage(msgBlock)
 }

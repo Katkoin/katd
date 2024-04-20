@@ -5,8 +5,8 @@ import (
 
 	"github.com/Katkoin/katd/domain/consensus/utils/serialization"
 
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/hashes"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/utils/hashes"
 	"github.com/pkg/errors"
 )
 

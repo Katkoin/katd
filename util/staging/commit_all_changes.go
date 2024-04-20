@@ -4,7 +4,7 @@ import (
 	"sync/atomic"
 
 	"github.com/Katkoin/katd/domain/consensus/model"
-	"github.com/katkoin/katdd/infrastructure/logger"
+	"github.com/Katkoin/katd/infrastructure/logger"
 )
 
 // CommitAllChanges creates a transaction in `databaseContext`, and commits all changes in `stagingArea` through it.

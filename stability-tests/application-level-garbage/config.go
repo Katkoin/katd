@@ -5,10 +5,10 @@ import (
 	"path/filepath"
 
 	"github.com/Katkoin/katd/infrastructure/logger"
-	"github.com/katkoin/katdd/stability-tests/common"
+	"github.com/Katkoin/katd/stability-tests/common"
 
 	"github.com/jessevdk/go-flags"
-	"github.com/katkoin/katdd/infrastructure/config"
+	"github.com/Katkoin/katd/infrastructure/config"
 )
 
 const (

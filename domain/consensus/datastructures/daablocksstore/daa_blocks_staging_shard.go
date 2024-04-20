@@ -2,8 +2,8 @@ package daablocksstore
 
 import (
 	"github.com/Katkoin/katd/domain/consensus/database/binaryserialization"
-	"github.com/katkoin/katdd/domain/consensus/model"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 )
 
 type daaBlocksStagingShard struct {

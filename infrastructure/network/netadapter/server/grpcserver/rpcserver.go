@@ -2,8 +2,8 @@ package grpcserver
 
 import (
 	"github.com/Katkoin/katd/infrastructure/network/netadapter/server"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/server/grpcserver/protowire"
-	"github.com/katkoin/katdd/util/panics"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/server/grpcserver/protowire"
+	"github.com/Katkoin/katd/util/panics"
 )
 
 type rpcServer struct {

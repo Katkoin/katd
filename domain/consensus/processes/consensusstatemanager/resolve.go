@@ -4,9 +4,9 @@ import (
 	"sort"
 
 	"github.com/Katkoin/katd/domain/consensus/model"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/infrastructure/logger"
-	"github.com/katkoin/katdd/util/staging"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/infrastructure/logger"
+	"github.com/Katkoin/katd/util/staging"
 	"github.com/pkg/errors"
 )
 

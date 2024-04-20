@@ -4,14 +4,14 @@ import (
 	"time"
 
 	"github.com/Katkoin/katd/app/protocol/common"
-	"github.com/katkoin/katdd/app/protocol/flowcontext"
+	"github.com/Katkoin/katd/app/protocol/flowcontext"
 	"github.com/pkg/errors"
 
-	"github.com/katkoin/katdd/app/appmessage"
-	peerpkg "github.com/katkoin/katdd/app/protocol/peer"
-	"github.com/katkoin/katdd/app/protocol/protocolerrors"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/router"
-	"github.com/katkoin/katdd/util/random"
+	"github.com/Katkoin/katd/app/appmessage"
+	peerpkg "github.com/Katkoin/katd/app/protocol/peer"
+	"github.com/Katkoin/katd/app/protocol/protocolerrors"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/router"
+	"github.com/Katkoin/katd/util/random"
 )
 
 // SendPingsContext is the interface for the context needed for the SendPings flow.

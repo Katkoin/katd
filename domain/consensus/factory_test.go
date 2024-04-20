@@ -6,8 +6,8 @@ import (
 
 	"github.com/Katkoin/katd/domain/prefixmanager/prefix"
 
-	"github.com/katkoin/katdd/domain/dagconfig"
-	"github.com/katkoin/katdd/infrastructure/db/database/ldb"
+	"github.com/Katkoin/katd/domain/dagconfig"
+	"github.com/Katkoin/katd/infrastructure/db/database/ldb"
 )
 
 func TestNewConsensus(t *testing.T) {

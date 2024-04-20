@@ -2,15 +2,15 @@ package v5
 
 import (
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/app/protocol/common"
-	"github.com/katkoin/katdd/app/protocol/flowcontext"
-	"github.com/katkoin/katdd/app/protocol/flows/v5/addressexchange"
-	"github.com/katkoin/katdd/app/protocol/flows/v5/blockrelay"
-	"github.com/katkoin/katdd/app/protocol/flows/v5/ping"
-	"github.com/katkoin/katdd/app/protocol/flows/v5/rejects"
-	"github.com/katkoin/katdd/app/protocol/flows/v5/transactionrelay"
-	peerpkg "github.com/katkoin/katdd/app/protocol/peer"
-	routerpkg "github.com/katkoin/katdd/infrastructure/network/netadapter/router"
+	"github.com/Katkoin/katd/app/protocol/common"
+	"github.com/Katkoin/katd/app/protocol/flowcontext"
+	"github.com/Katkoin/katd/app/protocol/flows/v5/addressexchange"
+	"github.com/Katkoin/katd/app/protocol/flows/v5/blockrelay"
+	"github.com/Katkoin/katd/app/protocol/flows/v5/ping"
+	"github.com/Katkoin/katd/app/protocol/flows/v5/rejects"
+	"github.com/Katkoin/katd/app/protocol/flows/v5/transactionrelay"
+	peerpkg "github.com/Katkoin/katd/app/protocol/peer"
+	routerpkg "github.com/Katkoin/katd/infrastructure/network/netadapter/router"
 )
 
 type protocolManager interface {

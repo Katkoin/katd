@@ -5,12 +5,12 @@ import (
 
 	"github.com/Katkoin/katd/domain/consensus/model"
 
-	"github.com/katkoin/katdd/domain/consensus"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/ruleerrors"
-	"github.com/katkoin/katdd/domain/consensus/utils/consensushashing"
-	"github.com/katkoin/katdd/domain/consensus/utils/constants"
-	"github.com/katkoin/katdd/domain/consensus/utils/testutils"
+	"github.com/Katkoin/katd/domain/consensus"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/ruleerrors"
+	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
+	"github.com/Katkoin/katd/domain/consensus/utils/constants"
+	"github.com/Katkoin/katd/domain/consensus/utils/testutils"
 	"github.com/pkg/errors"
 )
 

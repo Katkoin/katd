@@ -7,8 +7,8 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/katkoin/katdd/app/appmessage"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/router"
+	"github.com/Katkoin/katd/app/appmessage"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/router"
 )
 
 // Routes holds the incoming and outgoing routes of a connection created by MinimalNetAdapter

@@ -6,12 +6,12 @@ import (
 
 	"github.com/Katkoin/katd/app/protocol/flows/v5/addressexchange"
 
-	"github.com/katkoin/katdd/app/appmessage"
-	peerpkg "github.com/katkoin/katdd/app/protocol/peer"
-	"github.com/katkoin/katdd/domain/consensus"
-	"github.com/katkoin/katdd/domain/consensus/utils/testutils"
-	"github.com/katkoin/katdd/infrastructure/network/addressmanager"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/router"
+	"github.com/Katkoin/katd/app/appmessage"
+	peerpkg "github.com/Katkoin/katd/app/protocol/peer"
+	"github.com/Katkoin/katd/domain/consensus"
+	"github.com/Katkoin/katd/domain/consensus/utils/testutils"
+	"github.com/Katkoin/katd/infrastructure/network/addressmanager"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/router"
 )
 
 type fakeReceiveAddressesContext struct{}

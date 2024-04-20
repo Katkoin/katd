@@ -6,14 +6,14 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/katkoin/katd/domain/consensus/utils/blockheader"
-	"github.com/katkoin/katdd/domain/consensus/utils/hashes"
-	"github.com/katkoin/katdd/domain/consensus/utils/utxo"
+	"github.com/Katkoin/katd/domain/consensus/utils/blockheader"
+	"github.com/Katkoin/katd/domain/consensus/utils/hashes"
+	"github.com/Katkoin/katd/domain/consensus/utils/utxo"
 
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/subnetworks"
-	"github.com/katkoin/katdd/domain/consensus/utils/transactionid"
-	"github.com/katkoin/katdd/util/mstime"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/utils/subnetworks"
+	"github.com/Katkoin/katd/domain/consensus/utils/transactionid"
+	"github.com/Katkoin/katd/util/mstime"
 )
 
 // DomainBlockToMsgBlock converts an externalapi.DomainBlock to MsgBlock

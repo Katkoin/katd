@@ -9,9 +9,9 @@ import (
 
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 	"github.com/kaspanet/go-muhash"
-	"github.com/katkoin/katdd/domain/consensus/utils/blockheader"
-	"github.com/katkoin/katdd/domain/consensus/utils/subnetworks"
-	"github.com/katkoin/katdd/domain/consensus/utils/transactionhelper"
+	"github.com/Katkoin/katd/domain/consensus/utils/blockheader"
+	"github.com/Katkoin/katd/domain/consensus/utils/subnetworks"
+	"github.com/Katkoin/katd/domain/consensus/utils/transactionhelper"
 )
 
 var genesisTxOuts = []*externalapi.DomainTransactionOutput{}
@@ -46,7 +46,7 @@ var genesisCoinbaseTx = transactionhelper.NewSubnetworkTransaction(0, []*externa
 // genesisHash is the hash of the first block in the block DAG for the main
 // network (genesis block).
 var genesisHash = externalapi.NewDomainHashFromByteArray(&[externalapi.DomainHashSize]byte{
-	0xB4, 0xE4, 0x28, 0x98, 0x64, 0x11, 0xE0, 0x16, 0x2C, 0xCA, 0xE4, 0x78, 0x8, 0x7D, 0xF, 0xF2, 0x7E, 0xA0, 0x6B, 0x6B, 0xB5, 0x55, 0xB6, 0x75, 0x4F, 0x41, 0x1C, 0xF6, 0xC, 0xAC, 0xD3, 0x1E,
+	0x82, 0xC5, 0xE1, 0xB4, 0xBF, 0x9B, 0xB, 0xD0, 0x1B, 0x32, 0x55, 0x7, 0xC0, 0xC2, 0xCB, 0x56, 0x37, 0x2C, 0xEC, 0x2E, 0xC0, 0x6D, 0x2A, 0x32, 0xAB, 0x4D, 0x79, 0x8, 0x7, 0xA4, 0x5E, 0x95,
 })
 
 // genesisMerkleRoot is the hash of the first transaction in the genesis block
@@ -66,13 +66,11 @@ var genesisBlock = externalapi.DomainBlock{
 		[]externalapi.BlockLevelParents{},
 		genesisMerkleRoot,
 		&externalapi.DomainHash{},
-		externalapi.NewDomainHashFromByteArray(&[externalapi.DomainHashSize]byte{
-			0x71, 0x0f, 0x27, 0xdf, 0x42, 0x3e, 0x63, 0xaa, 0x6c, 0xdb, 0x72, 0xb8, 0x9e, 0xa5, 0xa0, 0x6c, 0xff, 0xa3, 0x99, 0xd6, 0x6f, 0x16, 0x77, 0x04, 0x45, 0x5b, 0x5a, 0xf5, 0x9d, 0xef, 0x8e, 0x20,
-		}),
-		1637609671037,
+		externalapi.NewDomainHashFromByteArray(muhash.EmptyMuHashHash.AsArray()),
+		1713653860160,
 		486722099,
-		0x3392c,
-		1312860, // Checkpoint DAA score
+		0x1a14e,
+		0,
 		0,
 		big.NewInt(0),
 		&externalapi.DomainHash{},
@@ -123,7 +121,7 @@ var devnetGenesisBlock = externalapi.DomainBlock{
 		externalapi.NewDomainHashFromByteArray(muhash.EmptyMuHashHash.AsArray()),
 		0x11e9db49828,
 		525264379,
-		0x48e5e,
+		0x1a14e,
 		0,
 		0,
 		big.NewInt(0),

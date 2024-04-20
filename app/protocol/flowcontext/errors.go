@@ -7,7 +7,7 @@ import (
 
 	"github.com/Katkoin/katd/infrastructure/network/netadapter/router"
 
-	"github.com/katkoin/katdd/app/protocol/protocolerrors"
+	"github.com/Katkoin/katd/app/protocol/protocolerrors"
 )
 
 var (

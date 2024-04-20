@@ -9,8 +9,8 @@ import (
 
 	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
 
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/util/mstime"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/util/mstime"
 )
 
 // BaseBlockHeaderPayload is the base number of bytes a block header can be,

@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/utxo"
+	"github.com/Katkoin/katd/domain/consensus/utils/utxo"
 )
 
 // Changed fields of a test struct compared to a base test struct marked as "changed" and

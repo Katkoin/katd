@@ -2,7 +2,7 @@ package rpcclient
 
 import (
 	"github.com/Katkoin/katd/app/appmessage"
-	routerpkg "github.com/katkoin/katdd/infrastructure/network/netadapter/router"
+	routerpkg "github.com/Katkoin/katd/infrastructure/network/netadapter/router"
 )
 
 type rpcRouter struct {

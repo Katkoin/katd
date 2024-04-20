@@ -20,147 +20,147 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-type katdMessage struct {
+type KatdMessage struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
 	// Types that are assignable to Payload:
-	//	*katdMessage_Addresses
-	//	*katdMessage_Block
-	//	*katdMessage_Transaction
-	//	*katdMessage_BlockLocator
-	//	*katdMessage_RequestAddresses
-	//	*katdMessage_RequestRelayBlocks
-	//	*katdMessage_RequestTransactions
-	//	*katdMessage_IbdBlock
-	//	*katdMessage_InvRelayBlock
-	//	*katdMessage_InvTransactions
-	//	*katdMessage_Ping
-	//	*katdMessage_Pong
-	//	*katdMessage_Verack
-	//	*katdMessage_Version
-	//	*katdMessage_TransactionNotFound
-	//	*katdMessage_Reject
-	//	*katdMessage_PruningPointUtxoSetChunk
-	//	*katdMessage_RequestIBDBlocks
-	//	*katdMessage_UnexpectedPruningPoint
-	//	*katdMessage_IbdBlockLocator
-	//	*katdMessage_IbdBlockLocatorHighestHash
-	//	*katdMessage_RequestNextPruningPointUtxoSetChunk
-	//	*katdMessage_DonePruningPointUtxoSetChunks
-	//	*katdMessage_IbdBlockLocatorHighestHashNotFound
-	//	*katdMessage_BlockWithTrustedData
-	//	*katdMessage_DoneBlocksWithTrustedData
-	//	*katdMessage_RequestPruningPointAndItsAnticone
-	//	*katdMessage_BlockHeaders
-	//	*katdMessage_RequestNextHeaders
-	//	*katdMessage_DoneHeaders
-	//	*katdMessage_RequestPruningPointUTXOSet
-	//	*katdMessage_RequestHeaders
-	//	*katdMessage_RequestBlockLocator
-	//	*katdMessage_PruningPoints
-	//	*katdMessage_RequestPruningPointProof
-	//	*katdMessage_PruningPointProof
-	//	*katdMessage_Ready
-	//	*katdMessage_BlockWithTrustedDataV4
-	//	*katdMessage_TrustedData
-	//	*katdMessage_RequestIBDChainBlockLocator
-	//	*katdMessage_IbdChainBlockLocator
-	//	*katdMessage_RequestAnticone
-	//	*katdMessage_RequestNextPruningPointAndItsAnticoneBlocks
-	//	*katdMessage_GetCurrentNetworkRequest
-	//	*katdMessage_GetCurrentNetworkResponse
-	//	*katdMessage_SubmitBlockRequest
-	//	*katdMessage_SubmitBlockResponse
-	//	*katdMessage_GetBlockTemplateRequest
-	//	*katdMessage_GetBlockTemplateResponse
-	//	*katdMessage_NotifyBlockAddedRequest
-	//	*katdMessage_NotifyBlockAddedResponse
-	//	*katdMessage_BlockAddedNotification
-	//	*katdMessage_GetPeerAddressesRequest
-	//	*katdMessage_GetPeerAddressesResponse
-	//	*katdMessage_GetSelectedTipHashRequest
-	//	*katdMessage_GetSelectedTipHashResponse
-	//	*katdMessage_GetMempoolEntryRequest
-	//	*katdMessage_GetMempoolEntryResponse
-	//	*katdMessage_GetConnectedPeerInfoRequest
-	//	*katdMessage_GetConnectedPeerInfoResponse
-	//	*katdMessage_AddPeerRequest
-	//	*katdMessage_AddPeerResponse
-	//	*katdMessage_SubmitTransactionRequest
-	//	*katdMessage_SubmitTransactionResponse
-	//	*katdMessage_NotifyVirtualSelectedParentChainChangedRequest
-	//	*katdMessage_NotifyVirtualSelectedParentChainChangedResponse
-	//	*katdMessage_VirtualSelectedParentChainChangedNotification
-	//	*katdMessage_GetBlockRequest
-	//	*katdMessage_GetBlockResponse
-	//	*katdMessage_GetSubnetworkRequest
-	//	*katdMessage_GetSubnetworkResponse
-	//	*katdMessage_GetVirtualSelectedParentChainFromBlockRequest
-	//	*katdMessage_GetVirtualSelectedParentChainFromBlockResponse
-	//	*katdMessage_GetBlocksRequest
-	//	*katdMessage_GetBlocksResponse
-	//	*katdMessage_GetBlockCountRequest
-	//	*katdMessage_GetBlockCountResponse
-	//	*katdMessage_GetBlockDagInfoRequest
-	//	*katdMessage_GetBlockDagInfoResponse
-	//	*katdMessage_ResolveFinalityConflictRequest
-	//	*katdMessage_ResolveFinalityConflictResponse
-	//	*katdMessage_NotifyFinalityConflictsRequest
-	//	*katdMessage_NotifyFinalityConflictsResponse
-	//	*katdMessage_FinalityConflictNotification
-	//	*katdMessage_FinalityConflictResolvedNotification
-	//	*katdMessage_GetMempoolEntriesRequest
-	//	*katdMessage_GetMempoolEntriesResponse
-	//	*katdMessage_ShutDownRequest
-	//	*katdMessage_ShutDownResponse
-	//	*katdMessage_GetHeadersRequest
-	//	*katdMessage_GetHeadersResponse
-	//	*katdMessage_NotifyUtxosChangedRequest
-	//	*katdMessage_NotifyUtxosChangedResponse
-	//	*katdMessage_UtxosChangedNotification
-	//	*katdMessage_GetUtxosByAddressesRequest
-	//	*katdMessage_GetUtxosByAddressesResponse
-	//	*katdMessage_GetVirtualSelectedParentBlueScoreRequest
-	//	*katdMessage_GetVirtualSelectedParentBlueScoreResponse
-	//	*katdMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest
-	//	*katdMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse
-	//	*katdMessage_VirtualSelectedParentBlueScoreChangedNotification
-	//	*katdMessage_BanRequest
-	//	*katdMessage_BanResponse
-	//	*katdMessage_UnbanRequest
-	//	*katdMessage_UnbanResponse
-	//	*katdMessage_GetInfoRequest
-	//	*katdMessage_GetInfoResponse
-	//	*katdMessage_StopNotifyingUtxosChangedRequest
-	//	*katdMessage_StopNotifyingUtxosChangedResponse
-	//	*katdMessage_NotifyPruningPointUTXOSetOverrideRequest
-	//	*katdMessage_NotifyPruningPointUTXOSetOverrideResponse
-	//	*katdMessage_PruningPointUTXOSetOverrideNotification
-	//	*katdMessage_StopNotifyingPruningPointUTXOSetOverrideRequest
-	//	*katdMessage_StopNotifyingPruningPointUTXOSetOverrideResponse
-	//	*katdMessage_EstimateNetworkHashesPerSecondRequest
-	//	*katdMessage_EstimateNetworkHashesPerSecondResponse
-	//	*katdMessage_NotifyVirtualDaaScoreChangedRequest
-	//	*katdMessage_NotifyVirtualDaaScoreChangedResponse
-	//	*katdMessage_VirtualDaaScoreChangedNotification
-	//	*katdMessage_GetBalanceByAddressRequest
-	//	*katdMessage_GetBalanceByAddressResponse
-	//	*katdMessage_GetBalancesByAddressesRequest
-	//	*katdMessage_GetBalancesByAddressesResponse
-	//	*katdMessage_NotifyNewBlockTemplateRequest
-	//	*katdMessage_NotifyNewBlockTemplateResponse
-	//	*katdMessage_NewBlockTemplateNotification
-	//	*katdMessage_GetMempoolEntriesByAddressesRequest
-	//	*katdMessage_GetMempoolEntriesByAddressesResponse
-	//	*katdMessage_GetCoinSupplyRequest
-	//	*katdMessage_GetCoinSupplyResponse
-	Payload iskatdMessage_Payload `protobuf_oneof:"payload"`
+	//	*KatdMessage_Addresses
+	//	*KatdMessage_Block
+	//	*KatdMessage_Transaction
+	//	*KatdMessage_BlockLocator
+	//	*KatdMessage_RequestAddresses
+	//	*KatdMessage_RequestRelayBlocks
+	//	*KatdMessage_RequestTransactions
+	//	*KatdMessage_IbdBlock
+	//	*KatdMessage_InvRelayBlock
+	//	*KatdMessage_InvTransactions
+	//	*KatdMessage_Ping
+	//	*KatdMessage_Pong
+	//	*KatdMessage_Verack
+	//	*KatdMessage_Version
+	//	*KatdMessage_TransactionNotFound
+	//	*KatdMessage_Reject
+	//	*KatdMessage_PruningPointUtxoSetChunk
+	//	*KatdMessage_RequestIBDBlocks
+	//	*KatdMessage_UnexpectedPruningPoint
+	//	*KatdMessage_IbdBlockLocator
+	//	*KatdMessage_IbdBlockLocatorHighestHash
+	//	*KatdMessage_RequestNextPruningPointUtxoSetChunk
+	//	*KatdMessage_DonePruningPointUtxoSetChunks
+	//	*KatdMessage_IbdBlockLocatorHighestHashNotFound
+	//	*KatdMessage_BlockWithTrustedData
+	//	*KatdMessage_DoneBlocksWithTrustedData
+	//	*KatdMessage_RequestPruningPointAndItsAnticone
+	//	*KatdMessage_BlockHeaders
+	//	*KatdMessage_RequestNextHeaders
+	//	*KatdMessage_DoneHeaders
+	//	*KatdMessage_RequestPruningPointUTXOSet
+	//	*KatdMessage_RequestHeaders
+	//	*KatdMessage_RequestBlockLocator
+	//	*KatdMessage_PruningPoints
+	//	*KatdMessage_RequestPruningPointProof
+	//	*KatdMessage_PruningPointProof
+	//	*KatdMessage_Ready
+	//	*KatdMessage_BlockWithTrustedDataV4
+	//	*KatdMessage_TrustedData
+	//	*KatdMessage_RequestIBDChainBlockLocator
+	//	*KatdMessage_IbdChainBlockLocator
+	//	*KatdMessage_RequestAnticone
+	//	*KatdMessage_RequestNextPruningPointAndItsAnticoneBlocks
+	//	*KatdMessage_GetCurrentNetworkRequest
+	//	*KatdMessage_GetCurrentNetworkResponse
+	//	*KatdMessage_SubmitBlockRequest
+	//	*KatdMessage_SubmitBlockResponse
+	//	*KatdMessage_GetBlockTemplateRequest
+	//	*KatdMessage_GetBlockTemplateResponse
+	//	*KatdMessage_NotifyBlockAddedRequest
+	//	*KatdMessage_NotifyBlockAddedResponse
+	//	*KatdMessage_BlockAddedNotification
+	//	*KatdMessage_GetPeerAddressesRequest
+	//	*KatdMessage_GetPeerAddressesResponse
+	//	*KatdMessage_GetSelectedTipHashRequest
+	//	*KatdMessage_GetSelectedTipHashResponse
+	//	*KatdMessage_GetMempoolEntryRequest
+	//	*KatdMessage_GetMempoolEntryResponse
+	//	*KatdMessage_GetConnectedPeerInfoRequest
+	//	*KatdMessage_GetConnectedPeerInfoResponse
+	//	*KatdMessage_AddPeerRequest
+	//	*KatdMessage_AddPeerResponse
+	//	*KatdMessage_SubmitTransactionRequest
+	//	*KatdMessage_SubmitTransactionResponse
+	//	*KatdMessage_NotifyVirtualSelectedParentChainChangedRequest
+	//	*KatdMessage_NotifyVirtualSelectedParentChainChangedResponse
+	//	*KatdMessage_VirtualSelectedParentChainChangedNotification
+	//	*KatdMessage_GetBlockRequest
+	//	*KatdMessage_GetBlockResponse
+	//	*KatdMessage_GetSubnetworkRequest
+	//	*KatdMessage_GetSubnetworkResponse
+	//	*KatdMessage_GetVirtualSelectedParentChainFromBlockRequest
+	//	*KatdMessage_GetVirtualSelectedParentChainFromBlockResponse
+	//	*KatdMessage_GetBlocksRequest
+	//	*KatdMessage_GetBlocksResponse
+	//	*KatdMessage_GetBlockCountRequest
+	//	*KatdMessage_GetBlockCountResponse
+	//	*KatdMessage_GetBlockDagInfoRequest
+	//	*KatdMessage_GetBlockDagInfoResponse
+	//	*KatdMessage_ResolveFinalityConflictRequest
+	//	*KatdMessage_ResolveFinalityConflictResponse
+	//	*KatdMessage_NotifyFinalityConflictsRequest
+	//	*KatdMessage_NotifyFinalityConflictsResponse
+	//	*KatdMessage_FinalityConflictNotification
+	//	*KatdMessage_FinalityConflictResolvedNotification
+	//	*KatdMessage_GetMempoolEntriesRequest
+	//	*KatdMessage_GetMempoolEntriesResponse
+	//	*KatdMessage_ShutDownRequest
+	//	*KatdMessage_ShutDownResponse
+	//	*KatdMessage_GetHeadersRequest
+	//	*KatdMessage_GetHeadersResponse
+	//	*KatdMessage_NotifyUtxosChangedRequest
+	//	*KatdMessage_NotifyUtxosChangedResponse
+	//	*KatdMessage_UtxosChangedNotification
+	//	*KatdMessage_GetUtxosByAddressesRequest
+	//	*KatdMessage_GetUtxosByAddressesResponse
+	//	*KatdMessage_GetVirtualSelectedParentBlueScoreRequest
+	//	*KatdMessage_GetVirtualSelectedParentBlueScoreResponse
+	//	*KatdMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest
+	//	*KatdMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse
+	//	*KatdMessage_VirtualSelectedParentBlueScoreChangedNotification
+	//	*KatdMessage_BanRequest
+	//	*KatdMessage_BanResponse
+	//	*KatdMessage_UnbanRequest
+	//	*KatdMessage_UnbanResponse
+	//	*KatdMessage_GetInfoRequest
+	//	*KatdMessage_GetInfoResponse
+	//	*KatdMessage_StopNotifyingUtxosChangedRequest
+	//	*KatdMessage_StopNotifyingUtxosChangedResponse
+	//	*KatdMessage_NotifyPruningPointUTXOSetOverrideRequest
+	//	*KatdMessage_NotifyPruningPointUTXOSetOverrideResponse
+	//	*KatdMessage_PruningPointUTXOSetOverrideNotification
+	//	*KatdMessage_StopNotifyingPruningPointUTXOSetOverrideRequest
+	//	*KatdMessage_StopNotifyingPruningPointUTXOSetOverrideResponse
+	//	*KatdMessage_EstimateNetworkHashesPerSecondRequest
+	//	*KatdMessage_EstimateNetworkHashesPerSecondResponse
+	//	*KatdMessage_NotifyVirtualDaaScoreChangedRequest
+	//	*KatdMessage_NotifyVirtualDaaScoreChangedResponse
+	//	*KatdMessage_VirtualDaaScoreChangedNotification
+	//	*KatdMessage_GetBalanceByAddressRequest
+	//	*KatdMessage_GetBalanceByAddressResponse
+	//	*KatdMessage_GetBalancesByAddressesRequest
+	//	*KatdMessage_GetBalancesByAddressesResponse
+	//	*KatdMessage_NotifyNewBlockTemplateRequest
+	//	*KatdMessage_NotifyNewBlockTemplateResponse
+	//	*KatdMessage_NewBlockTemplateNotification
+	//	*KatdMessage_GetMempoolEntriesByAddressesRequest
+	//	*KatdMessage_GetMempoolEntriesByAddressesResponse
+	//	*KatdMessage_GetCoinSupplyRequest
+	//	*KatdMessage_GetCoinSupplyResponse
+	Payload isKatdMessage_Payload `protobuf_oneof:"payload"`
 }
 
-func (x *katdMessage) Reset() {
-	*x = katdMessage{}
+func (x *KatdMessage) Reset() {
+	*x = KatdMessage{}
 	if protoimpl.UnsafeEnabled {
 		mi := &file_messages_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -168,13 +168,13 @@ func (x *katdMessage) Reset() {
 	}
 }
 
-func (x *katdMessage) String() string {
+func (x *KatdMessage) String() string {
 	return protoimpl.X.MessageStringOf(x)
 }
 
-func (*katdMessage) ProtoMessage() {}
+func (*KatdMessage) ProtoMessage() {}
 
-func (x *katdMessage) ProtoReflect() protoreflect.Message {
+func (x *KatdMessage) ProtoReflect() protoreflect.Message {
 	mi := &file_messages_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
@@ -186,1711 +186,1711 @@ func (x *katdMessage) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-// Deprecated: Use katdMessage.ProtoReflect.Descriptor instead.
-func (*katdMessage) Descriptor() ([]byte, []int) {
+// Deprecated: Use KatdMessage.ProtoReflect.Descriptor instead.
+func (*KatdMessage) Descriptor() ([]byte, []int) {
 	return file_messages_proto_rawDescGZIP(), []int{0}
 }
 
-func (m *katdMessage) GetPayload() iskatdMessage_Payload {
+func (m *KatdMessage) GetPayload() isKatdMessage_Payload {
 	if m != nil {
 		return m.Payload
 	}
 	return nil
 }
 
-func (x *katdMessage) GetAddresses() *AddressesMessage {
-	if x, ok := x.GetPayload().(*katdMessage_Addresses); ok {
+func (x *KatdMessage) GetAddresses() *AddressesMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_Addresses); ok {
 		return x.Addresses
 	}
 	return nil
 }
 
-func (x *katdMessage) GetBlock() *BlockMessage {
-	if x, ok := x.GetPayload().(*katdMessage_Block); ok {
+func (x *KatdMessage) GetBlock() *BlockMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_Block); ok {
 		return x.Block
 	}
 	return nil
 }
 
-func (x *katdMessage) GetTransaction() *TransactionMessage {
-	if x, ok := x.GetPayload().(*katdMessage_Transaction); ok {
+func (x *KatdMessage) GetTransaction() *TransactionMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_Transaction); ok {
 		return x.Transaction
 	}
 	return nil
 }
 
-func (x *katdMessage) GetBlockLocator() *BlockLocatorMessage {
-	if x, ok := x.GetPayload().(*katdMessage_BlockLocator); ok {
+func (x *KatdMessage) GetBlockLocator() *BlockLocatorMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_BlockLocator); ok {
 		return x.BlockLocator
 	}
 	return nil
 }
 
-func (x *katdMessage) GetRequestAddresses() *RequestAddressesMessage {
-	if x, ok := x.GetPayload().(*katdMessage_RequestAddresses); ok {
+func (x *KatdMessage) GetRequestAddresses() *RequestAddressesMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_RequestAddresses); ok {
 		return x.RequestAddresses
 	}
 	return nil
 }
 
-func (x *katdMessage) GetRequestRelayBlocks() *RequestRelayBlocksMessage {
-	if x, ok := x.GetPayload().(*katdMessage_RequestRelayBlocks); ok {
+func (x *KatdMessage) GetRequestRelayBlocks() *RequestRelayBlocksMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_RequestRelayBlocks); ok {
 		return x.RequestRelayBlocks
 	}
 	return nil
 }
 
-func (x *katdMessage) GetRequestTransactions() *RequestTransactionsMessage {
-	if x, ok := x.GetPayload().(*katdMessage_RequestTransactions); ok {
+func (x *KatdMessage) GetRequestTransactions() *RequestTransactionsMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_RequestTransactions); ok {
 		return x.RequestTransactions
 	}
 	return nil
 }
 
-func (x *katdMessage) GetIbdBlock() *BlockMessage {
-	if x, ok := x.GetPayload().(*katdMessage_IbdBlock); ok {
+func (x *KatdMessage) GetIbdBlock() *BlockMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_IbdBlock); ok {
 		return x.IbdBlock
 	}
 	return nil
 }
 
-func (x *katdMessage) GetInvRelayBlock() *InvRelayBlockMessage {
-	if x, ok := x.GetPayload().(*katdMessage_InvRelayBlock); ok {
+func (x *KatdMessage) GetInvRelayBlock() *InvRelayBlockMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_InvRelayBlock); ok {
 		return x.InvRelayBlock
 	}
 	return nil
 }
 
-func (x *katdMessage) GetInvTransactions() *InvTransactionsMessage {
-	if x, ok := x.GetPayload().(*katdMessage_InvTransactions); ok {
+func (x *KatdMessage) GetInvTransactions() *InvTransactionsMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_InvTransactions); ok {
 		return x.InvTransactions
 	}
 	return nil
 }
 
-func (x *katdMessage) GetPing() *PingMessage {
-	if x, ok := x.GetPayload().(*katdMessage_Ping); ok {
+func (x *KatdMessage) GetPing() *PingMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_Ping); ok {
 		return x.Ping
 	}
 	return nil
 }
 
-func (x *katdMessage) GetPong() *PongMessage {
-	if x, ok := x.GetPayload().(*katdMessage_Pong); ok {
+func (x *KatdMessage) GetPong() *PongMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_Pong); ok {
 		return x.Pong
 	}
 	return nil
 }
 
-func (x *katdMessage) GetVerack() *VerackMessage {
-	if x, ok := x.GetPayload().(*katdMessage_Verack); ok {
+func (x *KatdMessage) GetVerack() *VerackMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_Verack); ok {
 		return x.Verack
 	}
 	return nil
 }
 
-func (x *katdMessage) GetVersion() *VersionMessage {
-	if x, ok := x.GetPayload().(*katdMessage_Version); ok {
+func (x *KatdMessage) GetVersion() *VersionMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_Version); ok {
 		return x.Version
 	}
 	return nil
 }
 
-func (x *katdMessage) GetTransactionNotFound() *TransactionNotFoundMessage {
-	if x, ok := x.GetPayload().(*katdMessage_TransactionNotFound); ok {
+func (x *KatdMessage) GetTransactionNotFound() *TransactionNotFoundMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_TransactionNotFound); ok {
 		return x.TransactionNotFound
 	}
 	return nil
 }
 
-func (x *katdMessage) GetReject() *RejectMessage {
-	if x, ok := x.GetPayload().(*katdMessage_Reject); ok {
+func (x *KatdMessage) GetReject() *RejectMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_Reject); ok {
 		return x.Reject
 	}
 	return nil
 }
 
-func (x *katdMessage) GetPruningPointUtxoSetChunk() *PruningPointUtxoSetChunkMessage {
-	if x, ok := x.GetPayload().(*katdMessage_PruningPointUtxoSetChunk); ok {
+func (x *KatdMessage) GetPruningPointUtxoSetChunk() *PruningPointUtxoSetChunkMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_PruningPointUtxoSetChunk); ok {
 		return x.PruningPointUtxoSetChunk
 	}
 	return nil
 }
 
-func (x *katdMessage) GetRequestIBDBlocks() *RequestIBDBlocksMessage {
-	if x, ok := x.GetPayload().(*katdMessage_RequestIBDBlocks); ok {
+func (x *KatdMessage) GetRequestIBDBlocks() *RequestIBDBlocksMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_RequestIBDBlocks); ok {
 		return x.RequestIBDBlocks
 	}
 	return nil
 }
 
-func (x *katdMessage) GetUnexpectedPruningPoint() *UnexpectedPruningPointMessage {
-	if x, ok := x.GetPayload().(*katdMessage_UnexpectedPruningPoint); ok {
+func (x *KatdMessage) GetUnexpectedPruningPoint() *UnexpectedPruningPointMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_UnexpectedPruningPoint); ok {
 		return x.UnexpectedPruningPoint
 	}
 	return nil
 }
 
-func (x *katdMessage) GetIbdBlockLocator() *IbdBlockLocatorMessage {
-	if x, ok := x.GetPayload().(*katdMessage_IbdBlockLocator); ok {
+func (x *KatdMessage) GetIbdBlockLocator() *IbdBlockLocatorMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_IbdBlockLocator); ok {
 		return x.IbdBlockLocator
 	}
 	return nil
 }
 
-func (x *katdMessage) GetIbdBlockLocatorHighestHash() *IbdBlockLocatorHighestHashMessage {
-	if x, ok := x.GetPayload().(*katdMessage_IbdBlockLocatorHighestHash); ok {
+func (x *KatdMessage) GetIbdBlockLocatorHighestHash() *IbdBlockLocatorHighestHashMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_IbdBlockLocatorHighestHash); ok {
 		return x.IbdBlockLocatorHighestHash
 	}
 	return nil
 }
 
-func (x *katdMessage) GetRequestNextPruningPointUtxoSetChunk() *RequestNextPruningPointUtxoSetChunkMessage {
-	if x, ok := x.GetPayload().(*katdMessage_RequestNextPruningPointUtxoSetChunk); ok {
+func (x *KatdMessage) GetRequestNextPruningPointUtxoSetChunk() *RequestNextPruningPointUtxoSetChunkMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_RequestNextPruningPointUtxoSetChunk); ok {
 		return x.RequestNextPruningPointUtxoSetChunk
 	}
 	return nil
 }
 
-func (x *katdMessage) GetDonePruningPointUtxoSetChunks() *DonePruningPointUtxoSetChunksMessage {
-	if x, ok := x.GetPayload().(*katdMessage_DonePruningPointUtxoSetChunks); ok {
+func (x *KatdMessage) GetDonePruningPointUtxoSetChunks() *DonePruningPointUtxoSetChunksMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_DonePruningPointUtxoSetChunks); ok {
 		return x.DonePruningPointUtxoSetChunks
 	}
 	return nil
 }
 
-func (x *katdMessage) GetIbdBlockLocatorHighestHashNotFound() *IbdBlockLocatorHighestHashNotFoundMessage {
-	if x, ok := x.GetPayload().(*katdMessage_IbdBlockLocatorHighestHashNotFound); ok {
+func (x *KatdMessage) GetIbdBlockLocatorHighestHashNotFound() *IbdBlockLocatorHighestHashNotFoundMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_IbdBlockLocatorHighestHashNotFound); ok {
 		return x.IbdBlockLocatorHighestHashNotFound
 	}
 	return nil
 }
 
-func (x *katdMessage) GetBlockWithTrustedData() *BlockWithTrustedDataMessage {
-	if x, ok := x.GetPayload().(*katdMessage_BlockWithTrustedData); ok {
+func (x *KatdMessage) GetBlockWithTrustedData() *BlockWithTrustedDataMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_BlockWithTrustedData); ok {
 		return x.BlockWithTrustedData
 	}
 	return nil
 }
 
-func (x *katdMessage) GetDoneBlocksWithTrustedData() *DoneBlocksWithTrustedDataMessage {
-	if x, ok := x.GetPayload().(*katdMessage_DoneBlocksWithTrustedData); ok {
+func (x *KatdMessage) GetDoneBlocksWithTrustedData() *DoneBlocksWithTrustedDataMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_DoneBlocksWithTrustedData); ok {
 		return x.DoneBlocksWithTrustedData
 	}
 	return nil
 }
 
-func (x *katdMessage) GetRequestPruningPointAndItsAnticone() *RequestPruningPointAndItsAnticoneMessage {
-	if x, ok := x.GetPayload().(*katdMessage_RequestPruningPointAndItsAnticone); ok {
+func (x *KatdMessage) GetRequestPruningPointAndItsAnticone() *RequestPruningPointAndItsAnticoneMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_RequestPruningPointAndItsAnticone); ok {
 		return x.RequestPruningPointAndItsAnticone
 	}
 	return nil
 }
 
-func (x *katdMessage) GetBlockHeaders() *BlockHeadersMessage {
-	if x, ok := x.GetPayload().(*katdMessage_BlockHeaders); ok {
+func (x *KatdMessage) GetBlockHeaders() *BlockHeadersMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_BlockHeaders); ok {
 		return x.BlockHeaders
 	}
 	return nil
 }
 
-func (x *katdMessage) GetRequestNextHeaders() *RequestNextHeadersMessage {
-	if x, ok := x.GetPayload().(*katdMessage_RequestNextHeaders); ok {
+func (x *KatdMessage) GetRequestNextHeaders() *RequestNextHeadersMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_RequestNextHeaders); ok {
 		return x.RequestNextHeaders
 	}
 	return nil
 }
 
-func (x *katdMessage) GetDoneHeaders() *DoneHeadersMessage {
-	if x, ok := x.GetPayload().(*katdMessage_DoneHeaders); ok {
+func (x *KatdMessage) GetDoneHeaders() *DoneHeadersMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_DoneHeaders); ok {
 		return x.DoneHeaders
 	}
 	return nil
 }
 
-func (x *katdMessage) GetRequestPruningPointUTXOSet() *RequestPruningPointUTXOSetMessage {
-	if x, ok := x.GetPayload().(*katdMessage_RequestPruningPointUTXOSet); ok {
+func (x *KatdMessage) GetRequestPruningPointUTXOSet() *RequestPruningPointUTXOSetMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_RequestPruningPointUTXOSet); ok {
 		return x.RequestPruningPointUTXOSet
 	}
 	return nil
 }
 
-func (x *katdMessage) GetRequestHeaders() *RequestHeadersMessage {
-	if x, ok := x.GetPayload().(*katdMessage_RequestHeaders); ok {
+func (x *KatdMessage) GetRequestHeaders() *RequestHeadersMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_RequestHeaders); ok {
 		return x.RequestHeaders
 	}
 	return nil
 }
 
-func (x *katdMessage) GetRequestBlockLocator() *RequestBlockLocatorMessage {
-	if x, ok := x.GetPayload().(*katdMessage_RequestBlockLocator); ok {
+func (x *KatdMessage) GetRequestBlockLocator() *RequestBlockLocatorMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_RequestBlockLocator); ok {
 		return x.RequestBlockLocator
 	}
 	return nil
 }
 
-func (x *katdMessage) GetPruningPoints() *PruningPointsMessage {
-	if x, ok := x.GetPayload().(*katdMessage_PruningPoints); ok {
+func (x *KatdMessage) GetPruningPoints() *PruningPointsMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_PruningPoints); ok {
 		return x.PruningPoints
 	}
 	return nil
 }
 
-func (x *katdMessage) GetRequestPruningPointProof() *RequestPruningPointProofMessage {
-	if x, ok := x.GetPayload().(*katdMessage_RequestPruningPointProof); ok {
+func (x *KatdMessage) GetRequestPruningPointProof() *RequestPruningPointProofMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_RequestPruningPointProof); ok {
 		return x.RequestPruningPointProof
 	}
 	return nil
 }
 
-func (x *katdMessage) GetPruningPointProof() *PruningPointProofMessage {
-	if x, ok := x.GetPayload().(*katdMessage_PruningPointProof); ok {
+func (x *KatdMessage) GetPruningPointProof() *PruningPointProofMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_PruningPointProof); ok {
 		return x.PruningPointProof
 	}
 	return nil
 }
 
-func (x *katdMessage) GetReady() *ReadyMessage {
-	if x, ok := x.GetPayload().(*katdMessage_Ready); ok {
+func (x *KatdMessage) GetReady() *ReadyMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_Ready); ok {
 		return x.Ready
 	}
 	return nil
 }
 
-func (x *katdMessage) GetBlockWithTrustedDataV4() *BlockWithTrustedDataV4Message {
-	if x, ok := x.GetPayload().(*katdMessage_BlockWithTrustedDataV4); ok {
+func (x *KatdMessage) GetBlockWithTrustedDataV4() *BlockWithTrustedDataV4Message {
+	if x, ok := x.GetPayload().(*KatdMessage_BlockWithTrustedDataV4); ok {
 		return x.BlockWithTrustedDataV4
 	}
 	return nil
 }
 
-func (x *katdMessage) GetTrustedData() *TrustedDataMessage {
-	if x, ok := x.GetPayload().(*katdMessage_TrustedData); ok {
+func (x *KatdMessage) GetTrustedData() *TrustedDataMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_TrustedData); ok {
 		return x.TrustedData
 	}
 	return nil
 }
 
-func (x *katdMessage) GetRequestIBDChainBlockLocator() *RequestIBDChainBlockLocatorMessage {
-	if x, ok := x.GetPayload().(*katdMessage_RequestIBDChainBlockLocator); ok {
+func (x *KatdMessage) GetRequestIBDChainBlockLocator() *RequestIBDChainBlockLocatorMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_RequestIBDChainBlockLocator); ok {
 		return x.RequestIBDChainBlockLocator
 	}
 	return nil
 }
 
-func (x *katdMessage) GetIbdChainBlockLocator() *IbdChainBlockLocatorMessage {
-	if x, ok := x.GetPayload().(*katdMessage_IbdChainBlockLocator); ok {
+func (x *KatdMessage) GetIbdChainBlockLocator() *IbdChainBlockLocatorMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_IbdChainBlockLocator); ok {
 		return x.IbdChainBlockLocator
 	}
 	return nil
 }
 
-func (x *katdMessage) GetRequestAnticone() *RequestAnticoneMessage {
-	if x, ok := x.GetPayload().(*katdMessage_RequestAnticone); ok {
+func (x *KatdMessage) GetRequestAnticone() *RequestAnticoneMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_RequestAnticone); ok {
 		return x.RequestAnticone
 	}
 	return nil
 }
 
-func (x *katdMessage) GetRequestNextPruningPointAndItsAnticoneBlocks() *RequestNextPruningPointAndItsAnticoneBlocksMessage {
-	if x, ok := x.GetPayload().(*katdMessage_RequestNextPruningPointAndItsAnticoneBlocks); ok {
+func (x *KatdMessage) GetRequestNextPruningPointAndItsAnticoneBlocks() *RequestNextPruningPointAndItsAnticoneBlocksMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_RequestNextPruningPointAndItsAnticoneBlocks); ok {
 		return x.RequestNextPruningPointAndItsAnticoneBlocks
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetCurrentNetworkRequest() *GetCurrentNetworkRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetCurrentNetworkRequest); ok {
+func (x *KatdMessage) GetGetCurrentNetworkRequest() *GetCurrentNetworkRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetCurrentNetworkRequest); ok {
 		return x.GetCurrentNetworkRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetCurrentNetworkResponse() *GetCurrentNetworkResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetCurrentNetworkResponse); ok {
+func (x *KatdMessage) GetGetCurrentNetworkResponse() *GetCurrentNetworkResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetCurrentNetworkResponse); ok {
 		return x.GetCurrentNetworkResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetSubmitBlockRequest() *SubmitBlockRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_SubmitBlockRequest); ok {
+func (x *KatdMessage) GetSubmitBlockRequest() *SubmitBlockRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_SubmitBlockRequest); ok {
 		return x.SubmitBlockRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetSubmitBlockResponse() *SubmitBlockResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_SubmitBlockResponse); ok {
+func (x *KatdMessage) GetSubmitBlockResponse() *SubmitBlockResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_SubmitBlockResponse); ok {
 		return x.SubmitBlockResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetBlockTemplateRequest() *GetBlockTemplateRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetBlockTemplateRequest); ok {
+func (x *KatdMessage) GetGetBlockTemplateRequest() *GetBlockTemplateRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetBlockTemplateRequest); ok {
 		return x.GetBlockTemplateRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetBlockTemplateResponse() *GetBlockTemplateResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetBlockTemplateResponse); ok {
+func (x *KatdMessage) GetGetBlockTemplateResponse() *GetBlockTemplateResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetBlockTemplateResponse); ok {
 		return x.GetBlockTemplateResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetNotifyBlockAddedRequest() *NotifyBlockAddedRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_NotifyBlockAddedRequest); ok {
+func (x *KatdMessage) GetNotifyBlockAddedRequest() *NotifyBlockAddedRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_NotifyBlockAddedRequest); ok {
 		return x.NotifyBlockAddedRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetNotifyBlockAddedResponse() *NotifyBlockAddedResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_NotifyBlockAddedResponse); ok {
+func (x *KatdMessage) GetNotifyBlockAddedResponse() *NotifyBlockAddedResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_NotifyBlockAddedResponse); ok {
 		return x.NotifyBlockAddedResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetBlockAddedNotification() *BlockAddedNotificationMessage {
-	if x, ok := x.GetPayload().(*katdMessage_BlockAddedNotification); ok {
+func (x *KatdMessage) GetBlockAddedNotification() *BlockAddedNotificationMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_BlockAddedNotification); ok {
 		return x.BlockAddedNotification
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetPeerAddressesRequest() *GetPeerAddressesRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetPeerAddressesRequest); ok {
+func (x *KatdMessage) GetGetPeerAddressesRequest() *GetPeerAddressesRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetPeerAddressesRequest); ok {
 		return x.GetPeerAddressesRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetPeerAddressesResponse() *GetPeerAddressesResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetPeerAddressesResponse); ok {
+func (x *KatdMessage) GetGetPeerAddressesResponse() *GetPeerAddressesResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetPeerAddressesResponse); ok {
 		return x.GetPeerAddressesResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetSelectedTipHashRequest() *GetSelectedTipHashRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetSelectedTipHashRequest); ok {
+func (x *KatdMessage) GetGetSelectedTipHashRequest() *GetSelectedTipHashRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetSelectedTipHashRequest); ok {
 		return x.GetSelectedTipHashRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetSelectedTipHashResponse() *GetSelectedTipHashResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetSelectedTipHashResponse); ok {
+func (x *KatdMessage) GetGetSelectedTipHashResponse() *GetSelectedTipHashResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetSelectedTipHashResponse); ok {
 		return x.GetSelectedTipHashResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetMempoolEntryRequest() *GetMempoolEntryRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetMempoolEntryRequest); ok {
+func (x *KatdMessage) GetGetMempoolEntryRequest() *GetMempoolEntryRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetMempoolEntryRequest); ok {
 		return x.GetMempoolEntryRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetMempoolEntryResponse() *GetMempoolEntryResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetMempoolEntryResponse); ok {
+func (x *KatdMessage) GetGetMempoolEntryResponse() *GetMempoolEntryResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetMempoolEntryResponse); ok {
 		return x.GetMempoolEntryResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetConnectedPeerInfoRequest() *GetConnectedPeerInfoRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetConnectedPeerInfoRequest); ok {
+func (x *KatdMessage) GetGetConnectedPeerInfoRequest() *GetConnectedPeerInfoRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetConnectedPeerInfoRequest); ok {
 		return x.GetConnectedPeerInfoRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetConnectedPeerInfoResponse() *GetConnectedPeerInfoResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetConnectedPeerInfoResponse); ok {
+func (x *KatdMessage) GetGetConnectedPeerInfoResponse() *GetConnectedPeerInfoResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetConnectedPeerInfoResponse); ok {
 		return x.GetConnectedPeerInfoResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetAddPeerRequest() *AddPeerRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_AddPeerRequest); ok {
+func (x *KatdMessage) GetAddPeerRequest() *AddPeerRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_AddPeerRequest); ok {
 		return x.AddPeerRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetAddPeerResponse() *AddPeerResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_AddPeerResponse); ok {
+func (x *KatdMessage) GetAddPeerResponse() *AddPeerResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_AddPeerResponse); ok {
 		return x.AddPeerResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetSubmitTransactionRequest() *SubmitTransactionRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_SubmitTransactionRequest); ok {
+func (x *KatdMessage) GetSubmitTransactionRequest() *SubmitTransactionRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_SubmitTransactionRequest); ok {
 		return x.SubmitTransactionRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetSubmitTransactionResponse() *SubmitTransactionResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_SubmitTransactionResponse); ok {
+func (x *KatdMessage) GetSubmitTransactionResponse() *SubmitTransactionResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_SubmitTransactionResponse); ok {
 		return x.SubmitTransactionResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetNotifyVirtualSelectedParentChainChangedRequest() *NotifyVirtualSelectedParentChainChangedRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_NotifyVirtualSelectedParentChainChangedRequest); ok {
+func (x *KatdMessage) GetNotifyVirtualSelectedParentChainChangedRequest() *NotifyVirtualSelectedParentChainChangedRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_NotifyVirtualSelectedParentChainChangedRequest); ok {
 		return x.NotifyVirtualSelectedParentChainChangedRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetNotifyVirtualSelectedParentChainChangedResponse() *NotifyVirtualSelectedParentChainChangedResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_NotifyVirtualSelectedParentChainChangedResponse); ok {
+func (x *KatdMessage) GetNotifyVirtualSelectedParentChainChangedResponse() *NotifyVirtualSelectedParentChainChangedResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_NotifyVirtualSelectedParentChainChangedResponse); ok {
 		return x.NotifyVirtualSelectedParentChainChangedResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetVirtualSelectedParentChainChangedNotification() *VirtualSelectedParentChainChangedNotificationMessage {
-	if x, ok := x.GetPayload().(*katdMessage_VirtualSelectedParentChainChangedNotification); ok {
+func (x *KatdMessage) GetVirtualSelectedParentChainChangedNotification() *VirtualSelectedParentChainChangedNotificationMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_VirtualSelectedParentChainChangedNotification); ok {
 		return x.VirtualSelectedParentChainChangedNotification
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetBlockRequest() *GetBlockRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetBlockRequest); ok {
+func (x *KatdMessage) GetGetBlockRequest() *GetBlockRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetBlockRequest); ok {
 		return x.GetBlockRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetBlockResponse() *GetBlockResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetBlockResponse); ok {
+func (x *KatdMessage) GetGetBlockResponse() *GetBlockResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetBlockResponse); ok {
 		return x.GetBlockResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetSubnetworkRequest() *GetSubnetworkRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetSubnetworkRequest); ok {
+func (x *KatdMessage) GetGetSubnetworkRequest() *GetSubnetworkRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetSubnetworkRequest); ok {
 		return x.GetSubnetworkRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetSubnetworkResponse() *GetSubnetworkResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetSubnetworkResponse); ok {
+func (x *KatdMessage) GetGetSubnetworkResponse() *GetSubnetworkResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetSubnetworkResponse); ok {
 		return x.GetSubnetworkResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetVirtualSelectedParentChainFromBlockRequest() *GetVirtualSelectedParentChainFromBlockRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetVirtualSelectedParentChainFromBlockRequest); ok {
+func (x *KatdMessage) GetGetVirtualSelectedParentChainFromBlockRequest() *GetVirtualSelectedParentChainFromBlockRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetVirtualSelectedParentChainFromBlockRequest); ok {
 		return x.GetVirtualSelectedParentChainFromBlockRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetVirtualSelectedParentChainFromBlockResponse() *GetVirtualSelectedParentChainFromBlockResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetVirtualSelectedParentChainFromBlockResponse); ok {
+func (x *KatdMessage) GetGetVirtualSelectedParentChainFromBlockResponse() *GetVirtualSelectedParentChainFromBlockResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetVirtualSelectedParentChainFromBlockResponse); ok {
 		return x.GetVirtualSelectedParentChainFromBlockResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetBlocksRequest() *GetBlocksRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetBlocksRequest); ok {
+func (x *KatdMessage) GetGetBlocksRequest() *GetBlocksRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetBlocksRequest); ok {
 		return x.GetBlocksRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetBlocksResponse() *GetBlocksResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetBlocksResponse); ok {
+func (x *KatdMessage) GetGetBlocksResponse() *GetBlocksResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetBlocksResponse); ok {
 		return x.GetBlocksResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetBlockCountRequest() *GetBlockCountRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetBlockCountRequest); ok {
+func (x *KatdMessage) GetGetBlockCountRequest() *GetBlockCountRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetBlockCountRequest); ok {
 		return x.GetBlockCountRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetBlockCountResponse() *GetBlockCountResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetBlockCountResponse); ok {
+func (x *KatdMessage) GetGetBlockCountResponse() *GetBlockCountResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetBlockCountResponse); ok {
 		return x.GetBlockCountResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetBlockDagInfoRequest() *GetBlockDagInfoRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetBlockDagInfoRequest); ok {
+func (x *KatdMessage) GetGetBlockDagInfoRequest() *GetBlockDagInfoRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetBlockDagInfoRequest); ok {
 		return x.GetBlockDagInfoRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetBlockDagInfoResponse() *GetBlockDagInfoResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetBlockDagInfoResponse); ok {
+func (x *KatdMessage) GetGetBlockDagInfoResponse() *GetBlockDagInfoResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetBlockDagInfoResponse); ok {
 		return x.GetBlockDagInfoResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetResolveFinalityConflictRequest() *ResolveFinalityConflictRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_ResolveFinalityConflictRequest); ok {
+func (x *KatdMessage) GetResolveFinalityConflictRequest() *ResolveFinalityConflictRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_ResolveFinalityConflictRequest); ok {
 		return x.ResolveFinalityConflictRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetResolveFinalityConflictResponse() *ResolveFinalityConflictResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_ResolveFinalityConflictResponse); ok {
+func (x *KatdMessage) GetResolveFinalityConflictResponse() *ResolveFinalityConflictResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_ResolveFinalityConflictResponse); ok {
 		return x.ResolveFinalityConflictResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetNotifyFinalityConflictsRequest() *NotifyFinalityConflictsRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_NotifyFinalityConflictsRequest); ok {
+func (x *KatdMessage) GetNotifyFinalityConflictsRequest() *NotifyFinalityConflictsRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_NotifyFinalityConflictsRequest); ok {
 		return x.NotifyFinalityConflictsRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetNotifyFinalityConflictsResponse() *NotifyFinalityConflictsResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_NotifyFinalityConflictsResponse); ok {
+func (x *KatdMessage) GetNotifyFinalityConflictsResponse() *NotifyFinalityConflictsResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_NotifyFinalityConflictsResponse); ok {
 		return x.NotifyFinalityConflictsResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetFinalityConflictNotification() *FinalityConflictNotificationMessage {
-	if x, ok := x.GetPayload().(*katdMessage_FinalityConflictNotification); ok {
+func (x *KatdMessage) GetFinalityConflictNotification() *FinalityConflictNotificationMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_FinalityConflictNotification); ok {
 		return x.FinalityConflictNotification
 	}
 	return nil
 }
 
-func (x *katdMessage) GetFinalityConflictResolvedNotification() *FinalityConflictResolvedNotificationMessage {
-	if x, ok := x.GetPayload().(*katdMessage_FinalityConflictResolvedNotification); ok {
+func (x *KatdMessage) GetFinalityConflictResolvedNotification() *FinalityConflictResolvedNotificationMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_FinalityConflictResolvedNotification); ok {
 		return x.FinalityConflictResolvedNotification
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetMempoolEntriesRequest() *GetMempoolEntriesRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetMempoolEntriesRequest); ok {
+func (x *KatdMessage) GetGetMempoolEntriesRequest() *GetMempoolEntriesRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetMempoolEntriesRequest); ok {
 		return x.GetMempoolEntriesRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetMempoolEntriesResponse() *GetMempoolEntriesResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetMempoolEntriesResponse); ok {
+func (x *KatdMessage) GetGetMempoolEntriesResponse() *GetMempoolEntriesResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetMempoolEntriesResponse); ok {
 		return x.GetMempoolEntriesResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetShutDownRequest() *ShutDownRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_ShutDownRequest); ok {
+func (x *KatdMessage) GetShutDownRequest() *ShutDownRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_ShutDownRequest); ok {
 		return x.ShutDownRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetShutDownResponse() *ShutDownResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_ShutDownResponse); ok {
+func (x *KatdMessage) GetShutDownResponse() *ShutDownResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_ShutDownResponse); ok {
 		return x.ShutDownResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetHeadersRequest() *GetHeadersRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetHeadersRequest); ok {
+func (x *KatdMessage) GetGetHeadersRequest() *GetHeadersRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetHeadersRequest); ok {
 		return x.GetHeadersRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetHeadersResponse() *GetHeadersResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetHeadersResponse); ok {
+func (x *KatdMessage) GetGetHeadersResponse() *GetHeadersResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetHeadersResponse); ok {
 		return x.GetHeadersResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetNotifyUtxosChangedRequest() *NotifyUtxosChangedRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_NotifyUtxosChangedRequest); ok {
+func (x *KatdMessage) GetNotifyUtxosChangedRequest() *NotifyUtxosChangedRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_NotifyUtxosChangedRequest); ok {
 		return x.NotifyUtxosChangedRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetNotifyUtxosChangedResponse() *NotifyUtxosChangedResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_NotifyUtxosChangedResponse); ok {
+func (x *KatdMessage) GetNotifyUtxosChangedResponse() *NotifyUtxosChangedResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_NotifyUtxosChangedResponse); ok {
 		return x.NotifyUtxosChangedResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetUtxosChangedNotification() *UtxosChangedNotificationMessage {
-	if x, ok := x.GetPayload().(*katdMessage_UtxosChangedNotification); ok {
+func (x *KatdMessage) GetUtxosChangedNotification() *UtxosChangedNotificationMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_UtxosChangedNotification); ok {
 		return x.UtxosChangedNotification
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetUtxosByAddressesRequest() *GetUtxosByAddressesRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetUtxosByAddressesRequest); ok {
+func (x *KatdMessage) GetGetUtxosByAddressesRequest() *GetUtxosByAddressesRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetUtxosByAddressesRequest); ok {
 		return x.GetUtxosByAddressesRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetUtxosByAddressesResponse() *GetUtxosByAddressesResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetUtxosByAddressesResponse); ok {
+func (x *KatdMessage) GetGetUtxosByAddressesResponse() *GetUtxosByAddressesResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetUtxosByAddressesResponse); ok {
 		return x.GetUtxosByAddressesResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetVirtualSelectedParentBlueScoreRequest() *GetVirtualSelectedParentBlueScoreRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetVirtualSelectedParentBlueScoreRequest); ok {
+func (x *KatdMessage) GetGetVirtualSelectedParentBlueScoreRequest() *GetVirtualSelectedParentBlueScoreRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetVirtualSelectedParentBlueScoreRequest); ok {
 		return x.GetVirtualSelectedParentBlueScoreRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetVirtualSelectedParentBlueScoreResponse() *GetVirtualSelectedParentBlueScoreResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetVirtualSelectedParentBlueScoreResponse); ok {
+func (x *KatdMessage) GetGetVirtualSelectedParentBlueScoreResponse() *GetVirtualSelectedParentBlueScoreResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetVirtualSelectedParentBlueScoreResponse); ok {
 		return x.GetVirtualSelectedParentBlueScoreResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetNotifyVirtualSelectedParentBlueScoreChangedRequest() *NotifyVirtualSelectedParentBlueScoreChangedRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest); ok {
+func (x *KatdMessage) GetNotifyVirtualSelectedParentBlueScoreChangedRequest() *NotifyVirtualSelectedParentBlueScoreChangedRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest); ok {
 		return x.NotifyVirtualSelectedParentBlueScoreChangedRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetNotifyVirtualSelectedParentBlueScoreChangedResponse() *NotifyVirtualSelectedParentBlueScoreChangedResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse); ok {
+func (x *KatdMessage) GetNotifyVirtualSelectedParentBlueScoreChangedResponse() *NotifyVirtualSelectedParentBlueScoreChangedResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse); ok {
 		return x.NotifyVirtualSelectedParentBlueScoreChangedResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetVirtualSelectedParentBlueScoreChangedNotification() *VirtualSelectedParentBlueScoreChangedNotificationMessage {
-	if x, ok := x.GetPayload().(*katdMessage_VirtualSelectedParentBlueScoreChangedNotification); ok {
+func (x *KatdMessage) GetVirtualSelectedParentBlueScoreChangedNotification() *VirtualSelectedParentBlueScoreChangedNotificationMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_VirtualSelectedParentBlueScoreChangedNotification); ok {
 		return x.VirtualSelectedParentBlueScoreChangedNotification
 	}
 	return nil
 }
 
-func (x *katdMessage) GetBanRequest() *BanRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_BanRequest); ok {
+func (x *KatdMessage) GetBanRequest() *BanRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_BanRequest); ok {
 		return x.BanRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetBanResponse() *BanResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_BanResponse); ok {
+func (x *KatdMessage) GetBanResponse() *BanResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_BanResponse); ok {
 		return x.BanResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetUnbanRequest() *UnbanRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_UnbanRequest); ok {
+func (x *KatdMessage) GetUnbanRequest() *UnbanRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_UnbanRequest); ok {
 		return x.UnbanRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetUnbanResponse() *UnbanResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_UnbanResponse); ok {
+func (x *KatdMessage) GetUnbanResponse() *UnbanResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_UnbanResponse); ok {
 		return x.UnbanResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetInfoRequest() *GetInfoRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetInfoRequest); ok {
+func (x *KatdMessage) GetGetInfoRequest() *GetInfoRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetInfoRequest); ok {
 		return x.GetInfoRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetInfoResponse() *GetInfoResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetInfoResponse); ok {
+func (x *KatdMessage) GetGetInfoResponse() *GetInfoResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetInfoResponse); ok {
 		return x.GetInfoResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetStopNotifyingUtxosChangedRequest() *StopNotifyingUtxosChangedRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_StopNotifyingUtxosChangedRequest); ok {
+func (x *KatdMessage) GetStopNotifyingUtxosChangedRequest() *StopNotifyingUtxosChangedRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_StopNotifyingUtxosChangedRequest); ok {
 		return x.StopNotifyingUtxosChangedRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetStopNotifyingUtxosChangedResponse() *StopNotifyingUtxosChangedResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_StopNotifyingUtxosChangedResponse); ok {
+func (x *KatdMessage) GetStopNotifyingUtxosChangedResponse() *StopNotifyingUtxosChangedResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_StopNotifyingUtxosChangedResponse); ok {
 		return x.StopNotifyingUtxosChangedResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetNotifyPruningPointUTXOSetOverrideRequest() *NotifyPruningPointUTXOSetOverrideRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_NotifyPruningPointUTXOSetOverrideRequest); ok {
+func (x *KatdMessage) GetNotifyPruningPointUTXOSetOverrideRequest() *NotifyPruningPointUTXOSetOverrideRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_NotifyPruningPointUTXOSetOverrideRequest); ok {
 		return x.NotifyPruningPointUTXOSetOverrideRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetNotifyPruningPointUTXOSetOverrideResponse() *NotifyPruningPointUTXOSetOverrideResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_NotifyPruningPointUTXOSetOverrideResponse); ok {
+func (x *KatdMessage) GetNotifyPruningPointUTXOSetOverrideResponse() *NotifyPruningPointUTXOSetOverrideResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_NotifyPruningPointUTXOSetOverrideResponse); ok {
 		return x.NotifyPruningPointUTXOSetOverrideResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetPruningPointUTXOSetOverrideNotification() *PruningPointUTXOSetOverrideNotificationMessage {
-	if x, ok := x.GetPayload().(*katdMessage_PruningPointUTXOSetOverrideNotification); ok {
+func (x *KatdMessage) GetPruningPointUTXOSetOverrideNotification() *PruningPointUTXOSetOverrideNotificationMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_PruningPointUTXOSetOverrideNotification); ok {
 		return x.PruningPointUTXOSetOverrideNotification
 	}
 	return nil
 }
 
-func (x *katdMessage) GetStopNotifyingPruningPointUTXOSetOverrideRequest() *StopNotifyingPruningPointUTXOSetOverrideRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_StopNotifyingPruningPointUTXOSetOverrideRequest); ok {
+func (x *KatdMessage) GetStopNotifyingPruningPointUTXOSetOverrideRequest() *StopNotifyingPruningPointUTXOSetOverrideRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_StopNotifyingPruningPointUTXOSetOverrideRequest); ok {
 		return x.StopNotifyingPruningPointUTXOSetOverrideRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetStopNotifyingPruningPointUTXOSetOverrideResponse() *StopNotifyingPruningPointUTXOSetOverrideResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_StopNotifyingPruningPointUTXOSetOverrideResponse); ok {
+func (x *KatdMessage) GetStopNotifyingPruningPointUTXOSetOverrideResponse() *StopNotifyingPruningPointUTXOSetOverrideResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_StopNotifyingPruningPointUTXOSetOverrideResponse); ok {
 		return x.StopNotifyingPruningPointUTXOSetOverrideResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetEstimateNetworkHashesPerSecondRequest() *EstimateNetworkHashesPerSecondRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_EstimateNetworkHashesPerSecondRequest); ok {
+func (x *KatdMessage) GetEstimateNetworkHashesPerSecondRequest() *EstimateNetworkHashesPerSecondRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_EstimateNetworkHashesPerSecondRequest); ok {
 		return x.EstimateNetworkHashesPerSecondRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetEstimateNetworkHashesPerSecondResponse() *EstimateNetworkHashesPerSecondResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_EstimateNetworkHashesPerSecondResponse); ok {
+func (x *KatdMessage) GetEstimateNetworkHashesPerSecondResponse() *EstimateNetworkHashesPerSecondResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_EstimateNetworkHashesPerSecondResponse); ok {
 		return x.EstimateNetworkHashesPerSecondResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetNotifyVirtualDaaScoreChangedRequest() *NotifyVirtualDaaScoreChangedRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_NotifyVirtualDaaScoreChangedRequest); ok {
+func (x *KatdMessage) GetNotifyVirtualDaaScoreChangedRequest() *NotifyVirtualDaaScoreChangedRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_NotifyVirtualDaaScoreChangedRequest); ok {
 		return x.NotifyVirtualDaaScoreChangedRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetNotifyVirtualDaaScoreChangedResponse() *NotifyVirtualDaaScoreChangedResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_NotifyVirtualDaaScoreChangedResponse); ok {
+func (x *KatdMessage) GetNotifyVirtualDaaScoreChangedResponse() *NotifyVirtualDaaScoreChangedResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_NotifyVirtualDaaScoreChangedResponse); ok {
 		return x.NotifyVirtualDaaScoreChangedResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetVirtualDaaScoreChangedNotification() *VirtualDaaScoreChangedNotificationMessage {
-	if x, ok := x.GetPayload().(*katdMessage_VirtualDaaScoreChangedNotification); ok {
+func (x *KatdMessage) GetVirtualDaaScoreChangedNotification() *VirtualDaaScoreChangedNotificationMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_VirtualDaaScoreChangedNotification); ok {
 		return x.VirtualDaaScoreChangedNotification
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetBalanceByAddressRequest() *GetBalanceByAddressRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetBalanceByAddressRequest); ok {
+func (x *KatdMessage) GetGetBalanceByAddressRequest() *GetBalanceByAddressRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetBalanceByAddressRequest); ok {
 		return x.GetBalanceByAddressRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetBalanceByAddressResponse() *GetBalanceByAddressResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetBalanceByAddressResponse); ok {
+func (x *KatdMessage) GetGetBalanceByAddressResponse() *GetBalanceByAddressResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetBalanceByAddressResponse); ok {
 		return x.GetBalanceByAddressResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetBalancesByAddressesRequest() *GetBalancesByAddressesRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetBalancesByAddressesRequest); ok {
+func (x *KatdMessage) GetGetBalancesByAddressesRequest() *GetBalancesByAddressesRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetBalancesByAddressesRequest); ok {
 		return x.GetBalancesByAddressesRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetBalancesByAddressesResponse() *GetBalancesByAddressesResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetBalancesByAddressesResponse); ok {
+func (x *KatdMessage) GetGetBalancesByAddressesResponse() *GetBalancesByAddressesResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetBalancesByAddressesResponse); ok {
 		return x.GetBalancesByAddressesResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetNotifyNewBlockTemplateRequest() *NotifyNewBlockTemplateRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_NotifyNewBlockTemplateRequest); ok {
+func (x *KatdMessage) GetNotifyNewBlockTemplateRequest() *NotifyNewBlockTemplateRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_NotifyNewBlockTemplateRequest); ok {
 		return x.NotifyNewBlockTemplateRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetNotifyNewBlockTemplateResponse() *NotifyNewBlockTemplateResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_NotifyNewBlockTemplateResponse); ok {
+func (x *KatdMessage) GetNotifyNewBlockTemplateResponse() *NotifyNewBlockTemplateResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_NotifyNewBlockTemplateResponse); ok {
 		return x.NotifyNewBlockTemplateResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetNewBlockTemplateNotification() *NewBlockTemplateNotificationMessage {
-	if x, ok := x.GetPayload().(*katdMessage_NewBlockTemplateNotification); ok {
+func (x *KatdMessage) GetNewBlockTemplateNotification() *NewBlockTemplateNotificationMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_NewBlockTemplateNotification); ok {
 		return x.NewBlockTemplateNotification
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetMempoolEntriesByAddressesRequest() *GetMempoolEntriesByAddressesRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetMempoolEntriesByAddressesRequest); ok {
+func (x *KatdMessage) GetGetMempoolEntriesByAddressesRequest() *GetMempoolEntriesByAddressesRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetMempoolEntriesByAddressesRequest); ok {
 		return x.GetMempoolEntriesByAddressesRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetMempoolEntriesByAddressesResponse() *GetMempoolEntriesByAddressesResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetMempoolEntriesByAddressesResponse); ok {
+func (x *KatdMessage) GetGetMempoolEntriesByAddressesResponse() *GetMempoolEntriesByAddressesResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetMempoolEntriesByAddressesResponse); ok {
 		return x.GetMempoolEntriesByAddressesResponse
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetCoinSupplyRequest() *GetCoinSupplyRequestMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetCoinSupplyRequest); ok {
+func (x *KatdMessage) GetGetCoinSupplyRequest() *GetCoinSupplyRequestMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetCoinSupplyRequest); ok {
 		return x.GetCoinSupplyRequest
 	}
 	return nil
 }
 
-func (x *katdMessage) GetGetCoinSupplyResponse() *GetCoinSupplyResponseMessage {
-	if x, ok := x.GetPayload().(*katdMessage_GetCoinSupplyResponse); ok {
+func (x *KatdMessage) GetGetCoinSupplyResponse() *GetCoinSupplyResponseMessage {
+	if x, ok := x.GetPayload().(*KatdMessage_GetCoinSupplyResponse); ok {
 		return x.GetCoinSupplyResponse
 	}
 	return nil
 }
 
-type iskatdMessage_Payload interface {
-	iskatdMessage_Payload()
+type isKatdMessage_Payload interface {
+	isKatdMessage_Payload()
 }
 
-type katdMessage_Addresses struct {
+type KatdMessage_Addresses struct {
 	Addresses *AddressesMessage `protobuf:"bytes,1,opt,name=addresses,proto3,oneof"`
 }
 
-type katdMessage_Block struct {
+type KatdMessage_Block struct {
 	Block *BlockMessage `protobuf:"bytes,2,opt,name=block,proto3,oneof"`
 }
 
-type katdMessage_Transaction struct {
+type KatdMessage_Transaction struct {
 	Transaction *TransactionMessage `protobuf:"bytes,3,opt,name=transaction,proto3,oneof"`
 }
 
-type katdMessage_BlockLocator struct {
+type KatdMessage_BlockLocator struct {
 	BlockLocator *BlockLocatorMessage `protobuf:"bytes,5,opt,name=blockLocator,proto3,oneof"`
 }
 
-type katdMessage_RequestAddresses struct {
+type KatdMessage_RequestAddresses struct {
 	RequestAddresses *RequestAddressesMessage `protobuf:"bytes,6,opt,name=requestAddresses,proto3,oneof"`
 }
 
-type katdMessage_RequestRelayBlocks struct {
+type KatdMessage_RequestRelayBlocks struct {
 	RequestRelayBlocks *RequestRelayBlocksMessage `protobuf:"bytes,10,opt,name=requestRelayBlocks,proto3,oneof"`
 }
 
-type katdMessage_RequestTransactions struct {
+type KatdMessage_RequestTransactions struct {
 	RequestTransactions *RequestTransactionsMessage `protobuf:"bytes,12,opt,name=requestTransactions,proto3,oneof"`
 }
 
-type katdMessage_IbdBlock struct {
+type KatdMessage_IbdBlock struct {
 	IbdBlock *BlockMessage `protobuf:"bytes,13,opt,name=ibdBlock,proto3,oneof"`
 }
 
-type katdMessage_InvRelayBlock struct {
+type KatdMessage_InvRelayBlock struct {
 	InvRelayBlock *InvRelayBlockMessage `protobuf:"bytes,14,opt,name=invRelayBlock,proto3,oneof"`
 }
 
-type katdMessage_InvTransactions struct {
+type KatdMessage_InvTransactions struct {
 	InvTransactions *InvTransactionsMessage `protobuf:"bytes,15,opt,name=invTransactions,proto3,oneof"`
 }
 
-type katdMessage_Ping struct {
+type KatdMessage_Ping struct {
 	Ping *PingMessage `protobuf:"bytes,16,opt,name=ping,proto3,oneof"`
 }
 
-type katdMessage_Pong struct {
+type KatdMessage_Pong struct {
 	Pong *PongMessage `protobuf:"bytes,17,opt,name=pong,proto3,oneof"`
 }
 
-type katdMessage_Verack struct {
+type KatdMessage_Verack struct {
 	Verack *VerackMessage `protobuf:"bytes,19,opt,name=verack,proto3,oneof"`
 }
 
-type katdMessage_Version struct {
+type KatdMessage_Version struct {
 	Version *VersionMessage `protobuf:"bytes,20,opt,name=version,proto3,oneof"`
 }
 
-type katdMessage_TransactionNotFound struct {
+type KatdMessage_TransactionNotFound struct {
 	TransactionNotFound *TransactionNotFoundMessage `protobuf:"bytes,21,opt,name=transactionNotFound,proto3,oneof"`
 }
 
-type katdMessage_Reject struct {
+type KatdMessage_Reject struct {
 	Reject *RejectMessage `protobuf:"bytes,22,opt,name=reject,proto3,oneof"`
 }
 
-type katdMessage_PruningPointUtxoSetChunk struct {
+type KatdMessage_PruningPointUtxoSetChunk struct {
 	PruningPointUtxoSetChunk *PruningPointUtxoSetChunkMessage `protobuf:"bytes,25,opt,name=pruningPointUtxoSetChunk,proto3,oneof"`
 }
 
-type katdMessage_RequestIBDBlocks struct {
+type KatdMessage_RequestIBDBlocks struct {
 	RequestIBDBlocks *RequestIBDBlocksMessage `protobuf:"bytes,26,opt,name=requestIBDBlocks,proto3,oneof"`
 }
 
-type katdMessage_UnexpectedPruningPoint struct {
+type KatdMessage_UnexpectedPruningPoint struct {
 	UnexpectedPruningPoint *UnexpectedPruningPointMessage `protobuf:"bytes,27,opt,name=unexpectedPruningPoint,proto3,oneof"`
 }
 
-type katdMessage_IbdBlockLocator struct {
+type KatdMessage_IbdBlockLocator struct {
 	IbdBlockLocator *IbdBlockLocatorMessage `protobuf:"bytes,30,opt,name=ibdBlockLocator,proto3,oneof"`
 }
 
-type katdMessage_IbdBlockLocatorHighestHash struct {
+type KatdMessage_IbdBlockLocatorHighestHash struct {
 	IbdBlockLocatorHighestHash *IbdBlockLocatorHighestHashMessage `protobuf:"bytes,31,opt,name=ibdBlockLocatorHighestHash,proto3,oneof"`
 }
 
-type katdMessage_RequestNextPruningPointUtxoSetChunk struct {
+type KatdMessage_RequestNextPruningPointUtxoSetChunk struct {
 	RequestNextPruningPointUtxoSetChunk *RequestNextPruningPointUtxoSetChunkMessage `protobuf:"bytes,33,opt,name=requestNextPruningPointUtxoSetChunk,proto3,oneof"`
 }
 
-type katdMessage_DonePruningPointUtxoSetChunks struct {
+type KatdMessage_DonePruningPointUtxoSetChunks struct {
 	DonePruningPointUtxoSetChunks *DonePruningPointUtxoSetChunksMessage `protobuf:"bytes,34,opt,name=donePruningPointUtxoSetChunks,proto3,oneof"`
 }
 
-type katdMessage_IbdBlockLocatorHighestHashNotFound struct {
+type KatdMessage_IbdBlockLocatorHighestHashNotFound struct {
 	IbdBlockLocatorHighestHashNotFound *IbdBlockLocatorHighestHashNotFoundMessage `protobuf:"bytes,35,opt,name=ibdBlockLocatorHighestHashNotFound,proto3,oneof"`
 }
 
-type katdMessage_BlockWithTrustedData struct {
+type KatdMessage_BlockWithTrustedData struct {
 	BlockWithTrustedData *BlockWithTrustedDataMessage `protobuf:"bytes,36,opt,name=blockWithTrustedData,proto3,oneof"`
 }
 
-type katdMessage_DoneBlocksWithTrustedData struct {
+type KatdMessage_DoneBlocksWithTrustedData struct {
 	DoneBlocksWithTrustedData *DoneBlocksWithTrustedDataMessage `protobuf:"bytes,37,opt,name=doneBlocksWithTrustedData,proto3,oneof"`
 }
 
-type katdMessage_RequestPruningPointAndItsAnticone struct {
+type KatdMessage_RequestPruningPointAndItsAnticone struct {
 	RequestPruningPointAndItsAnticone *RequestPruningPointAndItsAnticoneMessage `protobuf:"bytes,40,opt,name=requestPruningPointAndItsAnticone,proto3,oneof"`
 }
 
-type katdMessage_BlockHeaders struct {
+type KatdMessage_BlockHeaders struct {
 	BlockHeaders *BlockHeadersMessage `protobuf:"bytes,41,opt,name=blockHeaders,proto3,oneof"`
 }
 
-type katdMessage_RequestNextHeaders struct {
+type KatdMessage_RequestNextHeaders struct {
 	RequestNextHeaders *RequestNextHeadersMessage `protobuf:"bytes,42,opt,name=requestNextHeaders,proto3,oneof"`
 }
 
-type katdMessage_DoneHeaders struct {
+type KatdMessage_DoneHeaders struct {
 	DoneHeaders *DoneHeadersMessage `protobuf:"bytes,43,opt,name=DoneHeaders,proto3,oneof"`
 }
 
-type katdMessage_RequestPruningPointUTXOSet struct {
+type KatdMessage_RequestPruningPointUTXOSet struct {
 	RequestPruningPointUTXOSet *RequestPruningPointUTXOSetMessage `protobuf:"bytes,44,opt,name=requestPruningPointUTXOSet,proto3,oneof"`
 }
 
-type katdMessage_RequestHeaders struct {
+type KatdMessage_RequestHeaders struct {
 	RequestHeaders *RequestHeadersMessage `protobuf:"bytes,45,opt,name=requestHeaders,proto3,oneof"`
 }
 
-type katdMessage_RequestBlockLocator struct {
+type KatdMessage_RequestBlockLocator struct {
 	RequestBlockLocator *RequestBlockLocatorMessage `protobuf:"bytes,46,opt,name=requestBlockLocator,proto3,oneof"`
 }
 
-type katdMessage_PruningPoints struct {
+type KatdMessage_PruningPoints struct {
 	PruningPoints *PruningPointsMessage `protobuf:"bytes,47,opt,name=pruningPoints,proto3,oneof"`
 }
 
-type katdMessage_RequestPruningPointProof struct {
+type KatdMessage_RequestPruningPointProof struct {
 	RequestPruningPointProof *RequestPruningPointProofMessage `protobuf:"bytes,48,opt,name=requestPruningPointProof,proto3,oneof"`
 }
 
-type katdMessage_PruningPointProof struct {
+type KatdMessage_PruningPointProof struct {
 	PruningPointProof *PruningPointProofMessage `protobuf:"bytes,49,opt,name=pruningPointProof,proto3,oneof"`
 }
 
-type katdMessage_Ready struct {
+type KatdMessage_Ready struct {
 	Ready *ReadyMessage `protobuf:"bytes,50,opt,name=ready,proto3,oneof"`
 }
 
-type katdMessage_BlockWithTrustedDataV4 struct {
+type KatdMessage_BlockWithTrustedDataV4 struct {
 	BlockWithTrustedDataV4 *BlockWithTrustedDataV4Message `protobuf:"bytes,51,opt,name=blockWithTrustedDataV4,proto3,oneof"`
 }
 
-type katdMessage_TrustedData struct {
+type KatdMessage_TrustedData struct {
 	TrustedData *TrustedDataMessage `protobuf:"bytes,52,opt,name=trustedData,proto3,oneof"`
 }
 
-type katdMessage_RequestIBDChainBlockLocator struct {
+type KatdMessage_RequestIBDChainBlockLocator struct {
 	RequestIBDChainBlockLocator *RequestIBDChainBlockLocatorMessage `protobuf:"bytes,53,opt,name=requestIBDChainBlockLocator,proto3,oneof"`
 }
 
-type katdMessage_IbdChainBlockLocator struct {
+type KatdMessage_IbdChainBlockLocator struct {
 	IbdChainBlockLocator *IbdChainBlockLocatorMessage `protobuf:"bytes,54,opt,name=ibdChainBlockLocator,proto3,oneof"`
 }
 
-type katdMessage_RequestAnticone struct {
+type KatdMessage_RequestAnticone struct {
 	RequestAnticone *RequestAnticoneMessage `protobuf:"bytes,55,opt,name=requestAnticone,proto3,oneof"`
 }
 
-type katdMessage_RequestNextPruningPointAndItsAnticoneBlocks struct {
+type KatdMessage_RequestNextPruningPointAndItsAnticoneBlocks struct {
 	RequestNextPruningPointAndItsAnticoneBlocks *RequestNextPruningPointAndItsAnticoneBlocksMessage `protobuf:"bytes,56,opt,name=requestNextPruningPointAndItsAnticoneBlocks,proto3,oneof"`
 }
 
-type katdMessage_GetCurrentNetworkRequest struct {
+type KatdMessage_GetCurrentNetworkRequest struct {
 	GetCurrentNetworkRequest *GetCurrentNetworkRequestMessage `protobuf:"bytes,1001,opt,name=getCurrentNetworkRequest,proto3,oneof"`
 }
 
-type katdMessage_GetCurrentNetworkResponse struct {
+type KatdMessage_GetCurrentNetworkResponse struct {
 	GetCurrentNetworkResponse *GetCurrentNetworkResponseMessage `protobuf:"bytes,1002,opt,name=getCurrentNetworkResponse,proto3,oneof"`
 }
 
-type katdMessage_SubmitBlockRequest struct {
+type KatdMessage_SubmitBlockRequest struct {
 	SubmitBlockRequest *SubmitBlockRequestMessage `protobuf:"bytes,1003,opt,name=submitBlockRequest,proto3,oneof"`
 }
 
-type katdMessage_SubmitBlockResponse struct {
+type KatdMessage_SubmitBlockResponse struct {
 	SubmitBlockResponse *SubmitBlockResponseMessage `protobuf:"bytes,1004,opt,name=submitBlockResponse,proto3,oneof"`
 }
 
-type katdMessage_GetBlockTemplateRequest struct {
+type KatdMessage_GetBlockTemplateRequest struct {
 	GetBlockTemplateRequest *GetBlockTemplateRequestMessage `protobuf:"bytes,1005,opt,name=getBlockTemplateRequest,proto3,oneof"`
 }
 
-type katdMessage_GetBlockTemplateResponse struct {
+type KatdMessage_GetBlockTemplateResponse struct {
 	GetBlockTemplateResponse *GetBlockTemplateResponseMessage `protobuf:"bytes,1006,opt,name=getBlockTemplateResponse,proto3,oneof"`
 }
 
-type katdMessage_NotifyBlockAddedRequest struct {
+type KatdMessage_NotifyBlockAddedRequest struct {
 	NotifyBlockAddedRequest *NotifyBlockAddedRequestMessage `protobuf:"bytes,1007,opt,name=notifyBlockAddedRequest,proto3,oneof"`
 }
 
-type katdMessage_NotifyBlockAddedResponse struct {
+type KatdMessage_NotifyBlockAddedResponse struct {
 	NotifyBlockAddedResponse *NotifyBlockAddedResponseMessage `protobuf:"bytes,1008,opt,name=notifyBlockAddedResponse,proto3,oneof"`
 }
 
-type katdMessage_BlockAddedNotification struct {
+type KatdMessage_BlockAddedNotification struct {
 	BlockAddedNotification *BlockAddedNotificationMessage `protobuf:"bytes,1009,opt,name=blockAddedNotification,proto3,oneof"`
 }
 
-type katdMessage_GetPeerAddressesRequest struct {
+type KatdMessage_GetPeerAddressesRequest struct {
 	GetPeerAddressesRequest *GetPeerAddressesRequestMessage `protobuf:"bytes,1010,opt,name=getPeerAddressesRequest,proto3,oneof"`
 }
 
-type katdMessage_GetPeerAddressesResponse struct {
+type KatdMessage_GetPeerAddressesResponse struct {
 	GetPeerAddressesResponse *GetPeerAddressesResponseMessage `protobuf:"bytes,1011,opt,name=getPeerAddressesResponse,proto3,oneof"`
 }
 
-type katdMessage_GetSelectedTipHashRequest struct {
+type KatdMessage_GetSelectedTipHashRequest struct {
 	GetSelectedTipHashRequest *GetSelectedTipHashRequestMessage `protobuf:"bytes,1012,opt,name=getSelectedTipHashRequest,proto3,oneof"`
 }
 
-type katdMessage_GetSelectedTipHashResponse struct {
+type KatdMessage_GetSelectedTipHashResponse struct {
 	GetSelectedTipHashResponse *GetSelectedTipHashResponseMessage `protobuf:"bytes,1013,opt,name=getSelectedTipHashResponse,proto3,oneof"`
 }
 
-type katdMessage_GetMempoolEntryRequest struct {
+type KatdMessage_GetMempoolEntryRequest struct {
 	GetMempoolEntryRequest *GetMempoolEntryRequestMessage `protobuf:"bytes,1014,opt,name=getMempoolEntryRequest,proto3,oneof"`
 }
 
-type katdMessage_GetMempoolEntryResponse struct {
+type KatdMessage_GetMempoolEntryResponse struct {
 	GetMempoolEntryResponse *GetMempoolEntryResponseMessage `protobuf:"bytes,1015,opt,name=getMempoolEntryResponse,proto3,oneof"`
 }
 
-type katdMessage_GetConnectedPeerInfoRequest struct {
+type KatdMessage_GetConnectedPeerInfoRequest struct {
 	GetConnectedPeerInfoRequest *GetConnectedPeerInfoRequestMessage `protobuf:"bytes,1016,opt,name=getConnectedPeerInfoRequest,proto3,oneof"`
 }
 
-type katdMessage_GetConnectedPeerInfoResponse struct {
+type KatdMessage_GetConnectedPeerInfoResponse struct {
 	GetConnectedPeerInfoResponse *GetConnectedPeerInfoResponseMessage `protobuf:"bytes,1017,opt,name=getConnectedPeerInfoResponse,proto3,oneof"`
 }
 
-type katdMessage_AddPeerRequest struct {
+type KatdMessage_AddPeerRequest struct {
 	AddPeerRequest *AddPeerRequestMessage `protobuf:"bytes,1018,opt,name=addPeerRequest,proto3,oneof"`
 }
 
-type katdMessage_AddPeerResponse struct {
+type KatdMessage_AddPeerResponse struct {
 	AddPeerResponse *AddPeerResponseMessage `protobuf:"bytes,1019,opt,name=addPeerResponse,proto3,oneof"`
 }
 
-type katdMessage_SubmitTransactionRequest struct {
+type KatdMessage_SubmitTransactionRequest struct {
 	SubmitTransactionRequest *SubmitTransactionRequestMessage `protobuf:"bytes,1020,opt,name=submitTransactionRequest,proto3,oneof"`
 }
 
-type katdMessage_SubmitTransactionResponse struct {
+type KatdMessage_SubmitTransactionResponse struct {
 	SubmitTransactionResponse *SubmitTransactionResponseMessage `protobuf:"bytes,1021,opt,name=submitTransactionResponse,proto3,oneof"`
 }
 
-type katdMessage_NotifyVirtualSelectedParentChainChangedRequest struct {
+type KatdMessage_NotifyVirtualSelectedParentChainChangedRequest struct {
 	NotifyVirtualSelectedParentChainChangedRequest *NotifyVirtualSelectedParentChainChangedRequestMessage `protobuf:"bytes,1022,opt,name=notifyVirtualSelectedParentChainChangedRequest,proto3,oneof"`
 }
 
-type katdMessage_NotifyVirtualSelectedParentChainChangedResponse struct {
+type KatdMessage_NotifyVirtualSelectedParentChainChangedResponse struct {
 	NotifyVirtualSelectedParentChainChangedResponse *NotifyVirtualSelectedParentChainChangedResponseMessage `protobuf:"bytes,1023,opt,name=notifyVirtualSelectedParentChainChangedResponse,proto3,oneof"`
 }
 
-type katdMessage_VirtualSelectedParentChainChangedNotification struct {
+type KatdMessage_VirtualSelectedParentChainChangedNotification struct {
 	VirtualSelectedParentChainChangedNotification *VirtualSelectedParentChainChangedNotificationMessage `protobuf:"bytes,1024,opt,name=virtualSelectedParentChainChangedNotification,proto3,oneof"`
 }
 
-type katdMessage_GetBlockRequest struct {
+type KatdMessage_GetBlockRequest struct {
 	GetBlockRequest *GetBlockRequestMessage `protobuf:"bytes,1025,opt,name=getBlockRequest,proto3,oneof"`
 }
 
-type katdMessage_GetBlockResponse struct {
+type KatdMessage_GetBlockResponse struct {
 	GetBlockResponse *GetBlockResponseMessage `protobuf:"bytes,1026,opt,name=getBlockResponse,proto3,oneof"`
 }
 
-type katdMessage_GetSubnetworkRequest struct {
+type KatdMessage_GetSubnetworkRequest struct {
 	GetSubnetworkRequest *GetSubnetworkRequestMessage `protobuf:"bytes,1027,opt,name=getSubnetworkRequest,proto3,oneof"`
 }
 
-type katdMessage_GetSubnetworkResponse struct {
+type KatdMessage_GetSubnetworkResponse struct {
 	GetSubnetworkResponse *GetSubnetworkResponseMessage `protobuf:"bytes,1028,opt,name=getSubnetworkResponse,proto3,oneof"`
 }
 
-type katdMessage_GetVirtualSelectedParentChainFromBlockRequest struct {
+type KatdMessage_GetVirtualSelectedParentChainFromBlockRequest struct {
 	GetVirtualSelectedParentChainFromBlockRequest *GetVirtualSelectedParentChainFromBlockRequestMessage `protobuf:"bytes,1029,opt,name=getVirtualSelectedParentChainFromBlockRequest,proto3,oneof"`
 }
 
-type katdMessage_GetVirtualSelectedParentChainFromBlockResponse struct {
+type KatdMessage_GetVirtualSelectedParentChainFromBlockResponse struct {
 	GetVirtualSelectedParentChainFromBlockResponse *GetVirtualSelectedParentChainFromBlockResponseMessage `protobuf:"bytes,1030,opt,name=getVirtualSelectedParentChainFromBlockResponse,proto3,oneof"`
 }
 
-type katdMessage_GetBlocksRequest struct {
+type KatdMessage_GetBlocksRequest struct {
 	GetBlocksRequest *GetBlocksRequestMessage `protobuf:"bytes,1031,opt,name=getBlocksRequest,proto3,oneof"`
 }
 
-type katdMessage_GetBlocksResponse struct {
+type KatdMessage_GetBlocksResponse struct {
 	GetBlocksResponse *GetBlocksResponseMessage `protobuf:"bytes,1032,opt,name=getBlocksResponse,proto3,oneof"`
 }
 
-type katdMessage_GetBlockCountRequest struct {
+type KatdMessage_GetBlockCountRequest struct {
 	GetBlockCountRequest *GetBlockCountRequestMessage `protobuf:"bytes,1033,opt,name=getBlockCountRequest,proto3,oneof"`
 }
 
-type katdMessage_GetBlockCountResponse struct {
+type KatdMessage_GetBlockCountResponse struct {
 	GetBlockCountResponse *GetBlockCountResponseMessage `protobuf:"bytes,1034,opt,name=getBlockCountResponse,proto3,oneof"`
 }
 
-type katdMessage_GetBlockDagInfoRequest struct {
+type KatdMessage_GetBlockDagInfoRequest struct {
 	GetBlockDagInfoRequest *GetBlockDagInfoRequestMessage `protobuf:"bytes,1035,opt,name=getBlockDagInfoRequest,proto3,oneof"`
 }
 
-type katdMessage_GetBlockDagInfoResponse struct {
+type KatdMessage_GetBlockDagInfoResponse struct {
 	GetBlockDagInfoResponse *GetBlockDagInfoResponseMessage `protobuf:"bytes,1036,opt,name=getBlockDagInfoResponse,proto3,oneof"`
 }
 
-type katdMessage_ResolveFinalityConflictRequest struct {
+type KatdMessage_ResolveFinalityConflictRequest struct {
 	ResolveFinalityConflictRequest *ResolveFinalityConflictRequestMessage `protobuf:"bytes,1037,opt,name=resolveFinalityConflictRequest,proto3,oneof"`
 }
 
-type katdMessage_ResolveFinalityConflictResponse struct {
+type KatdMessage_ResolveFinalityConflictResponse struct {
 	ResolveFinalityConflictResponse *ResolveFinalityConflictResponseMessage `protobuf:"bytes,1038,opt,name=resolveFinalityConflictResponse,proto3,oneof"`
 }
 
-type katdMessage_NotifyFinalityConflictsRequest struct {
+type KatdMessage_NotifyFinalityConflictsRequest struct {
 	NotifyFinalityConflictsRequest *NotifyFinalityConflictsRequestMessage `protobuf:"bytes,1039,opt,name=notifyFinalityConflictsRequest,proto3,oneof"`
 }
 
-type katdMessage_NotifyFinalityConflictsResponse struct {
+type KatdMessage_NotifyFinalityConflictsResponse struct {
 	NotifyFinalityConflictsResponse *NotifyFinalityConflictsResponseMessage `protobuf:"bytes,1040,opt,name=notifyFinalityConflictsResponse,proto3,oneof"`
 }
 
-type katdMessage_FinalityConflictNotification struct {
+type KatdMessage_FinalityConflictNotification struct {
 	FinalityConflictNotification *FinalityConflictNotificationMessage `protobuf:"bytes,1041,opt,name=finalityConflictNotification,proto3,oneof"`
 }
 
-type katdMessage_FinalityConflictResolvedNotification struct {
+type KatdMessage_FinalityConflictResolvedNotification struct {
 	FinalityConflictResolvedNotification *FinalityConflictResolvedNotificationMessage `protobuf:"bytes,1042,opt,name=finalityConflictResolvedNotification,proto3,oneof"`
 }
 
-type katdMessage_GetMempoolEntriesRequest struct {
+type KatdMessage_GetMempoolEntriesRequest struct {
 	GetMempoolEntriesRequest *GetMempoolEntriesRequestMessage `protobuf:"bytes,1043,opt,name=getMempoolEntriesRequest,proto3,oneof"`
 }
 
-type katdMessage_GetMempoolEntriesResponse struct {
+type KatdMessage_GetMempoolEntriesResponse struct {
 	GetMempoolEntriesResponse *GetMempoolEntriesResponseMessage `protobuf:"bytes,1044,opt,name=getMempoolEntriesResponse,proto3,oneof"`
 }
 
-type katdMessage_ShutDownRequest struct {
+type KatdMessage_ShutDownRequest struct {
 	ShutDownRequest *ShutDownRequestMessage `protobuf:"bytes,1045,opt,name=shutDownRequest,proto3,oneof"`
 }
 
-type katdMessage_ShutDownResponse struct {
+type KatdMessage_ShutDownResponse struct {
 	ShutDownResponse *ShutDownResponseMessage `protobuf:"bytes,1046,opt,name=shutDownResponse,proto3,oneof"`
 }
 
-type katdMessage_GetHeadersRequest struct {
+type KatdMessage_GetHeadersRequest struct {
 	GetHeadersRequest *GetHeadersRequestMessage `protobuf:"bytes,1047,opt,name=getHeadersRequest,proto3,oneof"`
 }
 
-type katdMessage_GetHeadersResponse struct {
+type KatdMessage_GetHeadersResponse struct {
 	GetHeadersResponse *GetHeadersResponseMessage `protobuf:"bytes,1048,opt,name=getHeadersResponse,proto3,oneof"`
 }
 
-type katdMessage_NotifyUtxosChangedRequest struct {
+type KatdMessage_NotifyUtxosChangedRequest struct {
 	NotifyUtxosChangedRequest *NotifyUtxosChangedRequestMessage `protobuf:"bytes,1049,opt,name=notifyUtxosChangedRequest,proto3,oneof"`
 }
 
-type katdMessage_NotifyUtxosChangedResponse struct {
+type KatdMessage_NotifyUtxosChangedResponse struct {
 	NotifyUtxosChangedResponse *NotifyUtxosChangedResponseMessage `protobuf:"bytes,1050,opt,name=notifyUtxosChangedResponse,proto3,oneof"`
 }
 
-type katdMessage_UtxosChangedNotification struct {
+type KatdMessage_UtxosChangedNotification struct {
 	UtxosChangedNotification *UtxosChangedNotificationMessage `protobuf:"bytes,1051,opt,name=utxosChangedNotification,proto3,oneof"`
 }
 
-type katdMessage_GetUtxosByAddressesRequest struct {
+type KatdMessage_GetUtxosByAddressesRequest struct {
 	GetUtxosByAddressesRequest *GetUtxosByAddressesRequestMessage `protobuf:"bytes,1052,opt,name=getUtxosByAddressesRequest,proto3,oneof"`
 }
 
-type katdMessage_GetUtxosByAddressesResponse struct {
+type KatdMessage_GetUtxosByAddressesResponse struct {
 	GetUtxosByAddressesResponse *GetUtxosByAddressesResponseMessage `protobuf:"bytes,1053,opt,name=getUtxosByAddressesResponse,proto3,oneof"`
 }
 
-type katdMessage_GetVirtualSelectedParentBlueScoreRequest struct {
+type KatdMessage_GetVirtualSelectedParentBlueScoreRequest struct {
 	GetVirtualSelectedParentBlueScoreRequest *GetVirtualSelectedParentBlueScoreRequestMessage `protobuf:"bytes,1054,opt,name=getVirtualSelectedParentBlueScoreRequest,proto3,oneof"`
 }
 
-type katdMessage_GetVirtualSelectedParentBlueScoreResponse struct {
+type KatdMessage_GetVirtualSelectedParentBlueScoreResponse struct {
 	GetVirtualSelectedParentBlueScoreResponse *GetVirtualSelectedParentBlueScoreResponseMessage `protobuf:"bytes,1055,opt,name=getVirtualSelectedParentBlueScoreResponse,proto3,oneof"`
 }
 
-type katdMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest struct {
+type KatdMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest struct {
 	NotifyVirtualSelectedParentBlueScoreChangedRequest *NotifyVirtualSelectedParentBlueScoreChangedRequestMessage `protobuf:"bytes,1056,opt,name=notifyVirtualSelectedParentBlueScoreChangedRequest,proto3,oneof"`
 }
 
-type katdMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse struct {
+type KatdMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse struct {
 	NotifyVirtualSelectedParentBlueScoreChangedResponse *NotifyVirtualSelectedParentBlueScoreChangedResponseMessage `protobuf:"bytes,1057,opt,name=notifyVirtualSelectedParentBlueScoreChangedResponse,proto3,oneof"`
 }
 
-type katdMessage_VirtualSelectedParentBlueScoreChangedNotification struct {
+type KatdMessage_VirtualSelectedParentBlueScoreChangedNotification struct {
 	VirtualSelectedParentBlueScoreChangedNotification *VirtualSelectedParentBlueScoreChangedNotificationMessage `protobuf:"bytes,1058,opt,name=virtualSelectedParentBlueScoreChangedNotification,proto3,oneof"`
 }
 
-type katdMessage_BanRequest struct {
+type KatdMessage_BanRequest struct {
 	BanRequest *BanRequestMessage `protobuf:"bytes,1059,opt,name=banRequest,proto3,oneof"`
 }
 
-type katdMessage_BanResponse struct {
+type KatdMessage_BanResponse struct {
 	BanResponse *BanResponseMessage `protobuf:"bytes,1060,opt,name=banResponse,proto3,oneof"`
 }
 
-type katdMessage_UnbanRequest struct {
+type KatdMessage_UnbanRequest struct {
 	UnbanRequest *UnbanRequestMessage `protobuf:"bytes,1061,opt,name=unbanRequest,proto3,oneof"`
 }
 
-type katdMessage_UnbanResponse struct {
+type KatdMessage_UnbanResponse struct {
 	UnbanResponse *UnbanResponseMessage `protobuf:"bytes,1062,opt,name=unbanResponse,proto3,oneof"`
 }
 
-type katdMessage_GetInfoRequest struct {
+type KatdMessage_GetInfoRequest struct {
 	GetInfoRequest *GetInfoRequestMessage `protobuf:"bytes,1063,opt,name=getInfoRequest,proto3,oneof"`
 }
 
-type katdMessage_GetInfoResponse struct {
+type KatdMessage_GetInfoResponse struct {
 	GetInfoResponse *GetInfoResponseMessage `protobuf:"bytes,1064,opt,name=getInfoResponse,proto3,oneof"`
 }
 
-type katdMessage_StopNotifyingUtxosChangedRequest struct {
+type KatdMessage_StopNotifyingUtxosChangedRequest struct {
 	StopNotifyingUtxosChangedRequest *StopNotifyingUtxosChangedRequestMessage `protobuf:"bytes,1065,opt,name=stopNotifyingUtxosChangedRequest,proto3,oneof"`
 }
 
-type katdMessage_StopNotifyingUtxosChangedResponse struct {
+type KatdMessage_StopNotifyingUtxosChangedResponse struct {
 	StopNotifyingUtxosChangedResponse *StopNotifyingUtxosChangedResponseMessage `protobuf:"bytes,1066,opt,name=stopNotifyingUtxosChangedResponse,proto3,oneof"`
 }
 
-type katdMessage_NotifyPruningPointUTXOSetOverrideRequest struct {
+type KatdMessage_NotifyPruningPointUTXOSetOverrideRequest struct {
 	NotifyPruningPointUTXOSetOverrideRequest *NotifyPruningPointUTXOSetOverrideRequestMessage `protobuf:"bytes,1067,opt,name=notifyPruningPointUTXOSetOverrideRequest,proto3,oneof"`
 }
 
-type katdMessage_NotifyPruningPointUTXOSetOverrideResponse struct {
+type KatdMessage_NotifyPruningPointUTXOSetOverrideResponse struct {
 	NotifyPruningPointUTXOSetOverrideResponse *NotifyPruningPointUTXOSetOverrideResponseMessage `protobuf:"bytes,1068,opt,name=notifyPruningPointUTXOSetOverrideResponse,proto3,oneof"`
 }
 
-type katdMessage_PruningPointUTXOSetOverrideNotification struct {
+type KatdMessage_PruningPointUTXOSetOverrideNotification struct {
 	PruningPointUTXOSetOverrideNotification *PruningPointUTXOSetOverrideNotificationMessage `protobuf:"bytes,1069,opt,name=pruningPointUTXOSetOverrideNotification,proto3,oneof"`
 }
 
-type katdMessage_StopNotifyingPruningPointUTXOSetOverrideRequest struct {
+type KatdMessage_StopNotifyingPruningPointUTXOSetOverrideRequest struct {
 	StopNotifyingPruningPointUTXOSetOverrideRequest *StopNotifyingPruningPointUTXOSetOverrideRequestMessage `protobuf:"bytes,1070,opt,name=stopNotifyingPruningPointUTXOSetOverrideRequest,proto3,oneof"`
 }
 
-type katdMessage_StopNotifyingPruningPointUTXOSetOverrideResponse struct {
+type KatdMessage_StopNotifyingPruningPointUTXOSetOverrideResponse struct {
 	StopNotifyingPruningPointUTXOSetOverrideResponse *StopNotifyingPruningPointUTXOSetOverrideResponseMessage `protobuf:"bytes,1071,opt,name=stopNotifyingPruningPointUTXOSetOverrideResponse,proto3,oneof"`
 }
 
-type katdMessage_EstimateNetworkHashesPerSecondRequest struct {
+type KatdMessage_EstimateNetworkHashesPerSecondRequest struct {
 	EstimateNetworkHashesPerSecondRequest *EstimateNetworkHashesPerSecondRequestMessage `protobuf:"bytes,1072,opt,name=estimateNetworkHashesPerSecondRequest,proto3,oneof"`
 }
 
-type katdMessage_EstimateNetworkHashesPerSecondResponse struct {
+type KatdMessage_EstimateNetworkHashesPerSecondResponse struct {
 	EstimateNetworkHashesPerSecondResponse *EstimateNetworkHashesPerSecondResponseMessage `protobuf:"bytes,1073,opt,name=estimateNetworkHashesPerSecondResponse,proto3,oneof"`
 }
 
-type katdMessage_NotifyVirtualDaaScoreChangedRequest struct {
+type KatdMessage_NotifyVirtualDaaScoreChangedRequest struct {
 	NotifyVirtualDaaScoreChangedRequest *NotifyVirtualDaaScoreChangedRequestMessage `protobuf:"bytes,1074,opt,name=notifyVirtualDaaScoreChangedRequest,proto3,oneof"`
 }
 
-type katdMessage_NotifyVirtualDaaScoreChangedResponse struct {
+type KatdMessage_NotifyVirtualDaaScoreChangedResponse struct {
 	NotifyVirtualDaaScoreChangedResponse *NotifyVirtualDaaScoreChangedResponseMessage `protobuf:"bytes,1075,opt,name=notifyVirtualDaaScoreChangedResponse,proto3,oneof"`
 }
 
-type katdMessage_VirtualDaaScoreChangedNotification struct {
+type KatdMessage_VirtualDaaScoreChangedNotification struct {
 	VirtualDaaScoreChangedNotification *VirtualDaaScoreChangedNotificationMessage `protobuf:"bytes,1076,opt,name=virtualDaaScoreChangedNotification,proto3,oneof"`
 }
 
-type katdMessage_GetBalanceByAddressRequest struct {
+type KatdMessage_GetBalanceByAddressRequest struct {
 	GetBalanceByAddressRequest *GetBalanceByAddressRequestMessage `protobuf:"bytes,1077,opt,name=getBalanceByAddressRequest,proto3,oneof"`
 }
 
-type katdMessage_GetBalanceByAddressResponse struct {
+type KatdMessage_GetBalanceByAddressResponse struct {
 	GetBalanceByAddressResponse *GetBalanceByAddressResponseMessage `protobuf:"bytes,1078,opt,name=getBalanceByAddressResponse,proto3,oneof"`
 }
 
-type katdMessage_GetBalancesByAddressesRequest struct {
+type KatdMessage_GetBalancesByAddressesRequest struct {
 	GetBalancesByAddressesRequest *GetBalancesByAddressesRequestMessage `protobuf:"bytes,1079,opt,name=getBalancesByAddressesRequest,proto3,oneof"`
 }
 
-type katdMessage_GetBalancesByAddressesResponse struct {
+type KatdMessage_GetBalancesByAddressesResponse struct {
 	GetBalancesByAddressesResponse *GetBalancesByAddressesResponseMessage `protobuf:"bytes,1080,opt,name=getBalancesByAddressesResponse,proto3,oneof"`
 }
 
-type katdMessage_NotifyNewBlockTemplateRequest struct {
+type KatdMessage_NotifyNewBlockTemplateRequest struct {
 	NotifyNewBlockTemplateRequest *NotifyNewBlockTemplateRequestMessage `protobuf:"bytes,1081,opt,name=notifyNewBlockTemplateRequest,proto3,oneof"`
 }
 
-type katdMessage_NotifyNewBlockTemplateResponse struct {
+type KatdMessage_NotifyNewBlockTemplateResponse struct {
 	NotifyNewBlockTemplateResponse *NotifyNewBlockTemplateResponseMessage `protobuf:"bytes,1082,opt,name=notifyNewBlockTemplateResponse,proto3,oneof"`
 }
 
-type katdMessage_NewBlockTemplateNotification struct {
+type KatdMessage_NewBlockTemplateNotification struct {
 	NewBlockTemplateNotification *NewBlockTemplateNotificationMessage `protobuf:"bytes,1083,opt,name=newBlockTemplateNotification,proto3,oneof"`
 }
 
-type katdMessage_GetMempoolEntriesByAddressesRequest struct {
+type KatdMessage_GetMempoolEntriesByAddressesRequest struct {
 	GetMempoolEntriesByAddressesRequest *GetMempoolEntriesByAddressesRequestMessage `protobuf:"bytes,1084,opt,name=getMempoolEntriesByAddressesRequest,proto3,oneof"`
 }
 
-type katdMessage_GetMempoolEntriesByAddressesResponse struct {
+type KatdMessage_GetMempoolEntriesByAddressesResponse struct {
 	GetMempoolEntriesByAddressesResponse *GetMempoolEntriesByAddressesResponseMessage `protobuf:"bytes,1085,opt,name=getMempoolEntriesByAddressesResponse,proto3,oneof"`
 }
 
-type katdMessage_GetCoinSupplyRequest struct {
+type KatdMessage_GetCoinSupplyRequest struct {
 	GetCoinSupplyRequest *GetCoinSupplyRequestMessage `protobuf:"bytes,1086,opt,name=getCoinSupplyRequest,proto3,oneof"`
 }
 
-type katdMessage_GetCoinSupplyResponse struct {
+type KatdMessage_GetCoinSupplyResponse struct {
 	GetCoinSupplyResponse *GetCoinSupplyResponseMessage `protobuf:"bytes,1087,opt,name=getCoinSupplyResponse,proto3,oneof"`
 }
 
-func (*katdMessage_Addresses) iskatdMessage_Payload() {}
+func (*KatdMessage_Addresses) isKatdMessage_Payload() {}
 
-func (*katdMessage_Block) iskatdMessage_Payload() {}
+func (*KatdMessage_Block) isKatdMessage_Payload() {}
 
-func (*katdMessage_Transaction) iskatdMessage_Payload() {}
+func (*KatdMessage_Transaction) isKatdMessage_Payload() {}
 
-func (*katdMessage_BlockLocator) iskatdMessage_Payload() {}
+func (*KatdMessage_BlockLocator) isKatdMessage_Payload() {}
 
-func (*katdMessage_RequestAddresses) iskatdMessage_Payload() {}
+func (*KatdMessage_RequestAddresses) isKatdMessage_Payload() {}
 
-func (*katdMessage_RequestRelayBlocks) iskatdMessage_Payload() {}
+func (*KatdMessage_RequestRelayBlocks) isKatdMessage_Payload() {}
 
-func (*katdMessage_RequestTransactions) iskatdMessage_Payload() {}
+func (*KatdMessage_RequestTransactions) isKatdMessage_Payload() {}
 
-func (*katdMessage_IbdBlock) iskatdMessage_Payload() {}
+func (*KatdMessage_IbdBlock) isKatdMessage_Payload() {}
 
-func (*katdMessage_InvRelayBlock) iskatdMessage_Payload() {}
+func (*KatdMessage_InvRelayBlock) isKatdMessage_Payload() {}
 
-func (*katdMessage_InvTransactions) iskatdMessage_Payload() {}
+func (*KatdMessage_InvTransactions) isKatdMessage_Payload() {}
 
-func (*katdMessage_Ping) iskatdMessage_Payload() {}
+func (*KatdMessage_Ping) isKatdMessage_Payload() {}
 
-func (*katdMessage_Pong) iskatdMessage_Payload() {}
+func (*KatdMessage_Pong) isKatdMessage_Payload() {}
 
-func (*katdMessage_Verack) iskatdMessage_Payload() {}
+func (*KatdMessage_Verack) isKatdMessage_Payload() {}
 
-func (*katdMessage_Version) iskatdMessage_Payload() {}
+func (*KatdMessage_Version) isKatdMessage_Payload() {}
 
-func (*katdMessage_TransactionNotFound) iskatdMessage_Payload() {}
+func (*KatdMessage_TransactionNotFound) isKatdMessage_Payload() {}
 
-func (*katdMessage_Reject) iskatdMessage_Payload() {}
+func (*KatdMessage_Reject) isKatdMessage_Payload() {}
 
-func (*katdMessage_PruningPointUtxoSetChunk) iskatdMessage_Payload() {}
+func (*KatdMessage_PruningPointUtxoSetChunk) isKatdMessage_Payload() {}
 
-func (*katdMessage_RequestIBDBlocks) iskatdMessage_Payload() {}
+func (*KatdMessage_RequestIBDBlocks) isKatdMessage_Payload() {}
 
-func (*katdMessage_UnexpectedPruningPoint) iskatdMessage_Payload() {}
+func (*KatdMessage_UnexpectedPruningPoint) isKatdMessage_Payload() {}
 
-func (*katdMessage_IbdBlockLocator) iskatdMessage_Payload() {}
+func (*KatdMessage_IbdBlockLocator) isKatdMessage_Payload() {}
 
-func (*katdMessage_IbdBlockLocatorHighestHash) iskatdMessage_Payload() {}
+func (*KatdMessage_IbdBlockLocatorHighestHash) isKatdMessage_Payload() {}
 
-func (*katdMessage_RequestNextPruningPointUtxoSetChunk) iskatdMessage_Payload() {}
+func (*KatdMessage_RequestNextPruningPointUtxoSetChunk) isKatdMessage_Payload() {}
 
-func (*katdMessage_DonePruningPointUtxoSetChunks) iskatdMessage_Payload() {}
+func (*KatdMessage_DonePruningPointUtxoSetChunks) isKatdMessage_Payload() {}
 
-func (*katdMessage_IbdBlockLocatorHighestHashNotFound) iskatdMessage_Payload() {}
+func (*KatdMessage_IbdBlockLocatorHighestHashNotFound) isKatdMessage_Payload() {}
 
-func (*katdMessage_BlockWithTrustedData) iskatdMessage_Payload() {}
+func (*KatdMessage_BlockWithTrustedData) isKatdMessage_Payload() {}
 
-func (*katdMessage_DoneBlocksWithTrustedData) iskatdMessage_Payload() {}
+func (*KatdMessage_DoneBlocksWithTrustedData) isKatdMessage_Payload() {}
 
-func (*katdMessage_RequestPruningPointAndItsAnticone) iskatdMessage_Payload() {}
+func (*KatdMessage_RequestPruningPointAndItsAnticone) isKatdMessage_Payload() {}
 
-func (*katdMessage_BlockHeaders) iskatdMessage_Payload() {}
+func (*KatdMessage_BlockHeaders) isKatdMessage_Payload() {}
 
-func (*katdMessage_RequestNextHeaders) iskatdMessage_Payload() {}
+func (*KatdMessage_RequestNextHeaders) isKatdMessage_Payload() {}
 
-func (*katdMessage_DoneHeaders) iskatdMessage_Payload() {}
+func (*KatdMessage_DoneHeaders) isKatdMessage_Payload() {}
 
-func (*katdMessage_RequestPruningPointUTXOSet) iskatdMessage_Payload() {}
+func (*KatdMessage_RequestPruningPointUTXOSet) isKatdMessage_Payload() {}
 
-func (*katdMessage_RequestHeaders) iskatdMessage_Payload() {}
+func (*KatdMessage_RequestHeaders) isKatdMessage_Payload() {}
 
-func (*katdMessage_RequestBlockLocator) iskatdMessage_Payload() {}
+func (*KatdMessage_RequestBlockLocator) isKatdMessage_Payload() {}
 
-func (*katdMessage_PruningPoints) iskatdMessage_Payload() {}
+func (*KatdMessage_PruningPoints) isKatdMessage_Payload() {}
 
-func (*katdMessage_RequestPruningPointProof) iskatdMessage_Payload() {}
+func (*KatdMessage_RequestPruningPointProof) isKatdMessage_Payload() {}
 
-func (*katdMessage_PruningPointProof) iskatdMessage_Payload() {}
+func (*KatdMessage_PruningPointProof) isKatdMessage_Payload() {}
 
-func (*katdMessage_Ready) iskatdMessage_Payload() {}
+func (*KatdMessage_Ready) isKatdMessage_Payload() {}
 
-func (*katdMessage_BlockWithTrustedDataV4) iskatdMessage_Payload() {}
+func (*KatdMessage_BlockWithTrustedDataV4) isKatdMessage_Payload() {}
 
-func (*katdMessage_TrustedData) iskatdMessage_Payload() {}
+func (*KatdMessage_TrustedData) isKatdMessage_Payload() {}
 
-func (*katdMessage_RequestIBDChainBlockLocator) iskatdMessage_Payload() {}
+func (*KatdMessage_RequestIBDChainBlockLocator) isKatdMessage_Payload() {}
 
-func (*katdMessage_IbdChainBlockLocator) iskatdMessage_Payload() {}
+func (*KatdMessage_IbdChainBlockLocator) isKatdMessage_Payload() {}
 
-func (*katdMessage_RequestAnticone) iskatdMessage_Payload() {}
+func (*KatdMessage_RequestAnticone) isKatdMessage_Payload() {}
 
-func (*katdMessage_RequestNextPruningPointAndItsAnticoneBlocks) iskatdMessage_Payload() {}
+func (*KatdMessage_RequestNextPruningPointAndItsAnticoneBlocks) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetCurrentNetworkRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_GetCurrentNetworkRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetCurrentNetworkResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_GetCurrentNetworkResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_SubmitBlockRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_SubmitBlockRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_SubmitBlockResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_SubmitBlockResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetBlockTemplateRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_GetBlockTemplateRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetBlockTemplateResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_GetBlockTemplateResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_NotifyBlockAddedRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_NotifyBlockAddedRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_NotifyBlockAddedResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_NotifyBlockAddedResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_BlockAddedNotification) iskatdMessage_Payload() {}
+func (*KatdMessage_BlockAddedNotification) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetPeerAddressesRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_GetPeerAddressesRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetPeerAddressesResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_GetPeerAddressesResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetSelectedTipHashRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_GetSelectedTipHashRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetSelectedTipHashResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_GetSelectedTipHashResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetMempoolEntryRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_GetMempoolEntryRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetMempoolEntryResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_GetMempoolEntryResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetConnectedPeerInfoRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_GetConnectedPeerInfoRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetConnectedPeerInfoResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_GetConnectedPeerInfoResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_AddPeerRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_AddPeerRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_AddPeerResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_AddPeerResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_SubmitTransactionRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_SubmitTransactionRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_SubmitTransactionResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_SubmitTransactionResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_NotifyVirtualSelectedParentChainChangedRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_NotifyVirtualSelectedParentChainChangedRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_NotifyVirtualSelectedParentChainChangedResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_NotifyVirtualSelectedParentChainChangedResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_VirtualSelectedParentChainChangedNotification) iskatdMessage_Payload() {}
+func (*KatdMessage_VirtualSelectedParentChainChangedNotification) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetBlockRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_GetBlockRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetBlockResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_GetBlockResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetSubnetworkRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_GetSubnetworkRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetSubnetworkResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_GetSubnetworkResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetVirtualSelectedParentChainFromBlockRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_GetVirtualSelectedParentChainFromBlockRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetVirtualSelectedParentChainFromBlockResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_GetVirtualSelectedParentChainFromBlockResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetBlocksRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_GetBlocksRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetBlocksResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_GetBlocksResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetBlockCountRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_GetBlockCountRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetBlockCountResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_GetBlockCountResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetBlockDagInfoRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_GetBlockDagInfoRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetBlockDagInfoResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_GetBlockDagInfoResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_ResolveFinalityConflictRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_ResolveFinalityConflictRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_ResolveFinalityConflictResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_ResolveFinalityConflictResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_NotifyFinalityConflictsRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_NotifyFinalityConflictsRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_NotifyFinalityConflictsResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_NotifyFinalityConflictsResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_FinalityConflictNotification) iskatdMessage_Payload() {}
+func (*KatdMessage_FinalityConflictNotification) isKatdMessage_Payload() {}
 
-func (*katdMessage_FinalityConflictResolvedNotification) iskatdMessage_Payload() {}
+func (*KatdMessage_FinalityConflictResolvedNotification) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetMempoolEntriesRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_GetMempoolEntriesRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetMempoolEntriesResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_GetMempoolEntriesResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_ShutDownRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_ShutDownRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_ShutDownResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_ShutDownResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetHeadersRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_GetHeadersRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetHeadersResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_GetHeadersResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_NotifyUtxosChangedRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_NotifyUtxosChangedRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_NotifyUtxosChangedResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_NotifyUtxosChangedResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_UtxosChangedNotification) iskatdMessage_Payload() {}
+func (*KatdMessage_UtxosChangedNotification) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetUtxosByAddressesRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_GetUtxosByAddressesRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetUtxosByAddressesResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_GetUtxosByAddressesResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetVirtualSelectedParentBlueScoreRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_GetVirtualSelectedParentBlueScoreRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetVirtualSelectedParentBlueScoreResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_GetVirtualSelectedParentBlueScoreResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_VirtualSelectedParentBlueScoreChangedNotification) iskatdMessage_Payload() {}
+func (*KatdMessage_VirtualSelectedParentBlueScoreChangedNotification) isKatdMessage_Payload() {}
 
-func (*katdMessage_BanRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_BanRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_BanResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_BanResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_UnbanRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_UnbanRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_UnbanResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_UnbanResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetInfoRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_GetInfoRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetInfoResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_GetInfoResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_StopNotifyingUtxosChangedRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_StopNotifyingUtxosChangedRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_StopNotifyingUtxosChangedResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_StopNotifyingUtxosChangedResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_NotifyPruningPointUTXOSetOverrideRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_NotifyPruningPointUTXOSetOverrideRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_NotifyPruningPointUTXOSetOverrideResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_NotifyPruningPointUTXOSetOverrideResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_PruningPointUTXOSetOverrideNotification) iskatdMessage_Payload() {}
+func (*KatdMessage_PruningPointUTXOSetOverrideNotification) isKatdMessage_Payload() {}
 
-func (*katdMessage_StopNotifyingPruningPointUTXOSetOverrideRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_StopNotifyingPruningPointUTXOSetOverrideRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_StopNotifyingPruningPointUTXOSetOverrideResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_StopNotifyingPruningPointUTXOSetOverrideResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_EstimateNetworkHashesPerSecondRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_EstimateNetworkHashesPerSecondRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_EstimateNetworkHashesPerSecondResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_EstimateNetworkHashesPerSecondResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_NotifyVirtualDaaScoreChangedRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_NotifyVirtualDaaScoreChangedRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_NotifyVirtualDaaScoreChangedResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_NotifyVirtualDaaScoreChangedResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_VirtualDaaScoreChangedNotification) iskatdMessage_Payload() {}
+func (*KatdMessage_VirtualDaaScoreChangedNotification) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetBalanceByAddressRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_GetBalanceByAddressRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetBalanceByAddressResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_GetBalanceByAddressResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetBalancesByAddressesRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_GetBalancesByAddressesRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetBalancesByAddressesResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_GetBalancesByAddressesResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_NotifyNewBlockTemplateRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_NotifyNewBlockTemplateRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_NotifyNewBlockTemplateResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_NotifyNewBlockTemplateResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_NewBlockTemplateNotification) iskatdMessage_Payload() {}
+func (*KatdMessage_NewBlockTemplateNotification) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetMempoolEntriesByAddressesRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_GetMempoolEntriesByAddressesRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetMempoolEntriesByAddressesResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_GetMempoolEntriesByAddressesResponse) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetCoinSupplyRequest) iskatdMessage_Payload() {}
+func (*KatdMessage_GetCoinSupplyRequest) isKatdMessage_Payload() {}
 
-func (*katdMessage_GetCoinSupplyResponse) iskatdMessage_Payload() {}
+func (*KatdMessage_GetCoinSupplyResponse) isKatdMessage_Payload() {}
 
 var File_messages_proto protoreflect.FileDescriptor
 
@@ -2804,7 +2804,7 @@ func file_messages_proto_rawDescGZIP() []byte {
 
 var file_messages_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
 var file_messages_proto_goTypes = []interface{}{
-	(*katdMessage)(nil),                                              // 0: protowire.katdMessage
+	(*KatdMessage)(nil),                                              // 0: protowire.KatdMessage
 	(*AddressesMessage)(nil),                                           // 1: protowire.AddressesMessage
 	(*BlockMessage)(nil),                                               // 2: protowire.BlockMessage
 	(*TransactionMessage)(nil),                                         // 3: protowire.TransactionMessage
@@ -2936,140 +2936,140 @@ var file_messages_proto_goTypes = []interface{}{
 	(*GetCoinSupplyResponseMessage)(nil),                               // 129: protowire.GetCoinSupplyResponseMessage
 }
 var file_messages_proto_depIdxs = []int32{
-	1,   // 0: protowire.katdMessage.addresses:type_name -> protowire.AddressesMessage
-	2,   // 1: protowire.katdMessage.block:type_name -> protowire.BlockMessage
-	3,   // 2: protowire.katdMessage.transaction:type_name -> protowire.TransactionMessage
-	4,   // 3: protowire.katdMessage.blockLocator:type_name -> protowire.BlockLocatorMessage
-	5,   // 4: protowire.katdMessage.requestAddresses:type_name -> protowire.RequestAddressesMessage
-	6,   // 5: protowire.katdMessage.requestRelayBlocks:type_name -> protowire.RequestRelayBlocksMessage
-	7,   // 6: protowire.katdMessage.requestTransactions:type_name -> protowire.RequestTransactionsMessage
-	2,   // 7: protowire.katdMessage.ibdBlock:type_name -> protowire.BlockMessage
-	8,   // 8: protowire.katdMessage.invRelayBlock:type_name -> protowire.InvRelayBlockMessage
-	9,   // 9: protowire.katdMessage.invTransactions:type_name -> protowire.InvTransactionsMessage
-	10,  // 10: protowire.katdMessage.ping:type_name -> protowire.PingMessage
-	11,  // 11: protowire.katdMessage.pong:type_name -> protowire.PongMessage
-	12,  // 12: protowire.katdMessage.verack:type_name -> protowire.VerackMessage
-	13,  // 13: protowire.katdMessage.version:type_name -> protowire.VersionMessage
-	14,  // 14: protowire.katdMessage.transactionNotFound:type_name -> protowire.TransactionNotFoundMessage
-	15,  // 15: protowire.katdMessage.reject:type_name -> protowire.RejectMessage
-	16,  // 16: protowire.katdMessage.pruningPointUtxoSetChunk:type_name -> protowire.PruningPointUtxoSetChunkMessage
-	17,  // 17: protowire.katdMessage.requestIBDBlocks:type_name -> protowire.RequestIBDBlocksMessage
-	18,  // 18: protowire.katdMessage.unexpectedPruningPoint:type_name -> protowire.UnexpectedPruningPointMessage
-	19,  // 19: protowire.katdMessage.ibdBlockLocator:type_name -> protowire.IbdBlockLocatorMessage
-	20,  // 20: protowire.katdMessage.ibdBlockLocatorHighestHash:type_name -> protowire.IbdBlockLocatorHighestHashMessage
-	21,  // 21: protowire.katdMessage.requestNextPruningPointUtxoSetChunk:type_name -> protowire.RequestNextPruningPointUtxoSetChunkMessage
-	22,  // 22: protowire.katdMessage.donePruningPointUtxoSetChunks:type_name -> protowire.DonePruningPointUtxoSetChunksMessage
-	23,  // 23: protowire.katdMessage.ibdBlockLocatorHighestHashNotFound:type_name -> protowire.IbdBlockLocatorHighestHashNotFoundMessage
-	24,  // 24: protowire.katdMessage.blockWithTrustedData:type_name -> protowire.BlockWithTrustedDataMessage
-	25,  // 25: protowire.katdMessage.doneBlocksWithTrustedData:type_name -> protowire.DoneBlocksWithTrustedDataMessage
-	26,  // 26: protowire.katdMessage.requestPruningPointAndItsAnticone:type_name -> protowire.RequestPruningPointAndItsAnticoneMessage
-	27,  // 27: protowire.katdMessage.blockHeaders:type_name -> protowire.BlockHeadersMessage
-	28,  // 28: protowire.katdMessage.requestNextHeaders:type_name -> protowire.RequestNextHeadersMessage
-	29,  // 29: protowire.katdMessage.DoneHeaders:type_name -> protowire.DoneHeadersMessage
-	30,  // 30: protowire.katdMessage.requestPruningPointUTXOSet:type_name -> protowire.RequestPruningPointUTXOSetMessage
-	31,  // 31: protowire.katdMessage.requestHeaders:type_name -> protowire.RequestHeadersMessage
-	32,  // 32: protowire.katdMessage.requestBlockLocator:type_name -> protowire.RequestBlockLocatorMessage
-	33,  // 33: protowire.katdMessage.pruningPoints:type_name -> protowire.PruningPointsMessage
-	34,  // 34: protowire.katdMessage.requestPruningPointProof:type_name -> protowire.RequestPruningPointProofMessage
-	35,  // 35: protowire.katdMessage.pruningPointProof:type_name -> protowire.PruningPointProofMessage
-	36,  // 36: protowire.katdMessage.ready:type_name -> protowire.ReadyMessage
-	37,  // 37: protowire.katdMessage.blockWithTrustedDataV4:type_name -> protowire.BlockWithTrustedDataV4Message
-	38,  // 38: protowire.katdMessage.trustedData:type_name -> protowire.TrustedDataMessage
-	39,  // 39: protowire.katdMessage.requestIBDChainBlockLocator:type_name -> protowire.RequestIBDChainBlockLocatorMessage
-	40,  // 40: protowire.katdMessage.ibdChainBlockLocator:type_name -> protowire.IbdChainBlockLocatorMessage
-	41,  // 41: protowire.katdMessage.requestAnticone:type_name -> protowire.RequestAnticoneMessage
-	42,  // 42: protowire.katdMessage.requestNextPruningPointAndItsAnticoneBlocks:type_name -> protowire.RequestNextPruningPointAndItsAnticoneBlocksMessage
-	43,  // 43: protowire.katdMessage.getCurrentNetworkRequest:type_name -> protowire.GetCurrentNetworkRequestMessage
-	44,  // 44: protowire.katdMessage.getCurrentNetworkResponse:type_name -> protowire.GetCurrentNetworkResponseMessage
-	45,  // 45: protowire.katdMessage.submitBlockRequest:type_name -> protowire.SubmitBlockRequestMessage
-	46,  // 46: protowire.katdMessage.submitBlockResponse:type_name -> protowire.SubmitBlockResponseMessage
-	47,  // 47: protowire.katdMessage.getBlockTemplateRequest:type_name -> protowire.GetBlockTemplateRequestMessage
-	48,  // 48: protowire.katdMessage.getBlockTemplateResponse:type_name -> protowire.GetBlockTemplateResponseMessage
-	49,  // 49: protowire.katdMessage.notifyBlockAddedRequest:type_name -> protowire.NotifyBlockAddedRequestMessage
-	50,  // 50: protowire.katdMessage.notifyBlockAddedResponse:type_name -> protowire.NotifyBlockAddedResponseMessage
-	51,  // 51: protowire.katdMessage.blockAddedNotification:type_name -> protowire.BlockAddedNotificationMessage
-	52,  // 52: protowire.katdMessage.getPeerAddressesRequest:type_name -> protowire.GetPeerAddressesRequestMessage
-	53,  // 53: protowire.katdMessage.getPeerAddressesResponse:type_name -> protowire.GetPeerAddressesResponseMessage
-	54,  // 54: protowire.katdMessage.getSelectedTipHashRequest:type_name -> protowire.GetSelectedTipHashRequestMessage
-	55,  // 55: protowire.katdMessage.getSelectedTipHashResponse:type_name -> protowire.GetSelectedTipHashResponseMessage
-	56,  // 56: protowire.katdMessage.getMempoolEntryRequest:type_name -> protowire.GetMempoolEntryRequestMessage
-	57,  // 57: protowire.katdMessage.getMempoolEntryResponse:type_name -> protowire.GetMempoolEntryResponseMessage
-	58,  // 58: protowire.katdMessage.getConnectedPeerInfoRequest:type_name -> protowire.GetConnectedPeerInfoRequestMessage
-	59,  // 59: protowire.katdMessage.getConnectedPeerInfoResponse:type_name -> protowire.GetConnectedPeerInfoResponseMessage
-	60,  // 60: protowire.katdMessage.addPeerRequest:type_name -> protowire.AddPeerRequestMessage
-	61,  // 61: protowire.katdMessage.addPeerResponse:type_name -> protowire.AddPeerResponseMessage
-	62,  // 62: protowire.katdMessage.submitTransactionRequest:type_name -> protowire.SubmitTransactionRequestMessage
-	63,  // 63: protowire.katdMessage.submitTransactionResponse:type_name -> protowire.SubmitTransactionResponseMessage
-	64,  // 64: protowire.katdMessage.notifyVirtualSelectedParentChainChangedRequest:type_name -> protowire.NotifyVirtualSelectedParentChainChangedRequestMessage
-	65,  // 65: protowire.katdMessage.notifyVirtualSelectedParentChainChangedResponse:type_name -> protowire.NotifyVirtualSelectedParentChainChangedResponseMessage
-	66,  // 66: protowire.katdMessage.virtualSelectedParentChainChangedNotification:type_name -> protowire.VirtualSelectedParentChainChangedNotificationMessage
-	67,  // 67: protowire.katdMessage.getBlockRequest:type_name -> protowire.GetBlockRequestMessage
-	68,  // 68: protowire.katdMessage.getBlockResponse:type_name -> protowire.GetBlockResponseMessage
-	69,  // 69: protowire.katdMessage.getSubnetworkRequest:type_name -> protowire.GetSubnetworkRequestMessage
-	70,  // 70: protowire.katdMessage.getSubnetworkResponse:type_name -> protowire.GetSubnetworkResponseMessage
-	71,  // 71: protowire.katdMessage.getVirtualSelectedParentChainFromBlockRequest:type_name -> protowire.GetVirtualSelectedParentChainFromBlockRequestMessage
-	72,  // 72: protowire.katdMessage.getVirtualSelectedParentChainFromBlockResponse:type_name -> protowire.GetVirtualSelectedParentChainFromBlockResponseMessage
-	73,  // 73: protowire.katdMessage.getBlocksRequest:type_name -> protowire.GetBlocksRequestMessage
-	74,  // 74: protowire.katdMessage.getBlocksResponse:type_name -> protowire.GetBlocksResponseMessage
-	75,  // 75: protowire.katdMessage.getBlockCountRequest:type_name -> protowire.GetBlockCountRequestMessage
-	76,  // 76: protowire.katdMessage.getBlockCountResponse:type_name -> protowire.GetBlockCountResponseMessage
-	77,  // 77: protowire.katdMessage.getBlockDagInfoRequest:type_name -> protowire.GetBlockDagInfoRequestMessage
-	78,  // 78: protowire.katdMessage.getBlockDagInfoResponse:type_name -> protowire.GetBlockDagInfoResponseMessage
-	79,  // 79: protowire.katdMessage.resolveFinalityConflictRequest:type_name -> protowire.ResolveFinalityConflictRequestMessage
-	80,  // 80: protowire.katdMessage.resolveFinalityConflictResponse:type_name -> protowire.ResolveFinalityConflictResponseMessage
-	81,  // 81: protowire.katdMessage.notifyFinalityConflictsRequest:type_name -> protowire.NotifyFinalityConflictsRequestMessage
-	82,  // 82: protowire.katdMessage.notifyFinalityConflictsResponse:type_name -> protowire.NotifyFinalityConflictsResponseMessage
-	83,  // 83: protowire.katdMessage.finalityConflictNotification:type_name -> protowire.FinalityConflictNotificationMessage
-	84,  // 84: protowire.katdMessage.finalityConflictResolvedNotification:type_name -> protowire.FinalityConflictResolvedNotificationMessage
-	85,  // 85: protowire.katdMessage.getMempoolEntriesRequest:type_name -> protowire.GetMempoolEntriesRequestMessage
-	86,  // 86: protowire.katdMessage.getMempoolEntriesResponse:type_name -> protowire.GetMempoolEntriesResponseMessage
-	87,  // 87: protowire.katdMessage.shutDownRequest:type_name -> protowire.ShutDownRequestMessage
-	88,  // 88: protowire.katdMessage.shutDownResponse:type_name -> protowire.ShutDownResponseMessage
-	89,  // 89: protowire.katdMessage.getHeadersRequest:type_name -> protowire.GetHeadersRequestMessage
-	90,  // 90: protowire.katdMessage.getHeadersResponse:type_name -> protowire.GetHeadersResponseMessage
-	91,  // 91: protowire.katdMessage.notifyUtxosChangedRequest:type_name -> protowire.NotifyUtxosChangedRequestMessage
-	92,  // 92: protowire.katdMessage.notifyUtxosChangedResponse:type_name -> protowire.NotifyUtxosChangedResponseMessage
-	93,  // 93: protowire.katdMessage.utxosChangedNotification:type_name -> protowire.UtxosChangedNotificationMessage
-	94,  // 94: protowire.katdMessage.getUtxosByAddressesRequest:type_name -> protowire.GetUtxosByAddressesRequestMessage
-	95,  // 95: protowire.katdMessage.getUtxosByAddressesResponse:type_name -> protowire.GetUtxosByAddressesResponseMessage
-	96,  // 96: protowire.katdMessage.getVirtualSelectedParentBlueScoreRequest:type_name -> protowire.GetVirtualSelectedParentBlueScoreRequestMessage
-	97,  // 97: protowire.katdMessage.getVirtualSelectedParentBlueScoreResponse:type_name -> protowire.GetVirtualSelectedParentBlueScoreResponseMessage
-	98,  // 98: protowire.katdMessage.notifyVirtualSelectedParentBlueScoreChangedRequest:type_name -> protowire.NotifyVirtualSelectedParentBlueScoreChangedRequestMessage
-	99,  // 99: protowire.katdMessage.notifyVirtualSelectedParentBlueScoreChangedResponse:type_name -> protowire.NotifyVirtualSelectedParentBlueScoreChangedResponseMessage
-	100, // 100: protowire.katdMessage.virtualSelectedParentBlueScoreChangedNotification:type_name -> protowire.VirtualSelectedParentBlueScoreChangedNotificationMessage
-	101, // 101: protowire.katdMessage.banRequest:type_name -> protowire.BanRequestMessage
-	102, // 102: protowire.katdMessage.banResponse:type_name -> protowire.BanResponseMessage
-	103, // 103: protowire.katdMessage.unbanRequest:type_name -> protowire.UnbanRequestMessage
-	104, // 104: protowire.katdMessage.unbanResponse:type_name -> protowire.UnbanResponseMessage
-	105, // 105: protowire.katdMessage.getInfoRequest:type_name -> protowire.GetInfoRequestMessage
-	106, // 106: protowire.katdMessage.getInfoResponse:type_name -> protowire.GetInfoResponseMessage
-	107, // 107: protowire.katdMessage.stopNotifyingUtxosChangedRequest:type_name -> protowire.StopNotifyingUtxosChangedRequestMessage
-	108, // 108: protowire.katdMessage.stopNotifyingUtxosChangedResponse:type_name -> protowire.StopNotifyingUtxosChangedResponseMessage
-	109, // 109: protowire.katdMessage.notifyPruningPointUTXOSetOverrideRequest:type_name -> protowire.NotifyPruningPointUTXOSetOverrideRequestMessage
-	110, // 110: protowire.katdMessage.notifyPruningPointUTXOSetOverrideResponse:type_name -> protowire.NotifyPruningPointUTXOSetOverrideResponseMessage
-	111, // 111: protowire.katdMessage.pruningPointUTXOSetOverrideNotification:type_name -> protowire.PruningPointUTXOSetOverrideNotificationMessage
-	112, // 112: protowire.katdMessage.stopNotifyingPruningPointUTXOSetOverrideRequest:type_name -> protowire.StopNotifyingPruningPointUTXOSetOverrideRequestMessage
-	113, // 113: protowire.katdMessage.stopNotifyingPruningPointUTXOSetOverrideResponse:type_name -> protowire.StopNotifyingPruningPointUTXOSetOverrideResponseMessage
-	114, // 114: protowire.katdMessage.estimateNetworkHashesPerSecondRequest:type_name -> protowire.EstimateNetworkHashesPerSecondRequestMessage
-	115, // 115: protowire.katdMessage.estimateNetworkHashesPerSecondResponse:type_name -> protowire.EstimateNetworkHashesPerSecondResponseMessage
-	116, // 116: protowire.katdMessage.notifyVirtualDaaScoreChangedRequest:type_name -> protowire.NotifyVirtualDaaScoreChangedRequestMessage
-	117, // 117: protowire.katdMessage.notifyVirtualDaaScoreChangedResponse:type_name -> protowire.NotifyVirtualDaaScoreChangedResponseMessage
-	118, // 118: protowire.katdMessage.virtualDaaScoreChangedNotification:type_name -> protowire.VirtualDaaScoreChangedNotificationMessage
-	119, // 119: protowire.katdMessage.getBalanceByAddressRequest:type_name -> protowire.GetBalanceByAddressRequestMessage
-	120, // 120: protowire.katdMessage.getBalanceByAddressResponse:type_name -> protowire.GetBalanceByAddressResponseMessage
-	121, // 121: protowire.katdMessage.getBalancesByAddressesRequest:type_name -> protowire.GetBalancesByAddressesRequestMessage
-	122, // 122: protowire.katdMessage.getBalancesByAddressesResponse:type_name -> protowire.GetBalancesByAddressesResponseMessage
-	123, // 123: protowire.katdMessage.notifyNewBlockTemplateRequest:type_name -> protowire.NotifyNewBlockTemplateRequestMessage
-	124, // 124: protowire.katdMessage.notifyNewBlockTemplateResponse:type_name -> protowire.NotifyNewBlockTemplateResponseMessage
-	125, // 125: protowire.katdMessage.newBlockTemplateNotification:type_name -> protowire.NewBlockTemplateNotificationMessage
-	126, // 126: protowire.katdMessage.getMempoolEntriesByAddressesRequest:type_name -> protowire.GetMempoolEntriesByAddressesRequestMessage
-	127, // 127: protowire.katdMessage.getMempoolEntriesByAddressesResponse:type_name -> protowire.GetMempoolEntriesByAddressesResponseMessage
-	128, // 128: protowire.katdMessage.getCoinSupplyRequest:type_name -> protowire.GetCoinSupplyRequestMessage
-	129, // 129: protowire.katdMessage.getCoinSupplyResponse:type_name -> protowire.GetCoinSupplyResponseMessage
-	0,   // 130: protowire.P2P.MessageStream:input_type -> protowire.katdMessage
-	0,   // 131: protowire.RPC.MessageStream:input_type -> protowire.katdMessage
-	0,   // 132: protowire.P2P.MessageStream:output_type -> protowire.katdMessage
-	0,   // 133: protowire.RPC.MessageStream:output_type -> protowire.katdMessage
+	1,   // 0: protowire.KatdMessage.addresses:type_name -> protowire.AddressesMessage
+	2,   // 1: protowire.KatdMessage.block:type_name -> protowire.BlockMessage
+	3,   // 2: protowire.KatdMessage.transaction:type_name -> protowire.TransactionMessage
+	4,   // 3: protowire.KatdMessage.blockLocator:type_name -> protowire.BlockLocatorMessage
+	5,   // 4: protowire.KatdMessage.requestAddresses:type_name -> protowire.RequestAddressesMessage
+	6,   // 5: protowire.KatdMessage.requestRelayBlocks:type_name -> protowire.RequestRelayBlocksMessage
+	7,   // 6: protowire.KatdMessage.requestTransactions:type_name -> protowire.RequestTransactionsMessage
+	2,   // 7: protowire.KatdMessage.ibdBlock:type_name -> protowire.BlockMessage
+	8,   // 8: protowire.KatdMessage.invRelayBlock:type_name -> protowire.InvRelayBlockMessage
+	9,   // 9: protowire.KatdMessage.invTransactions:type_name -> protowire.InvTransactionsMessage
+	10,  // 10: protowire.KatdMessage.ping:type_name -> protowire.PingMessage
+	11,  // 11: protowire.KatdMessage.pong:type_name -> protowire.PongMessage
+	12,  // 12: protowire.KatdMessage.verack:type_name -> protowire.VerackMessage
+	13,  // 13: protowire.KatdMessage.version:type_name -> protowire.VersionMessage
+	14,  // 14: protowire.KatdMessage.transactionNotFound:type_name -> protowire.TransactionNotFoundMessage
+	15,  // 15: protowire.KatdMessage.reject:type_name -> protowire.RejectMessage
+	16,  // 16: protowire.KatdMessage.pruningPointUtxoSetChunk:type_name -> protowire.PruningPointUtxoSetChunkMessage
+	17,  // 17: protowire.KatdMessage.requestIBDBlocks:type_name -> protowire.RequestIBDBlocksMessage
+	18,  // 18: protowire.KatdMessage.unexpectedPruningPoint:type_name -> protowire.UnexpectedPruningPointMessage
+	19,  // 19: protowire.KatdMessage.ibdBlockLocator:type_name -> protowire.IbdBlockLocatorMessage
+	20,  // 20: protowire.KatdMessage.ibdBlockLocatorHighestHash:type_name -> protowire.IbdBlockLocatorHighestHashMessage
+	21,  // 21: protowire.KatdMessage.requestNextPruningPointUtxoSetChunk:type_name -> protowire.RequestNextPruningPointUtxoSetChunkMessage
+	22,  // 22: protowire.KatdMessage.donePruningPointUtxoSetChunks:type_name -> protowire.DonePruningPointUtxoSetChunksMessage
+	23,  // 23: protowire.KatdMessage.ibdBlockLocatorHighestHashNotFound:type_name -> protowire.IbdBlockLocatorHighestHashNotFoundMessage
+	24,  // 24: protowire.KatdMessage.blockWithTrustedData:type_name -> protowire.BlockWithTrustedDataMessage
+	25,  // 25: protowire.KatdMessage.doneBlocksWithTrustedData:type_name -> protowire.DoneBlocksWithTrustedDataMessage
+	26,  // 26: protowire.KatdMessage.requestPruningPointAndItsAnticone:type_name -> protowire.RequestPruningPointAndItsAnticoneMessage
+	27,  // 27: protowire.KatdMessage.blockHeaders:type_name -> protowire.BlockHeadersMessage
+	28,  // 28: protowire.KatdMessage.requestNextHeaders:type_name -> protowire.RequestNextHeadersMessage
+	29,  // 29: protowire.KatdMessage.DoneHeaders:type_name -> protowire.DoneHeadersMessage
+	30,  // 30: protowire.KatdMessage.requestPruningPointUTXOSet:type_name -> protowire.RequestPruningPointUTXOSetMessage
+	31,  // 31: protowire.KatdMessage.requestHeaders:type_name -> protowire.RequestHeadersMessage
+	32,  // 32: protowire.KatdMessage.requestBlockLocator:type_name -> protowire.RequestBlockLocatorMessage
+	33,  // 33: protowire.KatdMessage.pruningPoints:type_name -> protowire.PruningPointsMessage
+	34,  // 34: protowire.KatdMessage.requestPruningPointProof:type_name -> protowire.RequestPruningPointProofMessage
+	35,  // 35: protowire.KatdMessage.pruningPointProof:type_name -> protowire.PruningPointProofMessage
+	36,  // 36: protowire.KatdMessage.ready:type_name -> protowire.ReadyMessage
+	37,  // 37: protowire.KatdMessage.blockWithTrustedDataV4:type_name -> protowire.BlockWithTrustedDataV4Message
+	38,  // 38: protowire.KatdMessage.trustedData:type_name -> protowire.TrustedDataMessage
+	39,  // 39: protowire.KatdMessage.requestIBDChainBlockLocator:type_name -> protowire.RequestIBDChainBlockLocatorMessage
+	40,  // 40: protowire.KatdMessage.ibdChainBlockLocator:type_name -> protowire.IbdChainBlockLocatorMessage
+	41,  // 41: protowire.KatdMessage.requestAnticone:type_name -> protowire.RequestAnticoneMessage
+	42,  // 42: protowire.KatdMessage.requestNextPruningPointAndItsAnticoneBlocks:type_name -> protowire.RequestNextPruningPointAndItsAnticoneBlocksMessage
+	43,  // 43: protowire.KatdMessage.getCurrentNetworkRequest:type_name -> protowire.GetCurrentNetworkRequestMessage
+	44,  // 44: protowire.KatdMessage.getCurrentNetworkResponse:type_name -> protowire.GetCurrentNetworkResponseMessage
+	45,  // 45: protowire.KatdMessage.submitBlockRequest:type_name -> protowire.SubmitBlockRequestMessage
+	46,  // 46: protowire.KatdMessage.submitBlockResponse:type_name -> protowire.SubmitBlockResponseMessage
+	47,  // 47: protowire.KatdMessage.getBlockTemplateRequest:type_name -> protowire.GetBlockTemplateRequestMessage
+	48,  // 48: protowire.KatdMessage.getBlockTemplateResponse:type_name -> protowire.GetBlockTemplateResponseMessage
+	49,  // 49: protowire.KatdMessage.notifyBlockAddedRequest:type_name -> protowire.NotifyBlockAddedRequestMessage
+	50,  // 50: protowire.KatdMessage.notifyBlockAddedResponse:type_name -> protowire.NotifyBlockAddedResponseMessage
+	51,  // 51: protowire.KatdMessage.blockAddedNotification:type_name -> protowire.BlockAddedNotificationMessage
+	52,  // 52: protowire.KatdMessage.getPeerAddressesRequest:type_name -> protowire.GetPeerAddressesRequestMessage
+	53,  // 53: protowire.KatdMessage.getPeerAddressesResponse:type_name -> protowire.GetPeerAddressesResponseMessage
+	54,  // 54: protowire.KatdMessage.getSelectedTipHashRequest:type_name -> protowire.GetSelectedTipHashRequestMessage
+	55,  // 55: protowire.KatdMessage.getSelectedTipHashResponse:type_name -> protowire.GetSelectedTipHashResponseMessage
+	56,  // 56: protowire.KatdMessage.getMempoolEntryRequest:type_name -> protowire.GetMempoolEntryRequestMessage
+	57,  // 57: protowire.KatdMessage.getMempoolEntryResponse:type_name -> protowire.GetMempoolEntryResponseMessage
+	58,  // 58: protowire.KatdMessage.getConnectedPeerInfoRequest:type_name -> protowire.GetConnectedPeerInfoRequestMessage
+	59,  // 59: protowire.KatdMessage.getConnectedPeerInfoResponse:type_name -> protowire.GetConnectedPeerInfoResponseMessage
+	60,  // 60: protowire.KatdMessage.addPeerRequest:type_name -> protowire.AddPeerRequestMessage
+	61,  // 61: protowire.KatdMessage.addPeerResponse:type_name -> protowire.AddPeerResponseMessage
+	62,  // 62: protowire.KatdMessage.submitTransactionRequest:type_name -> protowire.SubmitTransactionRequestMessage
+	63,  // 63: protowire.KatdMessage.submitTransactionResponse:type_name -> protowire.SubmitTransactionResponseMessage
+	64,  // 64: protowire.KatdMessage.notifyVirtualSelectedParentChainChangedRequest:type_name -> protowire.NotifyVirtualSelectedParentChainChangedRequestMessage
+	65,  // 65: protowire.KatdMessage.notifyVirtualSelectedParentChainChangedResponse:type_name -> protowire.NotifyVirtualSelectedParentChainChangedResponseMessage
+	66,  // 66: protowire.KatdMessage.virtualSelectedParentChainChangedNotification:type_name -> protowire.VirtualSelectedParentChainChangedNotificationMessage
+	67,  // 67: protowire.KatdMessage.getBlockRequest:type_name -> protowire.GetBlockRequestMessage
+	68,  // 68: protowire.KatdMessage.getBlockResponse:type_name -> protowire.GetBlockResponseMessage
+	69,  // 69: protowire.KatdMessage.getSubnetworkRequest:type_name -> protowire.GetSubnetworkRequestMessage
+	70,  // 70: protowire.KatdMessage.getSubnetworkResponse:type_name -> protowire.GetSubnetworkResponseMessage
+	71,  // 71: protowire.KatdMessage.getVirtualSelectedParentChainFromBlockRequest:type_name -> protowire.GetVirtualSelectedParentChainFromBlockRequestMessage
+	72,  // 72: protowire.KatdMessage.getVirtualSelectedParentChainFromBlockResponse:type_name -> protowire.GetVirtualSelectedParentChainFromBlockResponseMessage
+	73,  // 73: protowire.KatdMessage.getBlocksRequest:type_name -> protowire.GetBlocksRequestMessage
+	74,  // 74: protowire.KatdMessage.getBlocksResponse:type_name -> protowire.GetBlocksResponseMessage
+	75,  // 75: protowire.KatdMessage.getBlockCountRequest:type_name -> protowire.GetBlockCountRequestMessage
+	76,  // 76: protowire.KatdMessage.getBlockCountResponse:type_name -> protowire.GetBlockCountResponseMessage
+	77,  // 77: protowire.KatdMessage.getBlockDagInfoRequest:type_name -> protowire.GetBlockDagInfoRequestMessage
+	78,  // 78: protowire.KatdMessage.getBlockDagInfoResponse:type_name -> protowire.GetBlockDagInfoResponseMessage
+	79,  // 79: protowire.KatdMessage.resolveFinalityConflictRequest:type_name -> protowire.ResolveFinalityConflictRequestMessage
+	80,  // 80: protowire.KatdMessage.resolveFinalityConflictResponse:type_name -> protowire.ResolveFinalityConflictResponseMessage
+	81,  // 81: protowire.KatdMessage.notifyFinalityConflictsRequest:type_name -> protowire.NotifyFinalityConflictsRequestMessage
+	82,  // 82: protowire.KatdMessage.notifyFinalityConflictsResponse:type_name -> protowire.NotifyFinalityConflictsResponseMessage
+	83,  // 83: protowire.KatdMessage.finalityConflictNotification:type_name -> protowire.FinalityConflictNotificationMessage
+	84,  // 84: protowire.KatdMessage.finalityConflictResolvedNotification:type_name -> protowire.FinalityConflictResolvedNotificationMessage
+	85,  // 85: protowire.KatdMessage.getMempoolEntriesRequest:type_name -> protowire.GetMempoolEntriesRequestMessage
+	86,  // 86: protowire.KatdMessage.getMempoolEntriesResponse:type_name -> protowire.GetMempoolEntriesResponseMessage
+	87,  // 87: protowire.KatdMessage.shutDownRequest:type_name -> protowire.ShutDownRequestMessage
+	88,  // 88: protowire.KatdMessage.shutDownResponse:type_name -> protowire.ShutDownResponseMessage
+	89,  // 89: protowire.KatdMessage.getHeadersRequest:type_name -> protowire.GetHeadersRequestMessage
+	90,  // 90: protowire.KatdMessage.getHeadersResponse:type_name -> protowire.GetHeadersResponseMessage
+	91,  // 91: protowire.KatdMessage.notifyUtxosChangedRequest:type_name -> protowire.NotifyUtxosChangedRequestMessage
+	92,  // 92: protowire.KatdMessage.notifyUtxosChangedResponse:type_name -> protowire.NotifyUtxosChangedResponseMessage
+	93,  // 93: protowire.KatdMessage.utxosChangedNotification:type_name -> protowire.UtxosChangedNotificationMessage
+	94,  // 94: protowire.KatdMessage.getUtxosByAddressesRequest:type_name -> protowire.GetUtxosByAddressesRequestMessage
+	95,  // 95: protowire.KatdMessage.getUtxosByAddressesResponse:type_name -> protowire.GetUtxosByAddressesResponseMessage
+	96,  // 96: protowire.KatdMessage.getVirtualSelectedParentBlueScoreRequest:type_name -> protowire.GetVirtualSelectedParentBlueScoreRequestMessage
+	97,  // 97: protowire.KatdMessage.getVirtualSelectedParentBlueScoreResponse:type_name -> protowire.GetVirtualSelectedParentBlueScoreResponseMessage
+	98,  // 98: protowire.KatdMessage.notifyVirtualSelectedParentBlueScoreChangedRequest:type_name -> protowire.NotifyVirtualSelectedParentBlueScoreChangedRequestMessage
+	99,  // 99: protowire.KatdMessage.notifyVirtualSelectedParentBlueScoreChangedResponse:type_name -> protowire.NotifyVirtualSelectedParentBlueScoreChangedResponseMessage
+	100, // 100: protowire.KatdMessage.virtualSelectedParentBlueScoreChangedNotification:type_name -> protowire.VirtualSelectedParentBlueScoreChangedNotificationMessage
+	101, // 101: protowire.KatdMessage.banRequest:type_name -> protowire.BanRequestMessage
+	102, // 102: protowire.KatdMessage.banResponse:type_name -> protowire.BanResponseMessage
+	103, // 103: protowire.KatdMessage.unbanRequest:type_name -> protowire.UnbanRequestMessage
+	104, // 104: protowire.KatdMessage.unbanResponse:type_name -> protowire.UnbanResponseMessage
+	105, // 105: protowire.KatdMessage.getInfoRequest:type_name -> protowire.GetInfoRequestMessage
+	106, // 106: protowire.KatdMessage.getInfoResponse:type_name -> protowire.GetInfoResponseMessage
+	107, // 107: protowire.KatdMessage.stopNotifyingUtxosChangedRequest:type_name -> protowire.StopNotifyingUtxosChangedRequestMessage
+	108, // 108: protowire.KatdMessage.stopNotifyingUtxosChangedResponse:type_name -> protowire.StopNotifyingUtxosChangedResponseMessage
+	109, // 109: protowire.KatdMessage.notifyPruningPointUTXOSetOverrideRequest:type_name -> protowire.NotifyPruningPointUTXOSetOverrideRequestMessage
+	110, // 110: protowire.KatdMessage.notifyPruningPointUTXOSetOverrideResponse:type_name -> protowire.NotifyPruningPointUTXOSetOverrideResponseMessage
+	111, // 111: protowire.KatdMessage.pruningPointUTXOSetOverrideNotification:type_name -> protowire.PruningPointUTXOSetOverrideNotificationMessage
+	112, // 112: protowire.KatdMessage.stopNotifyingPruningPointUTXOSetOverrideRequest:type_name -> protowire.StopNotifyingPruningPointUTXOSetOverrideRequestMessage
+	113, // 113: protowire.KatdMessage.stopNotifyingPruningPointUTXOSetOverrideResponse:type_name -> protowire.StopNotifyingPruningPointUTXOSetOverrideResponseMessage
+	114, // 114: protowire.KatdMessage.estimateNetworkHashesPerSecondRequest:type_name -> protowire.EstimateNetworkHashesPerSecondRequestMessage
+	115, // 115: protowire.KatdMessage.estimateNetworkHashesPerSecondResponse:type_name -> protowire.EstimateNetworkHashesPerSecondResponseMessage
+	116, // 116: protowire.KatdMessage.notifyVirtualDaaScoreChangedRequest:type_name -> protowire.NotifyVirtualDaaScoreChangedRequestMessage
+	117, // 117: protowire.KatdMessage.notifyVirtualDaaScoreChangedResponse:type_name -> protowire.NotifyVirtualDaaScoreChangedResponseMessage
+	118, // 118: protowire.KatdMessage.virtualDaaScoreChangedNotification:type_name -> protowire.VirtualDaaScoreChangedNotificationMessage
+	119, // 119: protowire.KatdMessage.getBalanceByAddressRequest:type_name -> protowire.GetBalanceByAddressRequestMessage
+	120, // 120: protowire.KatdMessage.getBalanceByAddressResponse:type_name -> protowire.GetBalanceByAddressResponseMessage
+	121, // 121: protowire.KatdMessage.getBalancesByAddressesRequest:type_name -> protowire.GetBalancesByAddressesRequestMessage
+	122, // 122: protowire.KatdMessage.getBalancesByAddressesResponse:type_name -> protowire.GetBalancesByAddressesResponseMessage
+	123, // 123: protowire.KatdMessage.notifyNewBlockTemplateRequest:type_name -> protowire.NotifyNewBlockTemplateRequestMessage
+	124, // 124: protowire.KatdMessage.notifyNewBlockTemplateResponse:type_name -> protowire.NotifyNewBlockTemplateResponseMessage
+	125, // 125: protowire.KatdMessage.newBlockTemplateNotification:type_name -> protowire.NewBlockTemplateNotificationMessage
+	126, // 126: protowire.KatdMessage.getMempoolEntriesByAddressesRequest:type_name -> protowire.GetMempoolEntriesByAddressesRequestMessage
+	127, // 127: protowire.KatdMessage.getMempoolEntriesByAddressesResponse:type_name -> protowire.GetMempoolEntriesByAddressesResponseMessage
+	128, // 128: protowire.KatdMessage.getCoinSupplyRequest:type_name -> protowire.GetCoinSupplyRequestMessage
+	129, // 129: protowire.KatdMessage.getCoinSupplyResponse:type_name -> protowire.GetCoinSupplyResponseMessage
+	0,   // 130: protowire.P2P.MessageStream:input_type -> protowire.KatdMessage
+	0,   // 131: protowire.RPC.MessageStream:input_type -> protowire.KatdMessage
+	0,   // 132: protowire.P2P.MessageStream:output_type -> protowire.KatdMessage
+	0,   // 133: protowire.RPC.MessageStream:output_type -> protowire.KatdMessage
 	132, // [132:134] is the sub-list for method output_type
 	130, // [130:132] is the sub-list for method input_type
 	130, // [130:130] is the sub-list for extension type_name
@@ -3086,7 +3086,7 @@ func file_messages_proto_init() {
 	file_rpc_proto_init()
 	if !protoimpl.UnsafeEnabled {
 		file_messages_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*katdMessage); i {
+			switch v := v.(*KatdMessage); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3099,136 +3099,136 @@ func file_messages_proto_init() {
 		}
 	}
 	file_messages_proto_msgTypes[0].OneofWrappers = []interface{}{
-		(*katdMessage_Addresses)(nil),
-		(*katdMessage_Block)(nil),
-		(*katdMessage_Transaction)(nil),
-		(*katdMessage_BlockLocator)(nil),
-		(*katdMessage_RequestAddresses)(nil),
-		(*katdMessage_RequestRelayBlocks)(nil),
-		(*katdMessage_RequestTransactions)(nil),
-		(*katdMessage_IbdBlock)(nil),
-		(*katdMessage_InvRelayBlock)(nil),
-		(*katdMessage_InvTransactions)(nil),
-		(*katdMessage_Ping)(nil),
-		(*katdMessage_Pong)(nil),
-		(*katdMessage_Verack)(nil),
-		(*katdMessage_Version)(nil),
-		(*katdMessage_TransactionNotFound)(nil),
-		(*katdMessage_Reject)(nil),
-		(*katdMessage_PruningPointUtxoSetChunk)(nil),
-		(*katdMessage_RequestIBDBlocks)(nil),
-		(*katdMessage_UnexpectedPruningPoint)(nil),
-		(*katdMessage_IbdBlockLocator)(nil),
-		(*katdMessage_IbdBlockLocatorHighestHash)(nil),
-		(*katdMessage_RequestNextPruningPointUtxoSetChunk)(nil),
-		(*katdMessage_DonePruningPointUtxoSetChunks)(nil),
-		(*katdMessage_IbdBlockLocatorHighestHashNotFound)(nil),
-		(*katdMessage_BlockWithTrustedData)(nil),
-		(*katdMessage_DoneBlocksWithTrustedData)(nil),
-		(*katdMessage_RequestPruningPointAndItsAnticone)(nil),
-		(*katdMessage_BlockHeaders)(nil),
-		(*katdMessage_RequestNextHeaders)(nil),
-		(*katdMessage_DoneHeaders)(nil),
-		(*katdMessage_RequestPruningPointUTXOSet)(nil),
-		(*katdMessage_RequestHeaders)(nil),
-		(*katdMessage_RequestBlockLocator)(nil),
-		(*katdMessage_PruningPoints)(nil),
-		(*katdMessage_RequestPruningPointProof)(nil),
-		(*katdMessage_PruningPointProof)(nil),
-		(*katdMessage_Ready)(nil),
-		(*katdMessage_BlockWithTrustedDataV4)(nil),
-		(*katdMessage_TrustedData)(nil),
-		(*katdMessage_RequestIBDChainBlockLocator)(nil),
-		(*katdMessage_IbdChainBlockLocator)(nil),
-		(*katdMessage_RequestAnticone)(nil),
-		(*katdMessage_RequestNextPruningPointAndItsAnticoneBlocks)(nil),
-		(*katdMessage_GetCurrentNetworkRequest)(nil),
-		(*katdMessage_GetCurrentNetworkResponse)(nil),
-		(*katdMessage_SubmitBlockRequest)(nil),
-		(*katdMessage_SubmitBlockResponse)(nil),
-		(*katdMessage_GetBlockTemplateRequest)(nil),
-		(*katdMessage_GetBlockTemplateResponse)(nil),
-		(*katdMessage_NotifyBlockAddedRequest)(nil),
-		(*katdMessage_NotifyBlockAddedResponse)(nil),
-		(*katdMessage_BlockAddedNotification)(nil),
-		(*katdMessage_GetPeerAddressesRequest)(nil),
-		(*katdMessage_GetPeerAddressesResponse)(nil),
-		(*katdMessage_GetSelectedTipHashRequest)(nil),
-		(*katdMessage_GetSelectedTipHashResponse)(nil),
-		(*katdMessage_GetMempoolEntryRequest)(nil),
-		(*katdMessage_GetMempoolEntryResponse)(nil),
-		(*katdMessage_GetConnectedPeerInfoRequest)(nil),
-		(*katdMessage_GetConnectedPeerInfoResponse)(nil),
-		(*katdMessage_AddPeerRequest)(nil),
-		(*katdMessage_AddPeerResponse)(nil),
-		(*katdMessage_SubmitTransactionRequest)(nil),
-		(*katdMessage_SubmitTransactionResponse)(nil),
-		(*katdMessage_NotifyVirtualSelectedParentChainChangedRequest)(nil),
-		(*katdMessage_NotifyVirtualSelectedParentChainChangedResponse)(nil),
-		(*katdMessage_VirtualSelectedParentChainChangedNotification)(nil),
-		(*katdMessage_GetBlockRequest)(nil),
-		(*katdMessage_GetBlockResponse)(nil),
-		(*katdMessage_GetSubnetworkRequest)(nil),
-		(*katdMessage_GetSubnetworkResponse)(nil),
-		(*katdMessage_GetVirtualSelectedParentChainFromBlockRequest)(nil),
-		(*katdMessage_GetVirtualSelectedParentChainFromBlockResponse)(nil),
-		(*katdMessage_GetBlocksRequest)(nil),
-		(*katdMessage_GetBlocksResponse)(nil),
-		(*katdMessage_GetBlockCountRequest)(nil),
-		(*katdMessage_GetBlockCountResponse)(nil),
-		(*katdMessage_GetBlockDagInfoRequest)(nil),
-		(*katdMessage_GetBlockDagInfoResponse)(nil),
-		(*katdMessage_ResolveFinalityConflictRequest)(nil),
-		(*katdMessage_ResolveFinalityConflictResponse)(nil),
-		(*katdMessage_NotifyFinalityConflictsRequest)(nil),
-		(*katdMessage_NotifyFinalityConflictsResponse)(nil),
-		(*katdMessage_FinalityConflictNotification)(nil),
-		(*katdMessage_FinalityConflictResolvedNotification)(nil),
-		(*katdMessage_GetMempoolEntriesRequest)(nil),
-		(*katdMessage_GetMempoolEntriesResponse)(nil),
-		(*katdMessage_ShutDownRequest)(nil),
-		(*katdMessage_ShutDownResponse)(nil),
-		(*katdMessage_GetHeadersRequest)(nil),
-		(*katdMessage_GetHeadersResponse)(nil),
-		(*katdMessage_NotifyUtxosChangedRequest)(nil),
-		(*katdMessage_NotifyUtxosChangedResponse)(nil),
-		(*katdMessage_UtxosChangedNotification)(nil),
-		(*katdMessage_GetUtxosByAddressesRequest)(nil),
-		(*katdMessage_GetUtxosByAddressesResponse)(nil),
-		(*katdMessage_GetVirtualSelectedParentBlueScoreRequest)(nil),
-		(*katdMessage_GetVirtualSelectedParentBlueScoreResponse)(nil),
-		(*katdMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest)(nil),
-		(*katdMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse)(nil),
-		(*katdMessage_VirtualSelectedParentBlueScoreChangedNotification)(nil),
-		(*katdMessage_BanRequest)(nil),
-		(*katdMessage_BanResponse)(nil),
-		(*katdMessage_UnbanRequest)(nil),
-		(*katdMessage_UnbanResponse)(nil),
-		(*katdMessage_GetInfoRequest)(nil),
-		(*katdMessage_GetInfoResponse)(nil),
-		(*katdMessage_StopNotifyingUtxosChangedRequest)(nil),
-		(*katdMessage_StopNotifyingUtxosChangedResponse)(nil),
-		(*katdMessage_NotifyPruningPointUTXOSetOverrideRequest)(nil),
-		(*katdMessage_NotifyPruningPointUTXOSetOverrideResponse)(nil),
-		(*katdMessage_PruningPointUTXOSetOverrideNotification)(nil),
-		(*katdMessage_StopNotifyingPruningPointUTXOSetOverrideRequest)(nil),
-		(*katdMessage_StopNotifyingPruningPointUTXOSetOverrideResponse)(nil),
-		(*katdMessage_EstimateNetworkHashesPerSecondRequest)(nil),
-		(*katdMessage_EstimateNetworkHashesPerSecondResponse)(nil),
-		(*katdMessage_NotifyVirtualDaaScoreChangedRequest)(nil),
-		(*katdMessage_NotifyVirtualDaaScoreChangedResponse)(nil),
-		(*katdMessage_VirtualDaaScoreChangedNotification)(nil),
-		(*katdMessage_GetBalanceByAddressRequest)(nil),
-		(*katdMessage_GetBalanceByAddressResponse)(nil),
-		(*katdMessage_GetBalancesByAddressesRequest)(nil),
-		(*katdMessage_GetBalancesByAddressesResponse)(nil),
-		(*katdMessage_NotifyNewBlockTemplateRequest)(nil),
-		(*katdMessage_NotifyNewBlockTemplateResponse)(nil),
-		(*katdMessage_NewBlockTemplateNotification)(nil),
-		(*katdMessage_GetMempoolEntriesByAddressesRequest)(nil),
-		(*katdMessage_GetMempoolEntriesByAddressesResponse)(nil),
-		(*katdMessage_GetCoinSupplyRequest)(nil),
-		(*katdMessage_GetCoinSupplyResponse)(nil),
+		(*KatdMessage_Addresses)(nil),
+		(*KatdMessage_Block)(nil),
+		(*KatdMessage_Transaction)(nil),
+		(*KatdMessage_BlockLocator)(nil),
+		(*KatdMessage_RequestAddresses)(nil),
+		(*KatdMessage_RequestRelayBlocks)(nil),
+		(*KatdMessage_RequestTransactions)(nil),
+		(*KatdMessage_IbdBlock)(nil),
+		(*KatdMessage_InvRelayBlock)(nil),
+		(*KatdMessage_InvTransactions)(nil),
+		(*KatdMessage_Ping)(nil),
+		(*KatdMessage_Pong)(nil),
+		(*KatdMessage_Verack)(nil),
+		(*KatdMessage_Version)(nil),
+		(*KatdMessage_TransactionNotFound)(nil),
+		(*KatdMessage_Reject)(nil),
+		(*KatdMessage_PruningPointUtxoSetChunk)(nil),
+		(*KatdMessage_RequestIBDBlocks)(nil),
+		(*KatdMessage_UnexpectedPruningPoint)(nil),
+		(*KatdMessage_IbdBlockLocator)(nil),
+		(*KatdMessage_IbdBlockLocatorHighestHash)(nil),
+		(*KatdMessage_RequestNextPruningPointUtxoSetChunk)(nil),
+		(*KatdMessage_DonePruningPointUtxoSetChunks)(nil),
+		(*KatdMessage_IbdBlockLocatorHighestHashNotFound)(nil),
+		(*KatdMessage_BlockWithTrustedData)(nil),
+		(*KatdMessage_DoneBlocksWithTrustedData)(nil),
+		(*KatdMessage_RequestPruningPointAndItsAnticone)(nil),
+		(*KatdMessage_BlockHeaders)(nil),
+		(*KatdMessage_RequestNextHeaders)(nil),
+		(*KatdMessage_DoneHeaders)(nil),
+		(*KatdMessage_RequestPruningPointUTXOSet)(nil),
+		(*KatdMessage_RequestHeaders)(nil),
+		(*KatdMessage_RequestBlockLocator)(nil),
+		(*KatdMessage_PruningPoints)(nil),
+		(*KatdMessage_RequestPruningPointProof)(nil),
+		(*KatdMessage_PruningPointProof)(nil),
+		(*KatdMessage_Ready)(nil),
+		(*KatdMessage_BlockWithTrustedDataV4)(nil),
+		(*KatdMessage_TrustedData)(nil),
+		(*KatdMessage_RequestIBDChainBlockLocator)(nil),
+		(*KatdMessage_IbdChainBlockLocator)(nil),
+		(*KatdMessage_RequestAnticone)(nil),
+		(*KatdMessage_RequestNextPruningPointAndItsAnticoneBlocks)(nil),
+		(*KatdMessage_GetCurrentNetworkRequest)(nil),
+		(*KatdMessage_GetCurrentNetworkResponse)(nil),
+		(*KatdMessage_SubmitBlockRequest)(nil),
+		(*KatdMessage_SubmitBlockResponse)(nil),
+		(*KatdMessage_GetBlockTemplateRequest)(nil),
+		(*KatdMessage_GetBlockTemplateResponse)(nil),
+		(*KatdMessage_NotifyBlockAddedRequest)(nil),
+		(*KatdMessage_NotifyBlockAddedResponse)(nil),
+		(*KatdMessage_BlockAddedNotification)(nil),
+		(*KatdMessage_GetPeerAddressesRequest)(nil),
+		(*KatdMessage_GetPeerAddressesResponse)(nil),
+		(*KatdMessage_GetSelectedTipHashRequest)(nil),
+		(*KatdMessage_GetSelectedTipHashResponse)(nil),
+		(*KatdMessage_GetMempoolEntryRequest)(nil),
+		(*KatdMessage_GetMempoolEntryResponse)(nil),
+		(*KatdMessage_GetConnectedPeerInfoRequest)(nil),
+		(*KatdMessage_GetConnectedPeerInfoResponse)(nil),
+		(*KatdMessage_AddPeerRequest)(nil),
+		(*KatdMessage_AddPeerResponse)(nil),
+		(*KatdMessage_SubmitTransactionRequest)(nil),
+		(*KatdMessage_SubmitTransactionResponse)(nil),
+		(*KatdMessage_NotifyVirtualSelectedParentChainChangedRequest)(nil),
+		(*KatdMessage_NotifyVirtualSelectedParentChainChangedResponse)(nil),
+		(*KatdMessage_VirtualSelectedParentChainChangedNotification)(nil),
+		(*KatdMessage_GetBlockRequest)(nil),
+		(*KatdMessage_GetBlockResponse)(nil),
+		(*KatdMessage_GetSubnetworkRequest)(nil),
+		(*KatdMessage_GetSubnetworkResponse)(nil),
+		(*KatdMessage_GetVirtualSelectedParentChainFromBlockRequest)(nil),
+		(*KatdMessage_GetVirtualSelectedParentChainFromBlockResponse)(nil),
+		(*KatdMessage_GetBlocksRequest)(nil),
+		(*KatdMessage_GetBlocksResponse)(nil),
+		(*KatdMessage_GetBlockCountRequest)(nil),
+		(*KatdMessage_GetBlockCountResponse)(nil),
+		(*KatdMessage_GetBlockDagInfoRequest)(nil),
+		(*KatdMessage_GetBlockDagInfoResponse)(nil),
+		(*KatdMessage_ResolveFinalityConflictRequest)(nil),
+		(*KatdMessage_ResolveFinalityConflictResponse)(nil),
+		(*KatdMessage_NotifyFinalityConflictsRequest)(nil),
+		(*KatdMessage_NotifyFinalityConflictsResponse)(nil),
+		(*KatdMessage_FinalityConflictNotification)(nil),
+		(*KatdMessage_FinalityConflictResolvedNotification)(nil),
+		(*KatdMessage_GetMempoolEntriesRequest)(nil),
+		(*KatdMessage_GetMempoolEntriesResponse)(nil),
+		(*KatdMessage_ShutDownRequest)(nil),
+		(*KatdMessage_ShutDownResponse)(nil),
+		(*KatdMessage_GetHeadersRequest)(nil),
+		(*KatdMessage_GetHeadersResponse)(nil),
+		(*KatdMessage_NotifyUtxosChangedRequest)(nil),
+		(*KatdMessage_NotifyUtxosChangedResponse)(nil),
+		(*KatdMessage_UtxosChangedNotification)(nil),
+		(*KatdMessage_GetUtxosByAddressesRequest)(nil),
+		(*KatdMessage_GetUtxosByAddressesResponse)(nil),
+		(*KatdMessage_GetVirtualSelectedParentBlueScoreRequest)(nil),
+		(*KatdMessage_GetVirtualSelectedParentBlueScoreResponse)(nil),
+		(*KatdMessage_NotifyVirtualSelectedParentBlueScoreChangedRequest)(nil),
+		(*KatdMessage_NotifyVirtualSelectedParentBlueScoreChangedResponse)(nil),
+		(*KatdMessage_VirtualSelectedParentBlueScoreChangedNotification)(nil),
+		(*KatdMessage_BanRequest)(nil),
+		(*KatdMessage_BanResponse)(nil),
+		(*KatdMessage_UnbanRequest)(nil),
+		(*KatdMessage_UnbanResponse)(nil),
+		(*KatdMessage_GetInfoRequest)(nil),
+		(*KatdMessage_GetInfoResponse)(nil),
+		(*KatdMessage_StopNotifyingUtxosChangedRequest)(nil),
+		(*KatdMessage_StopNotifyingUtxosChangedResponse)(nil),
+		(*KatdMessage_NotifyPruningPointUTXOSetOverrideRequest)(nil),
+		(*KatdMessage_NotifyPruningPointUTXOSetOverrideResponse)(nil),
+		(*KatdMessage_PruningPointUTXOSetOverrideNotification)(nil),
+		(*KatdMessage_StopNotifyingPruningPointUTXOSetOverrideRequest)(nil),
+		(*KatdMessage_StopNotifyingPruningPointUTXOSetOverrideResponse)(nil),
+		(*KatdMessage_EstimateNetworkHashesPerSecondRequest)(nil),
+		(*KatdMessage_EstimateNetworkHashesPerSecondResponse)(nil),
+		(*KatdMessage_NotifyVirtualDaaScoreChangedRequest)(nil),
+		(*KatdMessage_NotifyVirtualDaaScoreChangedResponse)(nil),
+		(*KatdMessage_VirtualDaaScoreChangedNotification)(nil),
+		(*KatdMessage_GetBalanceByAddressRequest)(nil),
+		(*KatdMessage_GetBalanceByAddressResponse)(nil),
+		(*KatdMessage_GetBalancesByAddressesRequest)(nil),
+		(*KatdMessage_GetBalancesByAddressesResponse)(nil),
+		(*KatdMessage_NotifyNewBlockTemplateRequest)(nil),
+		(*KatdMessage_NotifyNewBlockTemplateResponse)(nil),
+		(*KatdMessage_NewBlockTemplateNotification)(nil),
+		(*KatdMessage_GetMempoolEntriesByAddressesRequest)(nil),
+		(*KatdMessage_GetMempoolEntriesByAddressesResponse)(nil),
+		(*KatdMessage_GetCoinSupplyRequest)(nil),
+		(*KatdMessage_GetCoinSupplyResponse)(nil),
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{

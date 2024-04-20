@@ -5,7 +5,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-func (x *katdMessage_RequestHeaders) toAppMessage() (appmessage.Message, error) {
+func (x *KatdMessage_RequestHeaders) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
 		return nil, errors.Wrapf(errorNil, "katdMessage_RequestBlockLocator is nil")
 	}
@@ -45,7 +45,7 @@ func (x *RequestHeadersMessage) toAppMessage() (appmessage.Message, error) {
 
 }
 
-func (x *katdMessage_RequestHeaders) fromAppMessage(msgRequestHeaders *appmessage.MsgRequestHeaders) error {
+func (x *KatdMessage_RequestHeaders) fromAppMessage(msgRequestHeaders *appmessage.MsgRequestHeaders) error {
 	x.RequestHeaders = &RequestHeadersMessage{
 		LowHash:  domainHashToProto(msgRequestHeaders.LowHash),
 		HighHash: domainHashToProto(msgRequestHeaders.HighHash),

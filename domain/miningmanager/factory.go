@@ -5,9 +5,9 @@ import (
 	"time"
 
 	"github.com/Katkoin/katd/domain/consensusreference"
-	"github.com/katkoin/katdd/domain/dagconfig"
-	"github.com/katkoin/katdd/domain/miningmanager/blocktemplatebuilder"
-	mempoolpkg "github.com/katkoin/katdd/domain/miningmanager/mempool"
+	"github.com/Katkoin/katd/domain/dagconfig"
+	"github.com/Katkoin/katd/domain/miningmanager/blocktemplatebuilder"
+	mempoolpkg "github.com/Katkoin/katd/domain/miningmanager/mempool"
 )
 
 // Factory instantiates new mining managers

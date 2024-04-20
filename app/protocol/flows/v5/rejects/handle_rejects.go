@@ -2,8 +2,8 @@ package rejects
 
 import (
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/app/protocol/protocolerrors"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/router"
+	"github.com/Katkoin/katd/app/protocol/protocolerrors"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/router"
 )
 
 // HandleRejectsContext is the interface for the context needed for the HandleRejects flow.

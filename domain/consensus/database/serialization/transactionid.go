@@ -2,7 +2,7 @@ package serialization
 
 import (
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/transactionid"
+	"github.com/Katkoin/katd/domain/consensus/utils/transactionid"
 )
 
 // DbTransactionIDToDomainTransactionID converts DbTransactionId to DomainTransactionID

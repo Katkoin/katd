@@ -4,7 +4,7 @@ import (
 	"container/heap"
 
 	"github.com/Katkoin/katd/domain/consensus/model"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 )
 
 func blockGHOSTDAGDataHashPairLess(left, right *externalapi.BlockGHOSTDAGDataHashPair, gm model.GHOSTDAGManager) bool {

@@ -9,7 +9,7 @@ import (
 
 	"github.com/Katkoin/katd/domain/consensus/utils/subnetworks"
 
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 )
 
 func TestCreateDefaultConfigFile(t *testing.T) {

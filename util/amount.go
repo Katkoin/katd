@@ -88,7 +88,7 @@ func NewAmount(f float64) (Amount, error) {
 		return 0, errors.New("invalid katkoin amount")
 	}
 
-	return round(f * constants.SompiPerKaspa), nil
+	return round(f * constants.SompiPerKatkoin), nil
 }
 
 // ToUnit converts a monetary amount counted in katkoin base units to a

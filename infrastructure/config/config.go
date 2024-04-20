@@ -19,11 +19,11 @@ import (
 	"github.com/btcsuite/go-socks/socks"
 	"github.com/jessevdk/go-flags"
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/dagconfig"
-	"github.com/katkoin/katdd/infrastructure/logger"
-	"github.com/katkoin/katdd/util"
-	"github.com/katkoin/katdd/util/network"
-	"github.com/katkoin/katdd/version"
+	"github.com/Katkoin/katd/domain/dagconfig"
+	"github.com/Katkoin/katd/infrastructure/logger"
+	"github.com/Katkoin/katd/util"
+	"github.com/Katkoin/katd/util/network"
+	"github.com/Katkoin/katd/version"
 	"github.com/pkg/errors"
 )
 

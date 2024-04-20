@@ -5,7 +5,7 @@
 package appmessage
 
 import (
-	"github.com/katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 )
 
 // MsgTransactionNotFound defines a katkoin TransactionNotFound message which is sent in response to

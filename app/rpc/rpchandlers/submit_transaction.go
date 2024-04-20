@@ -2,10 +2,10 @@ package rpchandlers
 
 import (
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/app/rpc/rpccontext"
-	"github.com/katkoin/katdd/domain/consensus/utils/consensushashing"
-	"github.com/katkoin/katdd/domain/miningmanager/mempool"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/router"
+	"github.com/Katkoin/katd/app/rpc/rpccontext"
+	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
+	"github.com/Katkoin/katd/domain/miningmanager/mempool"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 

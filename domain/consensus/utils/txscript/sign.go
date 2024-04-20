@@ -7,11 +7,11 @@ package txscript
 import (
 	"github.com/kaspanet/go-secp256k1"
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/consensushashing"
+	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
 	"github.com/pkg/errors"
 
-	"github.com/katkoin/katdd/domain/dagconfig"
-	"github.com/katkoin/katdd/util"
+	"github.com/Katkoin/katd/domain/dagconfig"
+	"github.com/Katkoin/katd/util"
 )
 
 // RawTxInSignature returns the serialized Schnorr signature for the input idx of

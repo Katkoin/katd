@@ -7,7 +7,7 @@ import (
 
 	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
 
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 )
 
 func TestNewErrMissingTxOut(t *testing.T) {

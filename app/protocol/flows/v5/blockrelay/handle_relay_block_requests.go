@@ -2,10 +2,10 @@ package blockrelay
 
 import (
 	"github.com/Katkoin/katd/app/appmessage"
-	peerpkg "github.com/katkoin/katdd/app/protocol/peer"
-	"github.com/katkoin/katdd/app/protocol/protocolerrors"
-	"github.com/katkoin/katdd/domain"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/router"
+	peerpkg "github.com/Katkoin/katd/app/protocol/peer"
+	"github.com/Katkoin/katd/app/protocol/protocolerrors"
+	"github.com/Katkoin/katd/domain"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 

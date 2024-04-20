@@ -2,11 +2,11 @@ package protowire
 
 import (
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
 )
 
-func (x *katdMessage_RequestIBDChainBlockLocator) toAppMessage() (appmessage.Message, error) {
+func (x *KatdMessage_RequestIBDChainBlockLocator) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
 		return nil, errors.Wrapf(errorNil, "katdMessage_RequestIBDChainBlockLocator is nil")
 	}
@@ -38,7 +38,7 @@ func (x *RequestIBDChainBlockLocatorMessage) toAppMessage() (appmessage.Message,
 
 }
 
-func (x *katdMessage_RequestIBDChainBlockLocator) fromAppMessage(msgGetBlockLocator *appmessage.MsgRequestIBDChainBlockLocator) error {
+func (x *KatdMessage_RequestIBDChainBlockLocator) fromAppMessage(msgGetBlockLocator *appmessage.MsgRequestIBDChainBlockLocator) error {
 	var highHash, lowHash *Hash
 	if msgGetBlockLocator.HighHash != nil {
 		highHash = domainHashToProto(msgGetBlockLocator.HighHash)

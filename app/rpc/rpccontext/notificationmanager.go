@@ -5,12 +5,12 @@ import (
 
 	"github.com/Katkoin/katd/domain/dagconfig"
 
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/txscript"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/utils/txscript"
 
-	"github.com/katkoin/katdd/app/appmessage"
-	"github.com/katkoin/katdd/domain/utxoindex"
-	routerpkg "github.com/katkoin/katdd/infrastructure/network/netadapter/router"
+	"github.com/Katkoin/katd/app/appmessage"
+	"github.com/Katkoin/katd/domain/utxoindex"
+	routerpkg "github.com/Katkoin/katd/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 

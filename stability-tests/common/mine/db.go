@@ -4,8 +4,8 @@ import (
 	"path/filepath"
 
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/infrastructure/db/database"
-	"github.com/katkoin/katdd/infrastructure/db/database/ldb"
+	"github.com/Katkoin/katd/infrastructure/db/database"
+	"github.com/Katkoin/katd/infrastructure/db/database/ldb"
 )
 
 const leveldbCacheSizeMiB = 256

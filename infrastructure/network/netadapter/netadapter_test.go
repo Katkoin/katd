@@ -8,8 +8,8 @@ import (
 
 	"github.com/Katkoin/katd/app/appmessage"
 
-	"github.com/katkoin/katdd/infrastructure/config"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/router"
+	"github.com/Katkoin/katd/infrastructure/config"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/router"
 )
 
 // routerInitializerForTest returns new RouterInitializer which simply sets

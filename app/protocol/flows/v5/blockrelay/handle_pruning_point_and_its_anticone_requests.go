@@ -4,12 +4,12 @@ import (
 	"sync/atomic"
 
 	"github.com/Katkoin/katd/app/appmessage"
-	peerpkg "github.com/katkoin/katdd/app/protocol/peer"
-	"github.com/katkoin/katdd/app/protocol/protocolerrors"
-	"github.com/katkoin/katdd/domain"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/infrastructure/config"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/router"
+	peerpkg "github.com/Katkoin/katd/app/protocol/peer"
+	"github.com/Katkoin/katd/app/protocol/protocolerrors"
+	"github.com/Katkoin/katd/domain"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/infrastructure/config"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/router"
 )
 
 // PruningPointAndItsAnticoneRequestsContext is the interface for the context needed for the HandlePruningPointAndItsAnticoneRequests flow.

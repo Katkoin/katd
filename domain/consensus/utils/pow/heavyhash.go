@@ -4,7 +4,7 @@ import (
 	"math"
 
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/hashes"
+	"github.com/Katkoin/katd/domain/consensus/utils/hashes"
 )
 
 const eps float64 = 1e-9

@@ -2,7 +2,7 @@ package mempool
 
 import (
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/miningmanager/mempool/model"
+	"github.com/Katkoin/katd/domain/miningmanager/mempool/model"
 )
 
 func (mp *mempool) removeTransaction(transactionID *externalapi.DomainTransactionID, removeRedeemers bool) error {

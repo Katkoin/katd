@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/Katkoin/katd/domain/dagconfig"
-	"github.com/katkoin/katdd/infrastructure/logger"
+	"github.com/Katkoin/katd/infrastructure/logger"
 	"github.com/pkg/errors"
 )
 
@@ -28,5 +28,5 @@ func StartCmd(name string, args ...string) (*exec.Cmd, error) {
 
 // NetworkCliArgumentFromNetParams returns the katd command line argument that starts the given network.
 func NetworkCliArgumentFromNetParams(params *dagconfig.Params) string {
-	return fmt.Sprintf("--%s", strings.TrimPrefix(params.Name, "kaspa-"))
+	return fmt.Sprintf("--%s", strings.TrimPrefix(params.Name, "katkoin-"))
 }

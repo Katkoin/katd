@@ -2,8 +2,8 @@ package mempool
 
 import (
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/miningmanager/mempool/model"
-	"github.com/katkoin/katdd/infrastructure/logger"
+	"github.com/Katkoin/katd/domain/miningmanager/mempool/model"
+	"github.com/Katkoin/katd/infrastructure/logger"
 )
 
 func (mp *mempool) revalidateHighPriorityTransactions() ([]*externalapi.DomainTransaction, error) {

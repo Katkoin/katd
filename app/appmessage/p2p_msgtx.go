@@ -10,9 +10,9 @@ import (
 
 	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
 
-	"github.com/katkoin/katdd/domain/consensus/utils/subnetworks"
+	"github.com/Katkoin/katd/domain/consensus/utils/subnetworks"
 
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 )
 
 const (

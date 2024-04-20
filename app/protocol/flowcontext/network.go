@@ -2,10 +2,10 @@ package flowcontext
 
 import (
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/app/protocol/common"
-	peerpkg "github.com/katkoin/katdd/app/protocol/peer"
-	"github.com/katkoin/katdd/infrastructure/network/connmanager"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter"
+	"github.com/Katkoin/katd/app/protocol/common"
+	peerpkg "github.com/Katkoin/katd/app/protocol/peer"
+	"github.com/Katkoin/katd/infrastructure/network/connmanager"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter"
 	"github.com/pkg/errors"
 )
 

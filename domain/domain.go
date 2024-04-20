@@ -7,13 +7,13 @@ import (
 
 	"github.com/Katkoin/katd/domain/consensusreference"
 
-	"github.com/katkoin/katdd/domain/consensus"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/miningmanager"
-	"github.com/katkoin/katdd/domain/miningmanager/mempool"
-	"github.com/katkoin/katdd/domain/prefixmanager"
-	"github.com/katkoin/katdd/domain/prefixmanager/prefix"
-	infrastructuredatabase "github.com/katkoin/katdd/infrastructure/db/database"
+	"github.com/Katkoin/katd/domain/consensus"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/miningmanager"
+	"github.com/Katkoin/katd/domain/miningmanager/mempool"
+	"github.com/Katkoin/katd/domain/prefixmanager"
+	"github.com/Katkoin/katd/domain/prefixmanager/prefix"
+	infrastructuredatabase "github.com/Katkoin/katd/infrastructure/db/database"
 	"github.com/pkg/errors"
 )
 

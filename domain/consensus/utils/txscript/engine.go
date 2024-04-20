@@ -8,9 +8,9 @@ import (
 	"fmt"
 
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/consensushashing"
-	"github.com/katkoin/katdd/domain/consensus/utils/constants"
-	"github.com/katkoin/katdd/infrastructure/logger"
+	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
+	"github.com/Katkoin/katd/domain/consensus/utils/constants"
+	"github.com/Katkoin/katd/infrastructure/logger"
 )
 
 // ScriptFlags is a bitmask defining additional operations or tests that will be

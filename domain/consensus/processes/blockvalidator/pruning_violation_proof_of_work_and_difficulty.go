@@ -2,12 +2,12 @@ package blockvalidator
 
 import (
 	"github.com/Katkoin/katd/domain/consensus/model"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/ruleerrors"
-	"github.com/katkoin/katdd/domain/consensus/utils/pow"
-	"github.com/katkoin/katdd/domain/consensus/utils/virtual"
-	"github.com/katkoin/katdd/infrastructure/db/database"
-	"github.com/katkoin/katdd/infrastructure/logger"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/ruleerrors"
+	"github.com/Katkoin/katd/domain/consensus/utils/pow"
+	"github.com/Katkoin/katd/domain/consensus/utils/virtual"
+	"github.com/Katkoin/katd/infrastructure/db/database"
+	"github.com/Katkoin/katd/infrastructure/logger"
 	"github.com/pkg/errors"
 )
 

@@ -5,10 +5,10 @@ import (
 	"os"
 
 	"github.com/Katkoin/katd/infrastructure/config"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/standalone"
-	"github.com/katkoin/katdd/stability-tests/common"
-	"github.com/katkoin/katdd/util/panics"
-	"github.com/katkoin/katdd/util/profiling"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/standalone"
+	"github.com/Katkoin/katd/stability-tests/common"
+	"github.com/Katkoin/katd/util/panics"
+	"github.com/Katkoin/katd/util/profiling"
 )
 
 func main() {

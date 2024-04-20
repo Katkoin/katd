@@ -6,12 +6,12 @@ import (
 
 	"github.com/Katkoin/katd/domain/dagconfig"
 
-	"github.com/katkoin/katdd/infrastructure/db/database/ldb"
+	"github.com/Katkoin/katd/infrastructure/db/database/ldb"
 
-	"github.com/katkoin/katdd/infrastructure/db/database"
+	"github.com/Katkoin/katd/infrastructure/db/database"
 
-	"github.com/katkoin/katdd/app"
-	"github.com/katkoin/katdd/infrastructure/config"
+	"github.com/Katkoin/katd/app"
+	"github.com/Katkoin/katd/infrastructure/config"
 )
 
 type appHarness struct {

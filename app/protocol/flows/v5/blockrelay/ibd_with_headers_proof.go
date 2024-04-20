@@ -5,11 +5,11 @@ import (
 	"time"
 
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/app/protocol/common"
-	"github.com/katkoin/katdd/app/protocol/protocolerrors"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/ruleerrors"
-	"github.com/katkoin/katdd/domain/consensus/utils/consensushashing"
+	"github.com/Katkoin/katd/app/protocol/common"
+	"github.com/Katkoin/katd/app/protocol/protocolerrors"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/ruleerrors"
+	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
 	"github.com/pkg/errors"
 )
 

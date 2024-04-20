@@ -5,16 +5,16 @@ import (
 
 	"github.com/Katkoin/katd/domain"
 
-	"github.com/katkoin/katdd/app/protocol/common"
-	"github.com/katkoin/katdd/app/protocol/protocolerrors"
-	"github.com/katkoin/katdd/infrastructure/network/addressmanager"
+	"github.com/Katkoin/katd/app/protocol/common"
+	"github.com/Katkoin/katd/app/protocol/protocolerrors"
+	"github.com/Katkoin/katd/infrastructure/network/addressmanager"
 
-	"github.com/katkoin/katdd/infrastructure/config"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter"
+	"github.com/Katkoin/katd/infrastructure/config"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter"
 
-	"github.com/katkoin/katdd/app/appmessage"
-	peerpkg "github.com/katkoin/katdd/app/protocol/peer"
-	routerpkg "github.com/katkoin/katdd/infrastructure/network/netadapter/router"
+	"github.com/Katkoin/katd/app/appmessage"
+	peerpkg "github.com/Katkoin/katd/app/protocol/peer"
+	routerpkg "github.com/Katkoin/katd/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 

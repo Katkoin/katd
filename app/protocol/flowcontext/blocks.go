@@ -4,13 +4,13 @@ import (
 	"time"
 
 	peerpkg "github.com/Katkoin/katd/app/protocol/peer"
-	"github.com/katkoin/katdd/app/protocol/protocolerrors"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/ruleerrors"
-	"github.com/katkoin/katdd/domain/consensus/utils/consensushashing"
+	"github.com/Katkoin/katd/app/protocol/protocolerrors"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/ruleerrors"
+	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
 	"github.com/pkg/errors"
 
-	"github.com/katkoin/katdd/app/appmessage"
+	"github.com/Katkoin/katd/app/appmessage"
 )
 
 // OnNewBlock updates the mempool after a new block arrival, and

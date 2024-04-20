@@ -8,8 +8,8 @@ import (
 	"github.com/pkg/errors"
 
 	"github.com/Katkoin/katd/stability-tests/common"
-	"github.com/katkoin/katdd/stability-tests/common/rpc"
-	"github.com/katkoin/katdd/util/profiling"
+	"github.com/Katkoin/katd/stability-tests/common/rpc"
+	"github.com/Katkoin/katd/util/profiling"
 )
 
 var timeout = 30 * time.Second

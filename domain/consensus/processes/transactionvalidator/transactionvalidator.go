@@ -2,9 +2,9 @@ package transactionvalidator
 
 import (
 	"github.com/Katkoin/katd/domain/consensus/model"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/txscript"
-	"github.com/katkoin/katdd/util/txmass"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/utils/txscript"
+	"github.com/Katkoin/katd/util/txmass"
 )
 
 const sigCacheSize = 10_000

@@ -4,7 +4,7 @@ import (
 	"io"
 
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/util/binaryserializer"
+	"github.com/Katkoin/katd/util/binaryserializer"
 	"github.com/pkg/errors"
 )
 

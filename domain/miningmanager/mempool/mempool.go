@@ -4,14 +4,14 @@ import (
 	"sync"
 
 	"github.com/Katkoin/katd/domain/consensus/ruleerrors"
-	"github.com/katkoin/katdd/domain/consensus/utils/consensushashing"
-	"github.com/katkoin/katdd/domain/consensus/utils/constants"
+	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
+	"github.com/Katkoin/katd/domain/consensus/utils/constants"
 	"github.com/pkg/errors"
 
-	"github.com/katkoin/katdd/domain/consensusreference"
+	"github.com/Katkoin/katd/domain/consensusreference"
 
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	miningmanagermodel "github.com/katkoin/katdd/domain/miningmanager/model"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	miningmanagermodel "github.com/Katkoin/katd/domain/miningmanager/model"
 )
 
 type mempool struct {

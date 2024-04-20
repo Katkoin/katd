@@ -2,7 +2,7 @@ package model
 
 import (
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/ruleerrors"
+	"github.com/Katkoin/katd/domain/consensus/ruleerrors"
 )
 
 // Mempool maintains a set of known transactions that

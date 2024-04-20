@@ -2,7 +2,7 @@ package transactionrelay
 
 import (
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/router"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/router"
 )
 
 type handleRequestedTransactionsFlow struct {

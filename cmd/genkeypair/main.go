@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/Katkoin/katd/cmd/katwallet/libkatwallet"
-	"github.com/katkoin/katdd/util"
+	"github.com/Katkoin/katd/util"
 )
 
 func main() {

@@ -2,9 +2,9 @@ package consensushashing
 
 import (
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/hashes"
-	"github.com/katkoin/katdd/domain/consensus/utils/serialization"
-	"github.com/katkoin/katdd/domain/consensus/utils/subnetworks"
+	"github.com/Katkoin/katd/domain/consensus/utils/hashes"
+	"github.com/Katkoin/katd/domain/consensus/utils/serialization"
+	"github.com/Katkoin/katd/domain/consensus/utils/subnetworks"
 	"github.com/pkg/errors"
 )
 

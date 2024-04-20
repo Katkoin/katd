@@ -3,7 +3,7 @@ package appmessage
 import (
 	"math/big"
 
-	"github.com/katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 )
 
 // MsgBlockWithTrustedData represents a katkoin BlockWithTrustedData message

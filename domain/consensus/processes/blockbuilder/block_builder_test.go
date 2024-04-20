@@ -6,11 +6,11 @@ import (
 	"github.com/pkg/errors"
 
 	"github.com/Katkoin/katd/domain/consensus"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/ruleerrors"
-	"github.com/katkoin/katdd/domain/consensus/utils/constants"
-	"github.com/katkoin/katdd/domain/consensus/utils/subnetworks"
-	"github.com/katkoin/katdd/domain/consensus/utils/testutils"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/ruleerrors"
+	"github.com/Katkoin/katd/domain/consensus/utils/constants"
+	"github.com/Katkoin/katd/domain/consensus/utils/subnetworks"
+	"github.com/Katkoin/katd/domain/consensus/utils/testutils"
 )
 
 func TestBuildBlockErrorCases(t *testing.T) {

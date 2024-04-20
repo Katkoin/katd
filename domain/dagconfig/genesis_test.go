@@ -7,7 +7,7 @@ package dagconfig
 import (
 	"testing"
 
-	"github.com/katkoin/katd/domain/consensus/utils/consensushashing"
+	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
 )
 
 // TestGenesisBlock tests the genesis block of the main network for validity by

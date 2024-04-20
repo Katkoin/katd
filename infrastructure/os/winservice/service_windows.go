@@ -10,8 +10,8 @@ import (
 	"github.com/btcsuite/winsvc/eventlog"
 	"github.com/btcsuite/winsvc/svc"
 	"github.com/Katkoin/katd/infrastructure/config"
-	"github.com/katkoin/katdd/infrastructure/os/signal"
-	"github.com/katkoin/katdd/version"
+	"github.com/Katkoin/katd/infrastructure/os/signal"
+	"github.com/Katkoin/katd/version"
 )
 
 // Service houses the main service handler which handles all service

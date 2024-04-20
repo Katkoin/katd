@@ -1,6 +1,6 @@
 package model
 
-import "github.com/katkoin/katd/domain/consensus/model/externalapi"
+import "github.com/Katkoin/katd/domain/consensus/model/externalapi"
 
 // BlockIterator is an iterator over blocks according to some order.
 type BlockIterator interface {

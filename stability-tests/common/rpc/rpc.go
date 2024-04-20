@@ -4,9 +4,9 @@ import (
 	"time"
 
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/infrastructure/network/rpcclient"
+	"github.com/Katkoin/katd/infrastructure/network/rpcclient"
 
-	"github.com/katkoin/katdd/domain/dagconfig"
+	"github.com/Katkoin/katd/domain/dagconfig"
 )
 
 const defaultRPCServer = "localhost"

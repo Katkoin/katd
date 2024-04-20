@@ -1,7 +1,7 @@
 package model
 
 import (
-	"github.com/katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 )
 
 // FinalityStore represents a store for finality data

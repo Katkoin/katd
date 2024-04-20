@@ -10,12 +10,12 @@ import (
 
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 
-	"github.com/katkoin/katdd/app/appmessage"
-	"github.com/katkoin/katdd/util/network"
+	"github.com/Katkoin/katd/app/appmessage"
+	"github.com/Katkoin/katd/util/network"
 
 	"github.com/pkg/errors"
 
-	"github.com/katkoin/katdd/util"
+	"github.com/Katkoin/katd/util"
 )
 
 // These variables are the DAG proof-of-work limit parameters for each default
@@ -58,7 +58,7 @@ type Params struct {
 	Name string
 
 	// Net defines the magic bytes used to identify the network.
-	Net appmessage.katkoin
+	Net appmessage.Katkoin
 
 	// RPCPort defines the rpc server port
 	RPCPort string
@@ -90,7 +90,7 @@ type Params struct {
 
 	// SubsidyGenesisReward SubsidyMergeSetRewardMultiplier, and
 	// SubsidyPastRewardMultiplier are part of the block subsidy equation.
-	// Further details: https://hashdag.medium.com/kaspa-launch-plan-9a63f4d754a6
+	// Further details: https://hashdag.medium.com/katkoin-launch-plan-9a63f4d754a6
 	SubsidyGenesisReward            uint64
 	PreDeflationaryPhaseBaseSubsidy uint64
 	DeflationaryPhaseBaseSubsidy    uint64
@@ -209,7 +209,7 @@ func (p *Params) PruningDepth() uint64 {
 // MainnetParams defines the network parameters for the main Kat network.
 var MainnetParams = Params{
 	K:           defaultGHOSTDAGK,
-	Name:        "kat-mainnet",
+	Name:        "katkoin-mainnet",
 	Net:         appmessage.Mainnet,
 	RPCPort:     "11120",
 	DefaultPort: "11121",
@@ -246,7 +246,7 @@ var MainnetParams = Params{
 	AcceptUnroutable: false,
 
 	// Human-readable part for Bech32 encoded addresses
-	Prefix: util.Bech32PrefixKaspa,
+	Prefix: util.Bech32PrefixKatkoin,
 
 	// Address encoding magics
 	PrivateKeyID: 0x80, // starts with 5 (uncompressed) or K (compressed)
@@ -277,7 +277,7 @@ var MainnetParams = Params{
 // TestnetParams defines the network parameters for the test Kat network.
 var TestnetParams = Params{
 	K:           defaultGHOSTDAGK,
-	Name:        "kat-testnet",
+	Name:        "katkoin-testnet",
 	Net:         appmessage.Testnet,
 	RPCPort:     "11130",
 	DefaultPort: "11131",
@@ -313,7 +313,7 @@ var TestnetParams = Params{
 	AcceptUnroutable: false,
 
 	// Human-readable part for Bech32 encoded addresses
-	Prefix: util.Bech32PrefixKaspaTest,
+	Prefix: util.Bech32PrefixKatkoinTest,
 
 	// Address encoding magics
 	PrivateKeyID: 0xef, // starts with 9 (uncompressed) or c (compressed)
@@ -347,7 +347,7 @@ var TestnetParams = Params{
 // just turn into another public testnet.
 var SimnetParams = Params{
 	K:           defaultGHOSTDAGK,
-	Name:        "kaspa-simnet",
+	Name:        "katkoin-simnet",
 	Net:         appmessage.Simnet,
 	RPCPort:     "11230",
 	DefaultPort: "11231",
@@ -382,7 +382,7 @@ var SimnetParams = Params{
 
 	PrivateKeyID: 0x64, // starts with 4 (uncompressed) or F (compressed)
 	// Human-readable part for Bech32 encoded addresses
-	Prefix: util.Bech32PrefixKaspaSim,
+	Prefix: util.Bech32PrefixKatkoinSim,
 
 	// EnableNonNativeSubnetworks enables non-native/coinbase transactions
 	EnableNonNativeSubnetworks: false,
@@ -407,7 +407,7 @@ var SimnetParams = Params{
 // DevnetParams defines the network parameters for the development katkoin network.
 var DevnetParams = Params{
 	K:           defaultGHOSTDAGK,
-	Name:        "kaspa-devnet",
+	Name:        "katkoin-devnet",
 	Net:         appmessage.Devnet,
 	RPCPort:     "11240",
 	DefaultPort: "11241",
@@ -471,7 +471,7 @@ var DevnetParams = Params{
 // network or previously-registered into this package.
 var ErrDuplicateNet = errors.New("duplicate katkoin network")
 
-var registeredNets = make(map[appmessage.katkoin]struct{})
+var registeredNets = make(map[appmessage.Katkoin]struct{})
 
 // Register registers the network parameters for a katkoin network. This may
 // error with ErrDuplicateNet if the network is already registered (either

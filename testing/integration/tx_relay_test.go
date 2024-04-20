@@ -8,16 +8,16 @@ import (
 
 	"github.com/Katkoin/katd/app/protocol/flowcontext"
 
-	"github.com/katkoin/katdd/domain/consensus/utils/utxo"
+	"github.com/Katkoin/katd/domain/consensus/utils/utxo"
 
 	"github.com/kaspanet/go-secp256k1"
-	"github.com/katkoin/katdd/app/appmessage"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/consensushashing"
-	"github.com/katkoin/katdd/domain/consensus/utils/constants"
-	"github.com/katkoin/katdd/domain/consensus/utils/transactionhelper"
-	"github.com/katkoin/katdd/domain/consensus/utils/txscript"
-	"github.com/katkoin/katdd/util"
+	"github.com/Katkoin/katd/app/appmessage"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
+	"github.com/Katkoin/katd/domain/consensus/utils/constants"
+	"github.com/Katkoin/katd/domain/consensus/utils/transactionhelper"
+	"github.com/Katkoin/katd/domain/consensus/utils/txscript"
+	"github.com/Katkoin/katd/util"
 )
 
 func TestTxRelay(t *testing.T) {
@@ -139,7 +139,7 @@ func generateTx(t *testing.T, firstBlockCoinbase *externalapi.DomainTransaction,
 	txIns := make([]*appmessage.TxIn, 1)
 	txIns[0] = appmessage.NewTxIn(appmessage.NewOutpoint(consensushashing.TransactionID(firstBlockCoinbase), 0), []byte{}, 0, 1)
 
-	payeeAddress, err := util.DecodeAddress(payee.miningAddress, util.Bech32PrefixKaspaSim)
+	payeeAddress, err := util.DecodeAddress(payee.miningAddress, util.Bech32PrefixKatkoinSim)
 	if err != nil {
 		t.Fatalf("Error decoding payeeAddress: %+v", err)
 	}

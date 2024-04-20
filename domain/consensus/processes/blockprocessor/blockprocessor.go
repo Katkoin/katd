@@ -4,9 +4,9 @@ import (
 	"time"
 
 	"github.com/Katkoin/katd/domain/consensus/model"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/processes/blockprocessor/blocklogger"
-	"github.com/katkoin/katdd/infrastructure/logger"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/processes/blockprocessor/blocklogger"
+	"github.com/Katkoin/katd/infrastructure/logger"
 )
 
 // blockProcessor is responsible for processing incoming blocks

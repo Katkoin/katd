@@ -7,7 +7,7 @@ import (
 
 	"github.com/Katkoin/katd/util/difficulty"
 
-	"github.com/katkoin/katdd/util"
+	"github.com/Katkoin/katd/util"
 )
 
 func ExampleAmount() {

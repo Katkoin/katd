@@ -4,12 +4,12 @@ import (
 	"testing"
 
 	"github.com/Katkoin/katd/domain/consensus"
-	"github.com/katkoin/katdd/domain/consensus/model"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/model/testapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/multiset"
-	"github.com/katkoin/katdd/domain/consensus/utils/testutils"
-	"github.com/katkoin/katdd/domain/consensus/utils/transactionhelper"
+	"github.com/Katkoin/katd/domain/consensus/model"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model/testapi"
+	"github.com/Katkoin/katd/domain/consensus/utils/multiset"
+	"github.com/Katkoin/katd/domain/consensus/utils/testutils"
+	"github.com/Katkoin/katd/domain/consensus/utils/transactionhelper"
 )
 
 func TestUTXOCommitment(t *testing.T) {

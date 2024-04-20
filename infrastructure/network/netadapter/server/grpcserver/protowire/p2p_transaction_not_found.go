@@ -5,7 +5,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-func (x *katdMessage_TransactionNotFound) toAppMessage() (appmessage.Message, error) {
+func (x *KatdMessage_TransactionNotFound) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
 		return nil, errors.Wrapf(errorNil, "katdMessage_TransactionNotFound is nil")
 	}
@@ -23,7 +23,7 @@ func (x *TransactionNotFoundMessage) toAppMessage() (appmessage.Message, error) 
 	return appmessage.NewMsgTransactionNotFound(id), nil
 }
 
-func (x *katdMessage_TransactionNotFound) fromAppMessage(msgTransactionsNotFound *appmessage.MsgTransactionNotFound) error {
+func (x *KatdMessage_TransactionNotFound) fromAppMessage(msgTransactionsNotFound *appmessage.MsgTransactionNotFound) error {
 	x.TransactionNotFound = &TransactionNotFoundMessage{
 		Id: domainTransactionIDToProto(msgTransactionsNotFound.ID),
 	}

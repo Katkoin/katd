@@ -6,9 +6,9 @@ import (
 	"time"
 
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/router"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/server/grpcserver"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/server/grpcserver/protowire"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/router"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/server/grpcserver"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/server/grpcserver/protowire"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/encoding/gzip"

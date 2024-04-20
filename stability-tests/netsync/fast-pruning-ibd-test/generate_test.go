@@ -8,9 +8,9 @@ import (
 	"time"
 
 	"github.com/Katkoin/katd/domain/consensus"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/testutils"
-	"github.com/katkoin/katdd/domain/dagconfig"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/utils/testutils"
+	"github.com/Katkoin/katd/domain/dagconfig"
 )
 
 // TestGenerateFastPruningIBDTest generates the json needed for dag-for-fast-pruning-ibd-test.json.gz

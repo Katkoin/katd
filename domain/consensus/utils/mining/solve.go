@@ -5,7 +5,7 @@ import (
 	"math/rand"
 
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/pow"
+	"github.com/Katkoin/katd/domain/consensus/utils/pow"
 	"github.com/pkg/errors"
 )
 

@@ -1,6 +1,6 @@
 package appmessage
 
-import "github.com/katkoin/katd/domain/consensus/model/externalapi"
+import "github.com/Katkoin/katd/domain/consensus/model/externalapi"
 
 // GetBlockCountRequestMessage is an appmessage corresponding to
 // its respective RPC message

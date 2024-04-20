@@ -6,7 +6,7 @@ import (
 
 	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
 
-	"github.com/katkoin/katdd/app/appmessage"
+	"github.com/Katkoin/katd/app/appmessage"
 )
 
 func TestIntegrationBasicSync(t *testing.T) {

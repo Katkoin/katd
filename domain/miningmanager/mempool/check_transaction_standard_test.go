@@ -11,15 +11,15 @@ import (
 
 	"github.com/Katkoin/katd/domain/consensusreference"
 
-	"github.com/katkoin/katdd/domain/consensus/utils/testutils"
+	"github.com/Katkoin/katd/domain/consensus/utils/testutils"
 
-	"github.com/katkoin/katdd/domain/consensus"
+	"github.com/Katkoin/katd/domain/consensus"
 
-	"github.com/katkoin/katdd/domain/consensus/utils/constants"
+	"github.com/Katkoin/katd/domain/consensus/utils/constants"
 
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/txscript"
-	"github.com/katkoin/katdd/util"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/utils/txscript"
+	"github.com/Katkoin/katd/util"
 	"github.com/pkg/errors"
 )
 
@@ -206,7 +206,7 @@ func TestCheckTransactionStandardInIsolation(t *testing.T) {
 		Sequence:         constants.MaxTxInSequenceNum,
 	}
 	addrHash := [32]byte{0x01}
-	addr, err := util.NewAddressPublicKey(addrHash[:], util.Bech32PrefixKaspaTest)
+	addr, err := util.NewAddressPublicKey(addrHash[:], util.Bech32PrefixKatkoinTest)
 	if err != nil {
 		t.Fatalf("NewAddressPublicKey: unexpected error: %v", err)
 	}

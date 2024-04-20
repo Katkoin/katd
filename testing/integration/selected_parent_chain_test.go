@@ -5,8 +5,8 @@ import (
 
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 
-	"github.com/katkoin/katdd/app/appmessage"
-	"github.com/katkoin/katdd/domain/consensus/utils/consensushashing"
+	"github.com/Katkoin/katd/app/appmessage"
+	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
 )
 
 func TestVirtualSelectedParentChain(t *testing.T) {

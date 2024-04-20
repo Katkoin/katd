@@ -2,12 +2,12 @@ package consensusstatemanager
 
 import (
 	"github.com/Katkoin/katd/infrastructure/logger"
-	"github.com/katkoin/katdd/util/math"
+	"github.com/Katkoin/katd/util/math"
 	"github.com/pkg/errors"
 
-	"github.com/katkoin/katdd/domain/consensus/model"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/hashset"
+	"github.com/Katkoin/katd/domain/consensus/model"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/utils/hashset"
 )
 
 func (csm *consensusStateManager) pickVirtualParents(stagingArea *model.StagingArea, tips []*externalapi.DomainHash) ([]*externalapi.DomainHash, error) {

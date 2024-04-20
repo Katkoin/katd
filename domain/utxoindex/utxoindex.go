@@ -4,9 +4,9 @@ import (
 	"sync"
 
 	"github.com/Katkoin/katd/domain"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/infrastructure/db/database"
-	"github.com/katkoin/katdd/infrastructure/logger"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/infrastructure/db/database"
+	"github.com/Katkoin/katd/infrastructure/logger"
 )
 
 // UTXOIndex maintains an index between transaction scriptPublicKeys

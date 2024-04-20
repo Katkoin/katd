@@ -4,7 +4,7 @@ import (
 	"time"
 
 	peerpkg "github.com/Katkoin/katd/app/protocol/peer"
-	routerpkg "github.com/katkoin/katdd/infrastructure/network/netadapter/router"
+	routerpkg "github.com/Katkoin/katd/infrastructure/network/netadapter/router"
 
 	"github.com/pkg/errors"
 )

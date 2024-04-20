@@ -6,7 +6,7 @@ import (
 	"strconv"
 
 	"github.com/Katkoin/katd/stability-tests/common"
-	"github.com/katkoin/katdd/stability-tests/common/mine"
+	"github.com/Katkoin/katd/stability-tests/common/mine"
 	"github.com/pkg/errors"
 )
 

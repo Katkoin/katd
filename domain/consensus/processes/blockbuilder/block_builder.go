@@ -5,16 +5,16 @@ import (
 	"sort"
 
 	"github.com/Katkoin/katd/domain/consensus/ruleerrors"
-	"github.com/katkoin/katdd/domain/consensus/utils/blockheader"
+	"github.com/Katkoin/katd/domain/consensus/utils/blockheader"
 	"github.com/pkg/errors"
 
-	"github.com/katkoin/katdd/domain/consensus/model"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/consensushashing"
-	"github.com/katkoin/katdd/domain/consensus/utils/constants"
-	"github.com/katkoin/katdd/domain/consensus/utils/merkle"
-	"github.com/katkoin/katdd/infrastructure/logger"
-	"github.com/katkoin/katdd/util/mstime"
+	"github.com/Katkoin/katd/domain/consensus/model"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
+	"github.com/Katkoin/katd/domain/consensus/utils/constants"
+	"github.com/Katkoin/katd/domain/consensus/utils/merkle"
+	"github.com/Katkoin/katd/infrastructure/logger"
+	"github.com/Katkoin/katd/util/mstime"
 )
 
 type blockBuilder struct {

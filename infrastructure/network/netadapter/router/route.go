@@ -6,7 +6,7 @@ import (
 
 	"github.com/Katkoin/katd/app/protocol/protocolerrors"
 
-	"github.com/katkoin/katdd/app/appmessage"
+	"github.com/Katkoin/katd/app/appmessage"
 	"github.com/pkg/errors"
 )
 

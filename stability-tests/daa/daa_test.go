@@ -8,11 +8,11 @@ import (
 	"time"
 
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/pow"
-	"github.com/katkoin/katdd/domain/dagconfig"
-	"github.com/katkoin/katdd/infrastructure/network/rpcclient"
-	"github.com/katkoin/katdd/stability-tests/common"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/utils/pow"
+	"github.com/Katkoin/katd/domain/dagconfig"
+	"github.com/Katkoin/katd/infrastructure/network/rpcclient"
+	"github.com/Katkoin/katd/stability-tests/common"
 )
 
 const rpcAddress = "localhost:9000"

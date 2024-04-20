@@ -4,14 +4,14 @@ import (
 	"sort"
 
 	"github.com/Katkoin/katd/domain/consensus/model"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/consensushashing"
-	"github.com/katkoin/katdd/domain/consensus/utils/multiset"
-	"github.com/katkoin/katdd/domain/consensus/utils/utxo"
-	"github.com/katkoin/katdd/domain/consensus/utils/virtual"
-	"github.com/katkoin/katdd/infrastructure/db/database"
-	"github.com/katkoin/katdd/infrastructure/logger"
-	"github.com/katkoin/katdd/util/staging"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
+	"github.com/Katkoin/katd/domain/consensus/utils/multiset"
+	"github.com/Katkoin/katd/domain/consensus/utils/utxo"
+	"github.com/Katkoin/katd/domain/consensus/utils/virtual"
+	"github.com/Katkoin/katd/infrastructure/db/database"
+	"github.com/Katkoin/katd/infrastructure/logger"
+	"github.com/Katkoin/katd/util/staging"
 	"github.com/pkg/errors"
 )
 

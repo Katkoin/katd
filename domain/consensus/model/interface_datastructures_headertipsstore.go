@@ -1,6 +1,6 @@
 package model
 
-import "github.com/katkoin/katd/domain/consensus/model/externalapi"
+import "github.com/Katkoin/katd/domain/consensus/model/externalapi"
 
 // HeaderSelectedTipStore represents a store of the headers selected tip
 type HeaderSelectedTipStore interface {

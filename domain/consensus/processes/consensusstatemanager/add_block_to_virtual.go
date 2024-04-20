@@ -2,9 +2,9 @@ package consensusstatemanager
 
 import (
 	"github.com/Katkoin/katd/domain/consensus/model"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/utxo"
-	"github.com/katkoin/katdd/infrastructure/logger"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/utils/utxo"
+	"github.com/Katkoin/katd/infrastructure/logger"
 )
 
 // AddBlock submits the given block to be added to the

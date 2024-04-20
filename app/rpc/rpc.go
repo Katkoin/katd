@@ -2,10 +2,10 @@ package rpc
 
 import (
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/app/rpc/rpccontext"
-	"github.com/katkoin/katdd/app/rpc/rpchandlers"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/router"
+	"github.com/Katkoin/katd/app/rpc/rpccontext"
+	"github.com/Katkoin/katd/app/rpc/rpchandlers"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 

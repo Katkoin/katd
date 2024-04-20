@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/Katkoin/katd/infrastructure/config"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/standalone"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/standalone"
 )
 
 func connectToNode() *standalone.Routes {

@@ -5,7 +5,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-func (x *katdMessage_IbdBlock) toAppMessage() (appmessage.Message, error) {
+func (x *KatdMessage_IbdBlock) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
 		return nil, errors.Wrapf(errorNil, "katdMessage_IbdBlock is nil")
 	}
@@ -16,7 +16,7 @@ func (x *katdMessage_IbdBlock) toAppMessage() (appmessage.Message, error) {
 	return &appmessage.MsgIBDBlock{MsgBlock: msgBlock}, nil
 }
 
-func (x *katdMessage_IbdBlock) fromAppMessage(msgIBDBlock *appmessage.MsgIBDBlock) error {
+func (x *KatdMessage_IbdBlock) fromAppMessage(msgIBDBlock *appmessage.MsgIBDBlock) error {
 	x.IbdBlock = new(BlockMessage)
 	return x.IbdBlock.fromAppMessage(msgIBDBlock.MsgBlock)
 }

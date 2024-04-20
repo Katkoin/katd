@@ -15,7 +15,7 @@ import (
 
 	"golang.org/x/crypto/blake2b"
 
-	"github.com/katkoin/katdd/domain/consensus/utils/constants"
+	"github.com/Katkoin/katd/domain/consensus/utils/constants"
 
 	"github.com/kaspanet/go-secp256k1"
 )

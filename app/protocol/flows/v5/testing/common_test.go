@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/katkoin/katd/app/protocol/protocolerrors"
+	"github.com/Katkoin/katd/app/protocol/protocolerrors"
 	"github.com/pkg/errors"
 )
 

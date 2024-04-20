@@ -5,7 +5,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-func (x *katdMessage_RequestPruningPointUTXOSet) toAppMessage() (appmessage.Message, error) {
+func (x *KatdMessage_RequestPruningPointUTXOSet) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
 		return nil, errors.Wrapf(errorNil, "katdMessage_RequestPruningPointUTXOSet is nil")
 	}
@@ -23,7 +23,7 @@ func (x *RequestPruningPointUTXOSetMessage) toAppMessage() (appmessage.Message, 
 	return &appmessage.MsgRequestPruningPointUTXOSet{PruningPointHash: pruningPointHash}, nil
 }
 
-func (x *katdMessage_RequestPruningPointUTXOSet) fromAppMessage(
+func (x *KatdMessage_RequestPruningPointUTXOSet) fromAppMessage(
 	msgRequestPruningPointUTXOSet *appmessage.MsgRequestPruningPointUTXOSet) error {
 
 	x.RequestPruningPointUTXOSet = &RequestPruningPointUTXOSetMessage{}

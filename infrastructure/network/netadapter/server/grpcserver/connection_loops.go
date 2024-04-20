@@ -7,14 +7,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/davecgh/go-spew/spew"
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/infrastructure/logger"
+	"github.com/Katkoin/katd/infrastructure/logger"
+	"github.com/davecgh/go-spew/spew"
 
-	routerpkg "github.com/katkoin/katdd/infrastructure/network/netadapter/router"
+	routerpkg "github.com/Katkoin/katd/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/server/grpcserver/protowire"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/server/grpcserver/protowire"
 )
 
 func (c *gRPCConnection) connectionLoops() error {
@@ -45,7 +45,7 @@ func (c *gRPCConnection) sendLoop() error {
 		}
 
 		blockDelayOnce.Do(func() {
-			experimentalDelayEnv := os.Getenv("KASPA_EXPERIMENTAL_DELAY")
+			experimentalDelayEnv := os.Getenv("KATKOIN_EXPERIMENTAL_DELAY")
 			if experimentalDelayEnv != "" {
 				blockDelay, err = strconv.Atoi(experimentalDelayEnv)
 				if err != nil {

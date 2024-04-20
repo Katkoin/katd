@@ -2,8 +2,8 @@ package rpchandlers
 
 import (
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/app/rpc/rpccontext"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/router"
+	"github.com/Katkoin/katd/app/rpc/rpccontext"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/router"
 )
 
 // HandleResolveFinalityConflict handles the respectively named RPC command

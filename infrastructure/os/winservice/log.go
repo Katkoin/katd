@@ -6,7 +6,7 @@ package winservice
 
 import (
 	"github.com/Katkoin/katd/infrastructure/logger"
-	"github.com/katkoin/katdd/util/panics"
+	"github.com/Katkoin/katd/util/panics"
 )
 
 var log = logger.RegisterSubSystem("CNFG")

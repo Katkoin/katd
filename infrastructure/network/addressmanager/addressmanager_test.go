@@ -10,9 +10,9 @@ import (
 	"testing"
 
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/infrastructure/config"
-	"github.com/katkoin/katdd/infrastructure/db/database/ldb"
-	"github.com/katkoin/katdd/util/mstime"
+	"github.com/Katkoin/katd/infrastructure/config"
+	"github.com/Katkoin/katd/infrastructure/db/database/ldb"
+	"github.com/Katkoin/katd/util/mstime"
 )
 
 func newAddressManagerForTest(t *testing.T, testName string) (addressManager *AddressManager, teardown func()) {

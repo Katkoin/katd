@@ -7,11 +7,11 @@ import (
 
 	"github.com/Katkoin/katd/domain/consensus/model"
 
-	"github.com/katkoin/katdd/domain/consensus"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/hashset"
-	"github.com/katkoin/katdd/domain/consensus/utils/testutils"
-	"github.com/katkoin/katdd/domain/dagconfig"
+	"github.com/Katkoin/katd/domain/consensus"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/utils/hashset"
+	"github.com/Katkoin/katd/domain/consensus/utils/testutils"
+	"github.com/Katkoin/katd/domain/dagconfig"
 	"github.com/pkg/errors"
 )
 

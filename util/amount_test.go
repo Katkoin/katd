@@ -10,7 +10,7 @@ import (
 
 	"github.com/Katkoin/katd/domain/consensus/utils/constants"
 
-	. "github.com/katkoin/katdd/util"
+	. "github.com/Katkoin/katd/util"
 )
 
 func TestAmountCreation(t *testing.T) {
@@ -37,7 +37,7 @@ func TestAmountCreation(t *testing.T) {
 			name:     "one hundred",
 			amount:   100,
 			valid:    true,
-			expected: 100 * constants.SompiPerKaspa,
+			expected: 100 * constants.SompiPerKatkoin,
 		},
 		{
 			name:     "fraction",
@@ -49,13 +49,13 @@ func TestAmountCreation(t *testing.T) {
 			name:     "rounding up",
 			amount:   54.999999999999943157,
 			valid:    true,
-			expected: 55 * constants.SompiPerKaspa,
+			expected: 55 * constants.SompiPerKatkoin,
 		},
 		{
 			name:     "rounding down",
 			amount:   55.000000000000056843,
 			valid:    true,
-			expected: 55 * constants.SompiPerKaspa,
+			expected: 55 * constants.SompiPerKatkoin,
 		},
 
 		// Negative tests.

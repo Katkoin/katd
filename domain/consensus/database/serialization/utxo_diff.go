@@ -2,7 +2,7 @@ package serialization
 
 import (
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/utxo"
+	"github.com/Katkoin/katd/domain/consensus/utils/utxo"
 )
 
 // UTXODiffToDBUTXODiff converts UTXODiff to DbUtxoDiff

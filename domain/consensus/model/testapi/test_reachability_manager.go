@@ -2,7 +2,7 @@ package testapi
 
 import (
 	"github.com/Katkoin/katd/domain/consensus/model"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 )
 
 // TestReachabilityManager adds to the main ReachabilityManager methods required by tests

@@ -5,7 +5,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-func (x *katdMessage_Pong) toAppMessage() (appmessage.Message, error) {
+func (x *KatdMessage_Pong) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
 		return nil, errors.Wrapf(errorNil, "katdMessage_Pong is nil")
 	}
@@ -21,7 +21,7 @@ func (x *PongMessage) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *katdMessage_Pong) fromAppMessage(msgPong *appmessage.MsgPong) error {
+func (x *KatdMessage_Pong) fromAppMessage(msgPong *appmessage.MsgPong) error {
 	x.Pong = &PongMessage{
 		Nonce: msgPong.Nonce,
 	}

@@ -2,13 +2,13 @@ package rpchandlers
 
 import (
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/app/rpc/rpccontext"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/transactionhelper"
-	"github.com/katkoin/katdd/domain/consensus/utils/txscript"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/router"
-	"github.com/katkoin/katdd/util"
-	"github.com/katkoin/katdd/version"
+	"github.com/Katkoin/katd/app/rpc/rpccontext"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/utils/transactionhelper"
+	"github.com/Katkoin/katd/domain/consensus/utils/txscript"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/router"
+	"github.com/Katkoin/katd/util"
+	"github.com/Katkoin/katd/version"
 )
 
 // HandleGetBlockTemplate handles the respectively named RPC command

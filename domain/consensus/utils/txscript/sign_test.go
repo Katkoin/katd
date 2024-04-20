@@ -10,14 +10,14 @@ import (
 
 	"github.com/Katkoin/katd/domain/consensus/utils/utxo"
 
-	"github.com/katkoin/katdd/domain/consensus/utils/consensushashing"
+	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
 
 	"github.com/kaspanet/go-secp256k1"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
 
-	"github.com/katkoin/katdd/domain/dagconfig"
-	"github.com/katkoin/katdd/util"
+	"github.com/Katkoin/katd/domain/dagconfig"
+	"github.com/Katkoin/katd/util"
 )
 
 func mkGetKey(keys map[string]*secp256k1.SchnorrKeyPair) KeyDB {
@@ -213,7 +213,7 @@ func TestSignTxOutput(t *testing.T) {
 				break
 			}
 
-			address, err := util.NewAddressPublicKey(serializedPubKey[:], util.Bech32PrefixKaspaTest)
+			address, err := util.NewAddressPublicKey(serializedPubKey[:], util.Bech32PrefixKatkoinTest)
 			if err != nil {
 				t.Errorf("failed to make address for %s: %v",
 					msg, err)
@@ -263,7 +263,7 @@ func TestSignTxOutput(t *testing.T) {
 				break
 			}
 
-			address, err := util.NewAddressPublicKey(serializedPubKey[:], util.Bech32PrefixKaspaTest)
+			address, err := util.NewAddressPublicKey(serializedPubKey[:], util.Bech32PrefixKatkoinTest)
 			if err != nil {
 				t.Errorf("failed to make address for %s: %v",
 					msg, err)
@@ -340,7 +340,7 @@ func TestSignTxOutput(t *testing.T) {
 				break
 			}
 
-			address, err := util.NewAddressPublicKey(serializedPubKey[:], util.Bech32PrefixKaspaTest)
+			address, err := util.NewAddressPublicKey(serializedPubKey[:], util.Bech32PrefixKatkoinTest)
 			if err != nil {
 				t.Errorf("failed to make address for %s: %v",
 					msg, err)
@@ -354,7 +354,7 @@ func TestSignTxOutput(t *testing.T) {
 			}
 
 			scriptAddr, err := util.NewAddressScriptHash(
-				scriptPubKey.Script, util.Bech32PrefixKaspaTest)
+				scriptPubKey.Script, util.Bech32PrefixKatkoinTest)
 			if err != nil {
 				t.Errorf("failed to make p2sh addr for %s: %v",
 					msg, err)
@@ -404,7 +404,7 @@ func TestSignTxOutput(t *testing.T) {
 				break
 			}
 
-			address, err := util.NewAddressPublicKey(serializedPubKey[:], util.Bech32PrefixKaspaTest)
+			address, err := util.NewAddressPublicKey(serializedPubKey[:], util.Bech32PrefixKatkoinTest)
 			if err != nil {
 				t.Errorf("failed to make address for %s: %v",
 					msg, err)
@@ -418,7 +418,7 @@ func TestSignTxOutput(t *testing.T) {
 			}
 
 			scriptAddr, err := util.NewAddressScriptHash(
-				scriptPubKey.Script, util.Bech32PrefixKaspaTest)
+				scriptPubKey.Script, util.Bech32PrefixKatkoinTest)
 			if err != nil {
 				t.Errorf("failed to make p2sh addr for %s: %v",
 					msg, err)
@@ -486,7 +486,7 @@ func generateKeys() (keyPair *secp256k1.SchnorrKeyPair, scriptPublicKey *externa
 	if err != nil {
 		return nil, nil, nil, errors.Errorf("failed to serialize a pubkey for %s: %s", pubKey, err)
 	}
-	address, err := util.NewAddressPublicKey(serializedPubKey[:], util.Bech32PrefixKaspaTest)
+	address, err := util.NewAddressPublicKey(serializedPubKey[:], util.Bech32PrefixKatkoinTest)
 	if err != nil {
 		return nil, nil, nil, errors.Errorf("failed to make address for %s: %s", serializedPubKey, err)
 	}

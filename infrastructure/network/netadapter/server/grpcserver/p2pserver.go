@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/Katkoin/katd/infrastructure/network/netadapter/server"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/server/grpcserver/protowire"
-	"github.com/katkoin/katdd/util/panics"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/server/grpcserver/protowire"
+	"github.com/Katkoin/katd/util/panics"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/encoding/gzip"

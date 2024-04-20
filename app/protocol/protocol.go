@@ -5,17 +5,17 @@ import (
 	"sync/atomic"
 
 	"github.com/Katkoin/katd/app/protocol/common"
-	"github.com/katkoin/katdd/app/protocol/flows/ready"
-	v5 "github.com/katkoin/katdd/app/protocol/flows/v5"
+	"github.com/Katkoin/katd/app/protocol/flows/ready"
+	v5 "github.com/Katkoin/katd/app/protocol/flows/v5"
 
-	"github.com/katkoin/katdd/app/appmessage"
-	"github.com/katkoin/katdd/app/protocol/flows/handshake"
-	peerpkg "github.com/katkoin/katdd/app/protocol/peer"
-	"github.com/katkoin/katdd/app/protocol/protocolerrors"
-	"github.com/katkoin/katdd/infrastructure/network/addressmanager"
-	"github.com/katkoin/katdd/infrastructure/network/connmanager"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter"
-	routerpkg "github.com/katkoin/katdd/infrastructure/network/netadapter/router"
+	"github.com/Katkoin/katd/app/appmessage"
+	"github.com/Katkoin/katd/app/protocol/flows/handshake"
+	peerpkg "github.com/Katkoin/katd/app/protocol/peer"
+	"github.com/Katkoin/katd/app/protocol/protocolerrors"
+	"github.com/Katkoin/katd/infrastructure/network/addressmanager"
+	"github.com/Katkoin/katd/infrastructure/network/connmanager"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter"
+	routerpkg "github.com/Katkoin/katd/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 

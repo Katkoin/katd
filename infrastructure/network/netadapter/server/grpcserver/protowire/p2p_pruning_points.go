@@ -5,7 +5,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-func (x *katdMessage_PruningPoints) toAppMessage() (appmessage.Message, error) {
+func (x *KatdMessage_PruningPoints) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
 		return nil, errors.Wrapf(errorNil, "katdMessage_PruningPoints is nil")
 	}
@@ -27,7 +27,7 @@ func (x *katdMessage_PruningPoints) toAppMessage() (appmessage.Message, error) {
 	}, nil
 }
 
-func (x *katdMessage_PruningPoints) fromAppMessage(msgPruningPoints *appmessage.MsgPruningPoints) error {
+func (x *KatdMessage_PruningPoints) fromAppMessage(msgPruningPoints *appmessage.MsgPruningPoints) error {
 	blockHeaders := make([]*BlockHeader, len(msgPruningPoints.Headers))
 	for i, blockHeader := range msgPruningPoints.Headers {
 		blockHeaders[i] = &BlockHeader{}

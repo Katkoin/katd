@@ -4,15 +4,15 @@ import (
 	"sync"
 
 	"github.com/Katkoin/katd/app/protocol/common"
-	"github.com/katkoin/katdd/util/mstime"
+	"github.com/Katkoin/katd/util/mstime"
 
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/id"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/id"
 
-	"github.com/katkoin/katdd/app/appmessage"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/router"
+	"github.com/Katkoin/katd/app/appmessage"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/router"
 
-	"github.com/katkoin/katdd/infrastructure/config"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter"
+	"github.com/Katkoin/katd/infrastructure/config"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter"
 
 	"github.com/pkg/errors"
 )

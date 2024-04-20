@@ -36,13 +36,13 @@ func TestServiceFlagStringer(t *testing.T) {
 // TestKatkoinStringer tests the stringized output for katkoin net types.
 func TestKatkoinStringer(t *testing.T) {
 	tests := []struct {
-		in   katkoin
+		in   Katkoin
 		want string
 	}{
 		{Mainnet, "Mainnet"},
 		{Testnet, "Testnet"},
 		{Simnet, "Simnet"},
-		{0xffffffff, "Unknown katkoin (4294967295)"},
+		{0xffffffff, "Unknown Katkoin (4294967295)"},
 	}
 
 	t.Logf("Running %d tests", len(tests))

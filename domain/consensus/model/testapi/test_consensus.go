@@ -4,9 +4,9 @@ import (
 	"io"
 
 	"github.com/Katkoin/katd/domain/consensus/model"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/dagconfig"
-	"github.com/katkoin/katdd/infrastructure/db/database"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/dagconfig"
+	"github.com/Katkoin/katd/infrastructure/db/database"
 )
 
 // MineJSONBlockType indicates which type of blocks MineJSON mines

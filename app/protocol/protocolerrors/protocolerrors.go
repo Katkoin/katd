@@ -1,7 +1,7 @@
 package protocolerrors
 
 import (
-	"github.com/katkoin/katd/domain/consensus/ruleerrors"
+	"github.com/Katkoin/katd/domain/consensus/ruleerrors"
 	"github.com/pkg/errors"
 )
 

@@ -4,11 +4,11 @@ import (
 	"encoding/hex"
 
 	"github.com/Katkoin/katd/domain/consensus/utils/txscript"
-	"github.com/katkoin/katdd/util"
+	"github.com/Katkoin/katd/util"
 	"github.com/pkg/errors"
 
-	"github.com/katkoin/katdd/app/appmessage"
-	"github.com/katkoin/katdd/domain/utxoindex"
+	"github.com/Katkoin/katd/app/appmessage"
+	"github.com/Katkoin/katd/domain/utxoindex"
 )
 
 // ConvertUTXOOutpointEntryPairsToUTXOsByAddressesEntries converts

@@ -5,9 +5,9 @@ import (
 
 	"github.com/kaspanet/go-secp256k1"
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/stability-tests/common"
-	"github.com/katkoin/katdd/stability-tests/common/rpc"
-	"github.com/katkoin/katdd/util"
+	"github.com/Katkoin/katd/stability-tests/common"
+	"github.com/Katkoin/katd/stability-tests/common/rpc"
+	"github.com/Katkoin/katd/util"
 	"github.com/pkg/errors"
 )
 

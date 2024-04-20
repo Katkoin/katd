@@ -13,13 +13,13 @@ import (
 
 	"github.com/kaspanet/go-secp256k1"
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/domain/consensus/utils/mining"
-	"github.com/katkoin/katdd/util"
+	"github.com/Katkoin/katd/domain/consensus/utils/mining"
+	"github.com/Katkoin/katd/util"
 
-	"github.com/katkoin/katdd/stability-tests/common"
-	"github.com/katkoin/katdd/stability-tests/common/rpc"
-	"github.com/katkoin/katdd/util/panics"
-	"github.com/katkoin/katdd/util/profiling"
+	"github.com/Katkoin/katd/stability-tests/common"
+	"github.com/Katkoin/katd/stability-tests/common/rpc"
+	"github.com/Katkoin/katd/util/panics"
+	"github.com/Katkoin/katd/util/profiling"
 	"github.com/pkg/errors"
 )
 
@@ -241,7 +241,7 @@ func mineLoopUntilHavingOnlyOneTipInDAG(rpcClient *rpc.Client, miningAddress uti
 	startMiningTime := time.Now()
 	shutdown := uint64(0)
 
-	spawn("kaspa-miner-Cmd.Wait", func() {
+	spawn("katkoin-miner-Cmd.Wait", func() {
 		err := katminerCmd.Wait()
 		if err != nil {
 			if atomic.LoadUint64(&shutdown) == 0 {

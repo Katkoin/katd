@@ -10,7 +10,7 @@ import (
 
 	"github.com/Katkoin/katd/domain/consensus/utils/constants"
 
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 )
 
 // These are the constants specified for maximums in individual scripts.

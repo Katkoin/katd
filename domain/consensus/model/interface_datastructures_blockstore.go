@@ -1,6 +1,6 @@
 package model
 
-import "github.com/katkoin/katd/domain/consensus/model/externalapi"
+import "github.com/Katkoin/katd/domain/consensus/model/externalapi"
 
 // BlockStore represents a store of blocks
 type BlockStore interface {

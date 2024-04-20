@@ -1,6 +1,6 @@
 package appmessage
 
-import "github.com/katkoin/katd/domain/consensus/model/externalapi"
+import "github.com/Katkoin/katd/domain/consensus/model/externalapi"
 
 // MsgPruningPointUTXOSetChunk represents a katkoin PruningPointUTXOSetChunk message
 type MsgPruningPointUTXOSetChunk struct {

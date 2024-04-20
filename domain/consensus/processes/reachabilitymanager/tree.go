@@ -7,8 +7,8 @@ import (
 
 	"github.com/Katkoin/katd/domain/consensus/utils/reachabilitydata"
 
-	"github.com/katkoin/katdd/domain/consensus/model"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 
 	"github.com/pkg/errors"
 )

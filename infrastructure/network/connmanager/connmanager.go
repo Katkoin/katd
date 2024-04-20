@@ -7,14 +7,14 @@ import (
 	"time"
 
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/infrastructure/network/dnsseed"
+	"github.com/Katkoin/katd/infrastructure/network/dnsseed"
 	"github.com/pkg/errors"
 
-	"github.com/katkoin/katdd/infrastructure/network/addressmanager"
+	"github.com/Katkoin/katd/infrastructure/network/addressmanager"
 
-	"github.com/katkoin/katdd/infrastructure/network/netadapter"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter"
 
-	"github.com/katkoin/katdd/infrastructure/config"
+	"github.com/Katkoin/katd/infrastructure/config"
 )
 
 // connectionRequest represents a user request (either through CLI or RPC) to connect to a certain node

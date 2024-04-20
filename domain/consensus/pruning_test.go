@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"github.com/Katkoin/katd/domain/consensus"
-	"github.com/katkoin/katdd/domain/consensus/utils/testutils"
-	"github.com/katkoin/katdd/domain/dagconfig"
+	"github.com/Katkoin/katd/domain/consensus/utils/testutils"
+	"github.com/Katkoin/katd/domain/dagconfig"
 )
 
 func TestPruningDepth(t *testing.T) {

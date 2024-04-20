@@ -8,16 +8,16 @@ import (
 	"time"
 
 	"github.com/Katkoin/katd/infrastructure/config"
-	"github.com/katkoin/katdd/infrastructure/db/database"
-	"github.com/katkoin/katdd/infrastructure/db/database/ldb"
-	"github.com/katkoin/katdd/infrastructure/logger"
-	"github.com/katkoin/katdd/infrastructure/os/execenv"
-	"github.com/katkoin/katdd/infrastructure/os/limits"
-	"github.com/katkoin/katdd/infrastructure/os/signal"
-	"github.com/katkoin/katdd/infrastructure/os/winservice"
-	"github.com/katkoin/katdd/util/panics"
-	"github.com/katkoin/katdd/util/profiling"
-	"github.com/katkoin/katdd/version"
+	"github.com/Katkoin/katd/infrastructure/db/database"
+	"github.com/Katkoin/katd/infrastructure/db/database/ldb"
+	"github.com/Katkoin/katd/infrastructure/logger"
+	"github.com/Katkoin/katd/infrastructure/os/execenv"
+	"github.com/Katkoin/katd/infrastructure/os/limits"
+	"github.com/Katkoin/katd/infrastructure/os/signal"
+	"github.com/Katkoin/katd/infrastructure/os/winservice"
+	"github.com/Katkoin/katd/util/panics"
+	"github.com/Katkoin/katd/util/profiling"
+	"github.com/Katkoin/katd/version"
 )
 
 const (

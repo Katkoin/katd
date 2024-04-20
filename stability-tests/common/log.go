@@ -5,9 +5,9 @@ import (
 	"os"
 
 	"github.com/Katkoin/katd/infrastructure/logger"
-	"github.com/katkoin/katdd/stability-tests/common/mine"
-	"github.com/katkoin/katdd/stability-tests/common/rpc"
-	"github.com/katkoin/katdd/util/panics"
+	"github.com/Katkoin/katd/stability-tests/common/mine"
+	"github.com/Katkoin/katd/stability-tests/common/rpc"
+	"github.com/Katkoin/katd/util/panics"
 )
 
 // log is a logger that is initialized with no output filters. This

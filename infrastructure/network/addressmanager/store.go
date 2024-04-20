@@ -5,8 +5,8 @@ import (
 	"net"
 
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/infrastructure/db/database"
-	"github.com/katkoin/katdd/util/mstime"
+	"github.com/Katkoin/katd/infrastructure/db/database"
+	"github.com/Katkoin/katd/util/mstime"
 	"github.com/pkg/errors"
 )
 

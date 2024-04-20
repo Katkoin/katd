@@ -12,9 +12,9 @@ import (
 	"github.com/Katkoin/katd/util/mstime"
 	"github.com/davecgh/go-spew/spew"
 
-	"github.com/katkoin/katdd/domain/consensus/utils/subnetworks"
+	"github.com/Katkoin/katd/domain/consensus/utils/subnetworks"
 
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 )
 
 // TestBlock tests the MsgBlock API.

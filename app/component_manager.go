@@ -6,20 +6,20 @@ import (
 
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 
-	"github.com/katkoin/katdd/domain/miningmanager/mempool"
+	"github.com/Katkoin/katd/domain/miningmanager/mempool"
 
-	"github.com/katkoin/katdd/app/protocol"
-	"github.com/katkoin/katdd/app/rpc"
-	"github.com/katkoin/katdd/domain"
-	"github.com/katkoin/katdd/domain/consensus"
-	"github.com/katkoin/katdd/domain/utxoindex"
-	"github.com/katkoin/katdd/infrastructure/config"
-	infrastructuredatabase "github.com/katkoin/katdd/infrastructure/db/database"
-	"github.com/katkoin/katdd/infrastructure/network/addressmanager"
-	"github.com/katkoin/katdd/infrastructure/network/connmanager"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/id"
-	"github.com/katkoin/katdd/util/panics"
+	"github.com/Katkoin/katd/app/protocol"
+	"github.com/Katkoin/katd/app/rpc"
+	"github.com/Katkoin/katd/domain"
+	"github.com/Katkoin/katd/domain/consensus"
+	"github.com/Katkoin/katd/domain/utxoindex"
+	"github.com/Katkoin/katd/infrastructure/config"
+	infrastructuredatabase "github.com/Katkoin/katd/infrastructure/db/database"
+	"github.com/Katkoin/katd/infrastructure/network/addressmanager"
+	"github.com/Katkoin/katd/infrastructure/network/connmanager"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/id"
+	"github.com/Katkoin/katd/util/panics"
 )
 
 // ComponentManager is a wrapper for all the katd services

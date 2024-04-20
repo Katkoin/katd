@@ -16,7 +16,7 @@ const (
 	DefaultServices = SFNodeNetwork | SFNodeBloom | SFNodeCF
 )
 
-// ServiceFlag identifies services supported by a katkoin peer.
+// ServiceFlag identifies services supported by a Katkoin peer.
 type ServiceFlag uint64
 
 const (
@@ -89,41 +89,41 @@ func (f ServiceFlag) String() string {
 	return s
 }
 
-// katkoin represents which katkoin network a message belongs to.
-type katkoin uint32
+// Katkoin represents which Katkoin network a message belongs to.
+type Katkoin uint32
 
-// Constants used to indicate the message katkoin network. They can also be
+// Constants used to indicate the message Katkoin network. They can also be
 // used to seek to the next message when a stream's state is unknown, but
 // this package does not provide that functionality since it's generally a
 // better idea to simply disconnect clients that are misbehaving over TCP.
 const (
-	// Mainnet represents the main katkoin network.
-	Mainnet katkoin = 0x3ddcf71d
+	// Mainnet represents the main Katkoin network.
+	Mainnet Katkoin = 0x3ddcf71d
 
 	// Testnet represents the test network.
-	Testnet katkoin = 0xddb8af8f
+	Testnet Katkoin = 0xddb8af8f
 
 	// Simnet represents the simulation test network.
-	Simnet katkoin = 0x374dcf1c
+	Simnet Katkoin = 0x374dcf1c
 
 	// Devnet represents the development test network.
-	Devnet katkoin = 0x732d87e1
+	Devnet Katkoin = 0x732d87e1
 )
 
-// bnStrings is a map of katkoin networks back to their constant names for
+// bnStrings is a map of Katkoin networks back to their constant names for
 // pretty printing.
-var bnStrings = map[katkoin]string{
+var bnStrings = map[Katkoin]string{
 	Mainnet: "Mainnet",
 	Testnet: "Testnet",
 	Simnet:  "Simnet",
 	Devnet:  "Devnet",
 }
 
-// String returns the katkoin in human-readable form.
-func (n katkoin) String() string {
+// String returns the Katkoin in human-readable form.
+func (n Katkoin) String() string {
 	if s, ok := bnStrings[n]; ok {
 		return s
 	}
 
-	return fmt.Sprintf("Unknown katkoin (%d)", uint32(n))
+	return fmt.Sprintf("Unknown Katkoin (%d)", uint32(n))
 }

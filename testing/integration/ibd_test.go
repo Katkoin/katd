@@ -8,12 +8,12 @@ import (
 	"time"
 
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/consensushashing"
-	"github.com/katkoin/katdd/domain/consensus/utils/mining"
+	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
+	"github.com/Katkoin/katd/domain/consensus/utils/mining"
 
-	"github.com/katkoin/katdd/domain/dagconfig"
+	"github.com/Katkoin/katd/domain/dagconfig"
 
-	"github.com/katkoin/katdd/app/appmessage"
+	"github.com/Katkoin/katd/app/appmessage"
 )
 
 func TestIBD(t *testing.T) {

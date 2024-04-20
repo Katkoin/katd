@@ -1,7 +1,7 @@
 package serialization
 
 import (
-	"github.com/katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 )
 
 // DomainBlockToDbBlock converts DomainBlocks to DbBlock

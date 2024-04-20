@@ -16,7 +16,7 @@ import (
 	"runtime"
 	"runtime/pprof"
 
-	"github.com/katkoin/katdd/util/panics"
+	"github.com/Katkoin/katd/util/panics"
 )
 
 // heapDumpFileName is the name of the heap dump file. We want every run to have its own

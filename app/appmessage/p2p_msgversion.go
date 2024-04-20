@@ -9,10 +9,10 @@ import (
 	"strings"
 
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/version"
+	"github.com/Katkoin/katd/version"
 
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/id"
-	"github.com/katkoin/katdd/util/mstime"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/id"
+	"github.com/Katkoin/katd/util/mstime"
 )
 
 // MaxUserAgentLen is the maximum allowed length for the user agent field in a

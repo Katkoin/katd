@@ -5,12 +5,12 @@ import (
 	"time"
 
 	"github.com/Katkoin/katd/infrastructure/logger"
-	"github.com/katkoin/katdd/util/math"
+	"github.com/Katkoin/katd/util/math"
 
-	"github.com/katkoin/katdd/util/difficulty"
+	"github.com/Katkoin/katd/util/difficulty"
 
-	"github.com/katkoin/katdd/domain/consensus/model"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 )
 
 // DifficultyManager provides a method to resolve the

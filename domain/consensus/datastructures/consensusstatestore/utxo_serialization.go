@@ -3,7 +3,7 @@ package consensusstatestore
 import (
 	"github.com/Katkoin/katd/domain/consensus/database/serialization"
 	"github.com/golang/protobuf/proto"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 )
 
 func serializeOutpoint(outpoint *externalapi.DomainOutpoint) ([]byte, error) {

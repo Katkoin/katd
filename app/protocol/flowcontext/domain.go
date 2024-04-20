@@ -1,7 +1,7 @@
 package flowcontext
 
 import (
-	"github.com/katkoin/katd/domain"
+	"github.com/Katkoin/katd/domain"
 )
 
 // Domain returns the Domain object associated to the flow context.

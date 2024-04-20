@@ -10,14 +10,14 @@ import (
 	"testing"
 
 	"github.com/Katkoin/katd/domain/consensus"
-	"github.com/katkoin/katdd/domain/consensus/model"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/processes/ghostdag2"
-	"github.com/katkoin/katdd/domain/consensus/processes/ghostdagmanager"
-	"github.com/katkoin/katdd/domain/consensus/utils/blockheader"
-	"github.com/katkoin/katdd/domain/consensus/utils/constants"
-	"github.com/katkoin/katdd/domain/consensus/utils/testutils"
-	"github.com/katkoin/katdd/util/difficulty"
+	"github.com/Katkoin/katd/domain/consensus/model"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/processes/ghostdag2"
+	"github.com/Katkoin/katd/domain/consensus/processes/ghostdagmanager"
+	"github.com/Katkoin/katd/domain/consensus/utils/blockheader"
+	"github.com/Katkoin/katd/domain/consensus/utils/constants"
+	"github.com/Katkoin/katd/domain/consensus/utils/testutils"
+	"github.com/Katkoin/katd/util/difficulty"
 	"github.com/pkg/errors"
 )
 

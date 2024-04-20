@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/Katkoin/katd/domain/consensus"
-	"github.com/katkoin/katdd/domain/dagconfig"
+	"github.com/Katkoin/katd/domain/dagconfig"
 )
 
 // ForAllNets runs the passed testFunc with all available networks

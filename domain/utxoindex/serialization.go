@@ -5,7 +5,7 @@ import (
 	"io"
 
 	"github.com/Katkoin/katd/domain/consensus/database/serialization"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
 	"google.golang.org/protobuf/proto"
 )

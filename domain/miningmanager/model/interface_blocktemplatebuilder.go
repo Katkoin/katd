@@ -1,7 +1,7 @@
 package model
 
 import (
-	consensusexternalapi "github.com/katkoin/katd/domain/consensus/model/externalapi"
+	consensusexternalapi "github.com/Katkoin/katd/domain/consensus/model/externalapi"
 )
 
 // BlockTemplateBuilder builds block templates for miners to consume

@@ -5,9 +5,9 @@ import (
 
 	"github.com/Katkoin/katd/domain/consensus/utils/constants"
 
-	"github.com/katkoin/katdd/util"
+	"github.com/Katkoin/katd/util"
 
-	"github.com/katkoin/katdd/domain/dagconfig"
+	"github.com/Katkoin/katd/domain/dagconfig"
 )
 
 const (

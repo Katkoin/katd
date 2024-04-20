@@ -5,12 +5,12 @@ import (
 	"time"
 
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter"
 
-	"github.com/katkoin/katdd/app/appmessage"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/id"
-	mathUtil "github.com/katkoin/katdd/util/math"
-	"github.com/katkoin/katdd/util/mstime"
+	"github.com/Katkoin/katd/app/appmessage"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/id"
+	mathUtil "github.com/Katkoin/katd/util/math"
+	"github.com/Katkoin/katd/util/mstime"
 )
 
 // Peer holds data about a peer.

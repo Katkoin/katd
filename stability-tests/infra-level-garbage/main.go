@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/Katkoin/katd/stability-tests/common"
-	"github.com/katkoin/katdd/util/profiling"
+	"github.com/Katkoin/katd/util/profiling"
 )
 
 const timeout = 5 * time.Second

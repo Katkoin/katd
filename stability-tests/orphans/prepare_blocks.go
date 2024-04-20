@@ -2,11 +2,11 @@ package main
 
 import (
 	"github.com/Katkoin/katd/domain/consensus"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/consensushashing"
-	"github.com/katkoin/katdd/infrastructure/db/database/ldb"
-	"github.com/katkoin/katdd/stability-tests/common"
-	"github.com/katkoin/katdd/stability-tests/common/mine"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
+	"github.com/Katkoin/katd/infrastructure/db/database/ldb"
+	"github.com/Katkoin/katd/stability-tests/common"
+	"github.com/Katkoin/katd/stability-tests/common/mine"
 	"github.com/pkg/errors"
 )
 

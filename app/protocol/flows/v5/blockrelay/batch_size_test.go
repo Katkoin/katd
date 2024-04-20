@@ -3,7 +3,7 @@ package blockrelay
 import (
 	"testing"
 
-	"github.com/katkoin/katd/infrastructure/network/netadapter/router"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/router"
 )
 
 func TestIBDBatchSizeLessThanRouteCapacity(t *testing.T) {

@@ -10,9 +10,9 @@ import (
 	"time"
 
 	"github.com/Katkoin/katd/infrastructure/db/database"
-	"github.com/katkoin/katdd/util/mstime"
+	"github.com/Katkoin/katd/util/mstime"
 
-	"github.com/katkoin/katdd/app/appmessage"
+	"github.com/Katkoin/katd/app/appmessage"
 	"github.com/pkg/errors"
 )
 

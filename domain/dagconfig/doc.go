@@ -28,7 +28,7 @@ variable (either directly, or hidden in a library call).
 		"log"
 
 		"github.com/Katkoin/katd/util"
-		"github.com/katkoin/katdd/domain/dagconfig"
+		"github.com/Katkoin/katd/domain/dagconfig"
 	)
 
 	var testnet = flag.Bool("testnet", false, "operate on the testnet katkoin network")

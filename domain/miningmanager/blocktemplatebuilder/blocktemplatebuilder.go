@@ -5,17 +5,17 @@ import (
 	"sort"
 
 	"github.com/Katkoin/katd/domain/consensus/processes/coinbasemanager"
-	"github.com/katkoin/katdd/domain/consensus/utils/merkle"
-	"github.com/katkoin/katdd/domain/consensus/utils/transactionhelper"
-	"github.com/katkoin/katdd/domain/consensusreference"
-	"github.com/katkoin/katdd/util/mstime"
+	"github.com/Katkoin/katd/domain/consensus/utils/merkle"
+	"github.com/Katkoin/katd/domain/consensus/utils/transactionhelper"
+	"github.com/Katkoin/katd/domain/consensusreference"
+	"github.com/Katkoin/katd/util/mstime"
 
-	"github.com/katkoin/katdd/util/difficulty"
+	"github.com/Katkoin/katd/util/difficulty"
 
-	consensusexternalapi "github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/ruleerrors"
-	"github.com/katkoin/katdd/domain/consensus/utils/subnetworks"
-	miningmanagerapi "github.com/katkoin/katdd/domain/miningmanager/model"
+	consensusexternalapi "github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/ruleerrors"
+	"github.com/Katkoin/katd/domain/consensus/utils/subnetworks"
+	miningmanagerapi "github.com/Katkoin/katd/domain/miningmanager/model"
 	"github.com/pkg/errors"
 )
 
@@ -152,7 +152,7 @@ func (btb *blockTemplateBuilder) BuildBlockTemplate(
 		if err != nil {
 			// mempool.RemoveInvalidTransactions might return errors in situations that are perfectly fine in this context.
 			// TODO: Once the mempool invariants are clear, this should be converted back `return nil, err`:
-			// https://github.com/katkoin/katdd/issues/1553
+			// https://github.com/Katkoin/katd/issues/1553
 			log.Criticalf("Error from mempool.RemoveInvalidTransactions: %+v", err)
 		}
 		// We can call this recursively without worry because this should almost never happen

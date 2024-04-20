@@ -5,11 +5,11 @@ import (
 	"time"
 
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/infrastructure/logger"
-	routerpkg "github.com/katkoin/katdd/infrastructure/network/netadapter/router"
-	"github.com/katkoin/katdd/infrastructure/network/rpcclient/grpcclient"
-	"github.com/katkoin/katdd/util/panics"
-	"github.com/katkoin/katdd/version"
+	"github.com/Katkoin/katd/infrastructure/logger"
+	routerpkg "github.com/Katkoin/katd/infrastructure/network/netadapter/router"
+	"github.com/Katkoin/katd/infrastructure/network/rpcclient/grpcclient"
+	"github.com/Katkoin/katd/util/panics"
+	"github.com/Katkoin/katd/version"
 	"github.com/pkg/errors"
 )
 

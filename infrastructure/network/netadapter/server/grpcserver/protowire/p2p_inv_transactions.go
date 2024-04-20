@@ -5,7 +5,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-func (x *katdMessage_InvTransactions) toAppMessage() (appmessage.Message, error) {
+func (x *KatdMessage_InvTransactions) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
 		return nil, errors.Wrapf(errorNil, "katdMessage_InvTransactions is nil")
 	}
@@ -29,7 +29,7 @@ func (x *InvTransactionsMessage) toAppMessage() (appmessage.Message, error) {
 
 }
 
-func (x *katdMessage_InvTransactions) fromAppMessage(msgInvTransaction *appmessage.MsgInvTransaction) error {
+func (x *KatdMessage_InvTransactions) fromAppMessage(msgInvTransaction *appmessage.MsgInvTransaction) error {
 	if len(msgInvTransaction.TxIDs) > appmessage.MaxInvPerTxInvMsg {
 		return errors.Errorf("too many hashes for message "+
 			"[count %d, max %d]", len(msgInvTransaction.TxIDs), appmessage.MaxInvPerTxInvMsg)

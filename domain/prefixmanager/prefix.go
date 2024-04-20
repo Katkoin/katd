@@ -2,7 +2,7 @@ package prefixmanager
 
 import (
 	"github.com/Katkoin/katd/domain/prefixmanager/prefix"
-	"github.com/katkoin/katdd/infrastructure/db/database"
+	"github.com/Katkoin/katd/infrastructure/db/database"
 )
 
 var activePrefixKey = database.MakeBucket(nil).Key([]byte("active-prefix"))

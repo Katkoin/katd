@@ -2,8 +2,8 @@ package transactionvalidator
 
 import (
 	"github.com/Katkoin/katd/domain/consensus/model"
-	"github.com/katkoin/katdd/domain/consensus/model/testapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/txscript"
+	"github.com/Katkoin/katd/domain/consensus/model/testapi"
+	"github.com/Katkoin/katd/domain/consensus/utils/txscript"
 )
 
 type testTransactionValidator struct {

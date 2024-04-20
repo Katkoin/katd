@@ -6,7 +6,7 @@ import (
 	"testing"
 
 	"github.com/Katkoin/katd/infrastructure/db/database"
-	"github.com/katkoin/katdd/infrastructure/db/database/ldb"
+	"github.com/Katkoin/katd/infrastructure/db/database/ldb"
 )
 
 type databasePrepareFunc func(t *testing.T, testName string) (db database.Database, name string, teardownFunc func())

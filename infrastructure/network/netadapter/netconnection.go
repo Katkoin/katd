@@ -5,11 +5,11 @@ import (
 	"sync/atomic"
 
 	"github.com/Katkoin/katd/app/appmessage"
-	routerpkg "github.com/katkoin/katdd/infrastructure/network/netadapter/router"
+	routerpkg "github.com/Katkoin/katd/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/id"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/server"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/id"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/server"
 )
 
 // NetConnection is a wrapper to a server connection for use by services external to NetAdapter

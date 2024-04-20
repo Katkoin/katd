@@ -8,11 +8,11 @@ import (
 	"fmt"
 
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/constants"
+	"github.com/Katkoin/katd/domain/consensus/utils/constants"
 	"github.com/pkg/errors"
 
-	"github.com/katkoin/katdd/domain/dagconfig"
-	"github.com/katkoin/katdd/util"
+	"github.com/Katkoin/katd/domain/dagconfig"
+	"github.com/Katkoin/katd/util"
 )
 
 // ScriptClass is an enumeration for the list of standard types of script.

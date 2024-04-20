@@ -7,21 +7,21 @@ import (
 
 	"github.com/kaspanet/go-secp256k1"
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/consensushashing"
-	"github.com/katkoin/katdd/domain/consensus/utils/constants"
-	"github.com/katkoin/katdd/domain/consensus/utils/subnetworks"
-	"github.com/katkoin/katdd/domain/consensus/utils/transactionhelper"
-	"github.com/katkoin/katdd/domain/consensus/utils/txscript"
-	utxopkg "github.com/katkoin/katdd/domain/consensus/utils/utxo"
-	"github.com/katkoin/katdd/domain/dagconfig"
-	"github.com/katkoin/katdd/infrastructure/network/rpcclient"
-	"github.com/katkoin/katdd/stability-tests/common/mine"
-	"github.com/katkoin/katdd/util"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/utils/consensushashing"
+	"github.com/Katkoin/katd/domain/consensus/utils/constants"
+	"github.com/Katkoin/katd/domain/consensus/utils/subnetworks"
+	"github.com/Katkoin/katd/domain/consensus/utils/transactionhelper"
+	"github.com/Katkoin/katd/domain/consensus/utils/txscript"
+	utxopkg "github.com/Katkoin/katd/domain/consensus/utils/utxo"
+	"github.com/Katkoin/katd/domain/dagconfig"
+	"github.com/Katkoin/katd/infrastructure/network/rpcclient"
+	"github.com/Katkoin/katd/stability-tests/common/mine"
+	"github.com/Katkoin/katd/util"
 )
 
 const (
-	payAddress                       = "kaspasim:qzuax2jhawd354e54thhpd9m9wg03pdzwjlpr4vtq3k7xrpumhhtwa2hkr3ep"
+	payAddress                       = "katkoinsim:qzuax2jhawd354e54thhpd9m9wg03pdzwjlpr4vtq3k7xrpumhhtwa2hkr3ep"
 	payAddressPrivateKey             = "05d8f681e954a550395ee2297fc1a14f6e801f554c0b9d48cd7165a7ea72ff77"
 	fundingCoinbaseTransactionAmount = 1000
 	outputsPerTransaction            = 3

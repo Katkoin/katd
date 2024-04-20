@@ -6,9 +6,9 @@ import (
 
 	"github.com/Katkoin/katd/util/txmass"
 
-	"github.com/katkoin/katdd/domain/consensus/model"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/util/difficulty"
+	"github.com/Katkoin/katd/domain/consensus/model"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/util/difficulty"
 )
 
 // blockValidator exposes a set of validation classes, after which

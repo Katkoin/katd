@@ -5,9 +5,9 @@ import (
 
 	"github.com/jessevdk/go-flags"
 	"github.com/Katkoin/katd/infrastructure/config"
-	"github.com/katkoin/katdd/infrastructure/logger"
-	"github.com/katkoin/katdd/stability-tests/common"
-	"github.com/katkoin/katdd/stability-tests/common/rpc"
+	"github.com/Katkoin/katd/infrastructure/logger"
+	"github.com/Katkoin/katd/stability-tests/common"
+	"github.com/Katkoin/katd/stability-tests/common/rpc"
 )
 
 const (

@@ -5,8 +5,8 @@ import (
 	"math/big"
 
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/util/mstime"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/util/mstime"
 	"github.com/pkg/errors"
 )
 

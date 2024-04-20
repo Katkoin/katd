@@ -5,11 +5,11 @@ import (
 	"sync/atomic"
 
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/infrastructure/config"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/id"
-	routerpkg "github.com/katkoin/katdd/infrastructure/network/netadapter/router"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/server"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/server/grpcserver"
+	"github.com/Katkoin/katd/infrastructure/config"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/id"
+	routerpkg "github.com/Katkoin/katd/infrastructure/network/netadapter/router"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/server"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/server/grpcserver"
 	"github.com/pkg/errors"
 )
 

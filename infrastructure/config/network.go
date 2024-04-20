@@ -10,8 +10,8 @@ import (
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 
 	"github.com/jessevdk/go-flags"
-	"github.com/katkoin/katdd/domain/dagconfig"
-	"github.com/katkoin/katdd/util/difficulty"
+	"github.com/Katkoin/katd/domain/dagconfig"
+	"github.com/Katkoin/katd/util/difficulty"
 	"github.com/pkg/errors"
 )
 

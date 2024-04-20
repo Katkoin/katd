@@ -14,13 +14,13 @@ import (
 
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 
-	"github.com/katkoin/katdd/app/appmessage"
-	pb2 "github.com/katkoin/katdd/infrastructure/network/dnsseed/pb"
+	"github.com/Katkoin/katd/app/appmessage"
+	pb2 "github.com/Katkoin/katd/infrastructure/network/dnsseed/pb"
 	"google.golang.org/grpc"
 
-	"github.com/katkoin/katdd/util/mstime"
+	"github.com/Katkoin/katd/util/mstime"
 
-	"github.com/katkoin/katdd/domain/dagconfig"
+	"github.com/Katkoin/katd/domain/dagconfig"
 )
 
 const (

@@ -2,7 +2,7 @@ package database
 
 import (
 	"github.com/Katkoin/katd/domain/consensus/model"
-	"github.com/katkoin/katdd/infrastructure/db/database"
+	"github.com/Katkoin/katd/infrastructure/db/database"
 )
 
 func dbBucketToDatabaseBucket(bucket model.DBBucket) *database.Bucket {

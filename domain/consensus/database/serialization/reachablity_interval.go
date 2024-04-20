@@ -1,7 +1,7 @@
 package serialization
 
 import (
-	"github.com/katkoin/katd/domain/consensus/model"
+	"github.com/Katkoin/katd/domain/consensus/model"
 )
 
 func reachablityIntervalToDBReachablityInterval(reachabilityInterval *model.ReachabilityInterval) *DbReachabilityInterval {

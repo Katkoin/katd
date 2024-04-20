@@ -9,16 +9,16 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/katkoin/katdd/domain"
+	"github.com/Katkoin/katd/domain"
 
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 
-	"github.com/katkoin/katdd/app/protocol/flowcontext"
-	peerpkg "github.com/katkoin/katdd/app/protocol/peer"
-	"github.com/katkoin/katdd/infrastructure/config"
-	"github.com/katkoin/katdd/infrastructure/network/addressmanager"
-	"github.com/katkoin/katdd/infrastructure/network/connmanager"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter"
+	"github.com/Katkoin/katd/app/protocol/flowcontext"
+	peerpkg "github.com/Katkoin/katd/app/protocol/peer"
+	"github.com/Katkoin/katd/infrastructure/config"
+	"github.com/Katkoin/katd/infrastructure/network/addressmanager"
+	"github.com/Katkoin/katd/infrastructure/network/connmanager"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter"
 )
 
 // Manager manages the p2p protocol

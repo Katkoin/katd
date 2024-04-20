@@ -6,21 +6,21 @@ import (
 	"testing"
 
 	"github.com/Katkoin/katd/app/protocol/flowcontext"
-	"github.com/katkoin/katdd/app/protocol/flows/v5/transactionrelay"
+	"github.com/Katkoin/katd/app/protocol/flows/v5/transactionrelay"
 
-	"github.com/katkoin/katdd/app/protocol/protocolerrors"
-	"github.com/katkoin/katdd/domain"
-	"github.com/katkoin/katdd/domain/consensus"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensus/utils/testutils"
-	"github.com/katkoin/katdd/domain/miningmanager/mempool"
-	"github.com/katkoin/katdd/infrastructure/logger"
-	"github.com/katkoin/katdd/util/panics"
+	"github.com/Katkoin/katd/app/protocol/protocolerrors"
+	"github.com/Katkoin/katd/domain"
+	"github.com/Katkoin/katd/domain/consensus"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/utils/testutils"
+	"github.com/Katkoin/katd/domain/miningmanager/mempool"
+	"github.com/Katkoin/katd/infrastructure/logger"
+	"github.com/Katkoin/katd/util/panics"
 
-	"github.com/katkoin/katdd/app/appmessage"
-	"github.com/katkoin/katdd/infrastructure/config"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter"
-	"github.com/katkoin/katdd/infrastructure/network/netadapter/router"
+	"github.com/Katkoin/katd/app/appmessage"
+	"github.com/Katkoin/katd/infrastructure/config"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter"
+	"github.com/Katkoin/katd/infrastructure/network/netadapter/router"
 )
 
 type mocTransactionsRelayContext struct {

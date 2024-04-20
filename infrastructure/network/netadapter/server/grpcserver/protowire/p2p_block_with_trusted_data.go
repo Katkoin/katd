@@ -4,11 +4,11 @@ import (
 	"math/big"
 
 	"github.com/Katkoin/katd/app/appmessage"
-	"github.com/katkoin/katdd/domain/consensus/model/externalapi"
+	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
 	"github.com/pkg/errors"
 )
 
-func (x *katdMessage_BlockWithTrustedData) toAppMessage() (appmessage.Message, error) {
+func (x *KatdMessage_BlockWithTrustedData) toAppMessage() (appmessage.Message, error) {
 	if x == nil {
 		return nil, errors.Wrapf(errorNil, "katdMessage_BlockWithTrustedData is nil")
 	}
@@ -52,7 +52,7 @@ func (x *katdMessage_BlockWithTrustedData) toAppMessage() (appmessage.Message, e
 	}, nil
 }
 
-func (x *katdMessage_BlockWithTrustedData) fromAppMessage(msgBlockWithTrustedData *appmessage.MsgBlockWithTrustedData) error {
+func (x *KatdMessage_BlockWithTrustedData) fromAppMessage(msgBlockWithTrustedData *appmessage.MsgBlockWithTrustedData) error {
 	x.BlockWithTrustedData = &BlockWithTrustedDataMessage{
 		Block:        &BlockMessage{},
 		DaaScore:     msgBlockWithTrustedData.DAAScore,

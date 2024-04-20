@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/Katkoin/katd/domain/consensus/model/externalapi"
-	"github.com/katkoin/katdd/domain/consensusreference"
-	miningmanagermodel "github.com/katkoin/katdd/domain/miningmanager/model"
+	"github.com/Katkoin/katd/domain/consensusreference"
+	miningmanagermodel "github.com/Katkoin/katd/domain/miningmanager/model"
 )
 
 // MiningManager creates block templates for mining as well as maintaining
